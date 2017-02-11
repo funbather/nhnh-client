@@ -5943,7 +5943,7 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 	PACKET.ZC.PC_PURCHASE_MYITEMLIST = function PACKET_ZC_PC_PURCHASE_MYITEMLIST(fp, end) {
 		this.AID = fp.readULong();
 		this.itemList = (function() {
-			var i, count=(end-fp.tell())/26|0, out=new Array(count);
+			var i,j, count=(end-fp.tell())/51|0, out=new Array(count);
 			for (i = 0; i < count; ++i) {
 				out[i] = {};
 				out[i].price = fp.readLong();
@@ -5960,6 +5960,11 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 				out[i].slot.card3 = fp.readUShort();
 				out[i].slot.card4 = fp.readUShort();
 				out[i].rolls = fp.readLong();
+				for (j = 0; j < 5; j++) {
+					this.unused = fp.readShort();
+					this.unused = fp.readShort();
+					this.unused = fp.readUChar();
+				}
 			}
 			return out;
 		})();
@@ -6898,7 +6903,31 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 	};
 	PACKET.ZC.ADD_ITEM_TO_STORE2.size = 26;
 
-
+	// 0xa0a
+	PACKET.ZC.ADD_ITEM_TO_STORE3 = function PACKET_ZC_ADD_ITEM_TO_STORE3(fp, end) {
+		var i;
+	
+		this.index = fp.readShort();
+		this.count = fp.readLong();
+		this.ITID = fp.readUShort();
+		this.type = fp.readUChar();
+		this.IsIdentified = fp.readUChar();
+		this.IsDamaged = fp.readUChar();
+		this.RefiningLevel = fp.readUChar();
+		this.slot = {};
+		this.slot.card1 = fp.readUShort();
+		this.slot.card2 = fp.readUShort();
+		this.slot.card3 = fp.readUShort();
+		this.slot.card4 = fp.readUShort();
+		this.rolls = fp.readLong();
+		for(i=0; i<5 ;i++) {
+			this.unused = fp.readShort();
+			this.unused = fp.readShort();
+			this.unused = fp.readUChar();
+		}
+	};
+	PACKET.ZC.ADD_ITEM_TO_STORE3.size = 51;
+	
 	// 0x1c5
 	PACKET.ZC.ADD_ITEM_TO_CART2 = function PACKET_ZC_ADD_ITEM_TO_CART2(fp, end) {
 		this.index = fp.readShort();
@@ -6917,6 +6946,30 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 	};
 	PACKET.ZC.ADD_ITEM_TO_CART2.size = 26;
 
+	// 0xa0b
+	PACKET.ZC.ADD_ITEM_TO_CART3 = function PACKET_ZC_ADD_ITEM_TO_CART3(fp, end) {
+		var i;
+	
+		this.index = fp.readShort();
+		this.count = fp.readLong();
+		this.ITID = fp.readUShort();
+		this.type = fp.readUChar();
+		this.IsIdentified = fp.readUChar();
+		this.IsDamaged = fp.readUChar();
+		this.RefiningLevel = fp.readUChar();
+		this.slot = {};
+		this.slot.card1 = fp.readUShort();
+		this.slot.card2 = fp.readUShort();
+		this.slot.card3 = fp.readUShort();
+		this.slot.card4 = fp.readUShort();
+		this.rolls = fp.readLong();
+		for(i=0; i<5 ;i++) {
+			this.unused = fp.readShort();
+			this.unused = fp.readShort();
+			this.unused = fp.readUChar();
+		}
+	};
+	PACKET.ZC.ADD_ITEM_TO_CART3.size = 51;
 
 	// 0x1c7
 	PACKET.SC.ACK_ENCRYPTION = function PACKET_SC_ACK_ENCRYPTION(fp, end) {};
@@ -9870,7 +9923,7 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 		this.AID = fp.readULong();
 		this.UniqueID = fp.readULong();
 		this.itemList = (function() {
-			var i, count = (end - fp.tell()) / 26 | 0,
+			var i,j, count = (end - fp.tell()) / 51 | 0,
 				out = new Array(count);
 			for (i = 0; i < count; ++i) {
 				out[i] = {};
@@ -9888,6 +9941,11 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 				out[i].slot.card3 = fp.readUShort();
 				out[i].slot.card4 = fp.readUShort();
 				out[i].rolls = fp.readLong();
+				for (j = 0; i < 5; i++) {
+					this.unused = fp.readShort();
+					this.unused = fp.readShort();
+					this.unused = fp.readUChar();
+				}
 			}
 			return out;
 		})();
@@ -10009,6 +10067,29 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 	};
 	PACKET.ZC.ADD_EXCHANGE_ITEM2.size = 24;
 
+	// 0xa09
+	PACKET.ZC.ADD_EXCHANGE_ITEM3 = function PACKET_ZC_ADD_EXCHANGE_ITEM3(fp, end) {
+		var i;
+	
+		this.ITID = fp.readUShort();
+		this.type = fp.readUChar();
+		this.count = fp.readLong();
+		this.IsIdentified = fp.readUChar();
+		this.IsDamaged = fp.readUChar();
+		this.RefiningLevel = fp.readUChar();
+		this.slot = {};
+		this.slot.card1 = fp.readUShort();
+		this.slot.card2 = fp.readUShort();
+		this.slot.card3 = fp.readUShort();
+		this.slot.card4 = fp.readUShort();
+		this.rolls = fp.readULong();
+		for(i=0; i<5; i++) {
+			this.unused = fp.readShort();
+			this.unused = fp.readShort();
+			this.unused = fp.readUChar();
+		}
+	};
+	PACKET.ZC.ADD_EXCHANGE_ITEM2.size = 49;
 
 	// 0x810
 	PACKET.ZC.OPEN_BUYING_STORE = function PACKET_ZC_OPEN_BUYING_STORE(fp, end) {
@@ -10655,6 +10736,127 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 	};
 	PACKET.ZC.NOTIFY_NEWENTRY7.size = -1;
 
+	// 0x9fd
+	PACKET.ZC.NOTIFY_MOVEENTRY8 = function PACKET_ZC_NOTIFY_MOVEENTRY8(fp, end) {
+		this.objecttype = fp.readUChar();
+		this.GID = fp.readULong();
+		this.speed = fp.readShort();
+		this.bodyState = fp.readShort();
+		this.healthState = fp.readShort();
+		this.effectState = fp.readLong();
+		this.job = fp.readShort();
+		this.head = fp.readShort();
+		this.weapon = fp.readLong();
+		this.accessory = fp.readShort();
+		this.moveStartTime = fp.readULong();
+		this.accessory2 = fp.readShort();
+		this.accessory3 = fp.readShort();
+		this.headpalette = fp.readShort();
+		this.bodypalette = fp.readShort();
+		this.headDir = fp.readShort();
+		this.Robe = fp.readShort();
+		this.GUID = fp.readULong();
+		this.GEmblemVer = fp.readShort();
+		this.honor = fp.readShort();
+		this.virtue = fp.readLong();
+		this.isPKModeON = fp.readUChar();
+		this.sex = fp.readUChar();
+		this.MoveData = fp.readPos2();
+		this.xSize = fp.readUChar();
+		this.ySize = fp.readUChar();
+		this.clevel = fp.readShort();
+		this.font = fp.readShort();
+		this.hp = fp.readLong();
+		this.maxhp = fp.readLong();
+		this.isBoss = fp.readUChar();
+		this.body = fp.readShort();
+		this.classes = fp.readULong();
+		this.name = fp.readString(24);
+	};
+	PACKET.ZC.NOTIFY_MOVEENTRY8.size = -1;
+
+
+	// 0x9ff
+	PACKET.ZC.NOTIFY_STANDENTRY8 = function PACKET_ZC_NOTIFY_STANDENTRY8(fp, end) {
+		this.objecttype = fp.readUChar();
+		this.AID = fp.readULong();
+		this.GID = fp.readULong();
+		this.speed = fp.readShort();
+		this.bodyState = fp.readShort();
+		this.healthState = fp.readShort();
+		this.effectState = fp.readLong();
+		this.job = fp.readShort();
+		this.head = fp.readShort();
+		this.weapon = fp.readLong();
+		this.accessory = fp.readShort();
+		this.accessory2 = fp.readShort();
+		this.accessory3 = fp.readShort();
+		this.headpalette = fp.readShort();
+		this.bodypalette = fp.readShort();
+		this.headDir = fp.readShort();
+		this.Robe = fp.readShort();
+		this.GUID = fp.readULong();
+		this.GEmblemVer = fp.readShort();
+		this.honor = fp.readShort();
+		this.virtue = fp.readLong();
+		this.isPKModeON = fp.readUChar();
+		this.sex = fp.readUChar();
+		this.PosDir = fp.readPos();
+		this.xSize = fp.readUChar();
+		this.ySize = fp.readUChar();
+		this.state = fp.readUChar();
+		this.clevel = fp.readShort();
+		this.font = fp.readShort();
+		this.maxhp = fp.readLong();
+		this.hp = fp.readLong();
+		this.isBoss = fp.readUChar();
+		this.body = fp.readShort();
+		this.classes = fp.readULong();
+		this.name = fp.readString(end - fp.tell());
+	};
+	PACKET.ZC.NOTIFY_STANDENTRY8.size = -1;
+	
+	
+	// 0x90f
+	PACKET.ZC.NOTIFY_NEWENTRY8 = function PACKET_ZC_NOTIFY_NEWENTRY8(fp, end) {
+		this.objecttype = fp.readUChar();
+		this.AID = fp.readULong();
+		this.GID = fp.readULong();
+		this.speed = fp.readShort();
+		this.bodyState = fp.readShort();
+		this.healthState = fp.readShort();
+		this.effectState = fp.readLong();
+		this.job = fp.readShort();
+		this.head = fp.readShort();
+		this.weapon = fp.readLong();
+		this.accessory = fp.readShort();
+		this.accessory2 = fp.readShort();
+		this.accessory3 = fp.readShort();
+		this.headpalette = fp.readShort();
+		this.bodypalette = fp.readShort();
+		this.headDir = fp.readShort();
+		this.Robe = fp.readShort();
+		this.GUID = fp.readULong();
+		this.GEmblemVer = fp.readShort();
+		this.honor = fp.readShort();
+		this.virtue = fp.readLong();
+		this.isPKModeON = fp.readUChar();
+		this.sex = fp.readUChar();
+		this.PosDir = fp.readPos();
+		this.xSize = fp.readUChar();
+		this.ySize = fp.readUChar();
+		this.state = fp.readUChar();
+		this.clevel = fp.readShort();
+		this.font = fp.readShort();
+		this.maxhp = fp.readLong();
+		this.hp = fp.readLong();
+		this.isBoss = fp.readUChar();
+		this.body = fp.readShort();
+		this.classes = fp.readULong();
+		this.name = fp.readString(end - fp.tell());
+	};
+	PACKET.ZC.NOTIFY_NEWENTRY8.size = -1;
+
 
 	// 0x977
 	PACKET.ZC.NOTIFY_MONSTER_HP = function PACKET_ZC_NOTIFY_MONSTER_HP(fp, end) {
@@ -10741,11 +10943,37 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 	};
 	PACKET.ZC.ITEM_PICKUP_ACK5.size = 35;
 
-
+	// 0xa0c
+	PACKET.ZC.ITEM_PICKUP_ACK6 = function PACKET_ZC_ITEM_PICKUP_ACK6(fp, end) {
+		this.index = fp.readUShort();
+		this.count = fp.readUShort();
+		this.ITID = fp.readUShort();
+		this.IsIdentified = fp.readUChar();
+		this.IsDamaged = fp.readUChar();
+		this.RefiningLevel = fp.readUChar();
+		this.slot = {};
+		this.slot.card1 = fp.readUShort();
+		this.slot.card2 = fp.readUShort();
+		this.slot.card3 = fp.readUShort();
+		this.slot.card4 = fp.readUShort();
+		this.location = fp.readLong();
+		this.type = fp.readUChar();
+		this.result = fp.readUChar();
+		this.HireExpireDate = fp.readLong();
+		this.bindOnEquipType = fp.readUShort();
+		this.rolls = fp.readULong();
+		for (var i = 0; i < 5; i++) {
+			this.unused = fp.readShort(); //
+			this.unused = fp.readShort(); // These are currently unused, just eat the packets
+			this.unused = fp.readUChar(); //
+		}
+	};
+	PACKET.ZC.ITEM_PICKUP_ACK6.size = 60;
+	
 	// 0x991
 	PACKET.ZC.NORMAL_ITEMLIST4 = function PACKET_ZC_NORMAL_ITEMLIST4(fp, end) {
 		this.ItemInfo = (function() {
-			var i, count = (end - fp.tell()) / 28 | 0,
+			var i, count = (end - fp.tell()) / 31 | 0,
 				out = new Array(count);
 			var flag;
 			for (i = 0; i < count; ++i) {
@@ -10761,7 +10989,7 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 				out[i].slot.card3 = fp.readUShort();
 				out[i].slot.card4 = fp.readUShort();
 				out[i].HireExpireDate = fp.readLong();
-				flag = fp.readUChar();
+				flag = fp.readULong();
 				out[i].IsIdentified = flag & 1;
 				out[i].PlaceETCTab = flag & 2;
 				out[i].rolls = fp.readLong();
@@ -10771,11 +10999,12 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 	};
 	PACKET.ZC.NORMAL_ITEMLIST4.size = -1;
 
+	// 0x992 UNUSED
 
-	// 0x992
+	// 0xa0d
 	PACKET.ZC.EQUIPMENT_ITEMLIST4 = function PACKET_ZC_EQUIPMENT_ITEMLIST4(fp, end) {
 		this.ItemInfo = (function() {
-			var i, count = (end - fp.tell()) / 35 | 0,
+			var i,j, count = (end - fp.tell()) / 60 | 0,
 				out = new Array(count);
 			var flag;
 			for (i = 0; i < count; ++i) {
@@ -10794,9 +11023,15 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 				out[i].HireExpireDate = fp.readLong();
 				out[i].bindOnEquipType = fp.readUShort();
 				out[i].wItemSpriteNumber = fp.readUShort();
-				flag = fp.readUChar();
+				out[i].optioncount = fp.readUChar();
+				for(j = 0; j < 5; j++) {
+					out[i].optioncount = fp.readShort(); //
+					out[i].optioncount = fp.readShort(); // These are currently unused, just eat the packets
+					out[i].optioncount = fp.readUChar(); //
+				}
+				flag = fp.readULong();
 				out[i].IsIdentified = 1;
-				out[i].IsDamaged = flag;// = flag & 2;
+				out[i].IsDamaged = flag;
 				out[i].PlaceETCTab = flag & 4;
 				out[i].rolls = fp.readLong();
 			}
@@ -10805,11 +11040,10 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 	};
 	PACKET.ZC.EQUIPMENT_ITEMLIST4.size = -1;
 
-
 	// 0x993
 	PACKET.ZC.CART_NORMAL_ITEMLIST4 = function PACKET_ZC_CART_NORMAL_ITEMLIST4(fp, end) {
 		this.ItemInfo = (function() {
-			var i, count = (end - fp.tell()) / 28 | 0,
+			var i, count = (end - fp.tell()) / 31 | 0,
 				out = new Array(count);
 			var flag;
 			for (i = 0; i < count; ++i) {
@@ -10825,7 +11059,7 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 				out[i].slot.card3 = fp.readUShort();
 				out[i].slot.card4 = fp.readUShort();
 				out[i].HireExpireDate = fp.readLong();
-				flag = fp.readUChar();
+				flag = fp.readULong();
 				out[i].IsIdentified = flag & 1;
 				out[i].PlaceETCTab = flag & 2;
 				out[i].rolls = fp.readLong();
@@ -10836,10 +11070,12 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 	PACKET.ZC.CART_NORMAL_ITEMLIST4.size = -1;
 
 
-	// 0x994
+	// 0x994 UNUSED
+	
+	// 0xa0f
 	PACKET.ZC.CART_EQUIPMENT_ITEMLIST4 = function PACKET_ZC_CART_EQUIPMENT_ITEMLIST4(fp, end) {
 		this.ItemInfo = (function() {
-			var i, count = (end - fp.tell()) / 35 | 0,
+			var i,j, count = (end - fp.tell()) / 60 | 0,
 				out = new Array(count);
 			var flag;
 			for (i = 0; i < count; ++i) {
@@ -10858,9 +11094,15 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 				out[i].HireExpireDate = fp.readLong();
 				out[i].bindOnEquipType = fp.readUShort();
 				out[i].wItemSpriteNumber = fp.readUShort();
-				flag = fp.readUChar();
+				out[i].optioncount = fp.readUChar();
+				for(j = 0; j < 5; j++) {
+					out[i].optioncount = fp.readShort(); //
+					out[i].optioncount = fp.readShort(); // These are currently unused, just eat the packets
+					out[i].optioncount = fp.readUChar(); //
+				}
+				flag = fp.readULong();
 				out[i].IsIdentified = 1;
-				out[i].IsDamaged = flag;// = flag & 2;
+				out[i].IsDamaged = flag;
 				out[i].PlaceETCTab = flag & 4;
 				out[i].rolls = fp.readLong();
 			}
@@ -10874,7 +11116,7 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 	PACKET.ZC.STORE_NORMAL_ITEMLIST4 = function PACKET_ZC_STORE_NORMAL_ITEMLIST4(fp, end) {
 		this.Name = fp.readString(24);
 		this.ItemInfo = (function() {
-			var i, count = (end - fp.tell()) / 28 | 0,
+			var i, count = (end - fp.tell()) / 31 | 0,
 				out = new Array(count);
 			var flag;
 			for (i = 0; i < count; ++i) {
@@ -10890,7 +11132,7 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 				out[i].slot.card3 = fp.readUShort();
 				out[i].slot.card4 = fp.readUShort();
 				out[i].HireExpireDate = fp.readLong();
-				flag = fp.readUChar();
+				flag = fp.readULong();
 				out[i].IsIdentified = flag & 1;
 				out[i].PlaceETCTab = flag & 2;
 				out[i].rolls = fp.readLong();
@@ -10901,11 +11143,13 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 	PACKET.ZC.STORE_NORMAL_ITEMLIST4.size = -1;
 
 
-	// 0x996
+	// 0x996 UNUSED
+	
+	// 0x0a6
 	PACKET.ZC.STORE_EQUIPMENT_ITEMLIST4 = function PACKET_ZC_STORE_EQUIPMENT_ITEMLIST4(fp, end) {
 		this.Name = fp.readString(24);
 		this.ItemInfo = (function() {
-			var i, count = (end - fp.tell()) / 35 | 0,
+			var i,j, count = (end - fp.tell()) / 60 | 0,
 				out = new Array(count);
 			var flag;
 			for (i = 0; i < count; ++i) {
@@ -10924,9 +11168,15 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 				out[i].HireExpireDate = fp.readLong();
 				out[i].bindOnEquipType = fp.readUShort();
 				out[i].wItemSpriteNumber = fp.readUShort();
-				flag = fp.readUChar();
+				out[i].optioncount = fp.readUChar();
+				for(j = 0; j < 5; j++) {
+					out[i].optioncount = fp.readShort(); //
+					out[i].optioncount = fp.readShort(); // These are currently unused, just eat the packets
+					out[i].optioncount = fp.readUChar(); //
+				}
+				flag = fp.readULong();
 				out[i].IsIdentified = 1;
-				out[i].IsDamaged = flag;// = flag & 2;
+				out[i].IsDamaged = flag;
 				out[i].PlaceETCTab = flag & 4;
 				out[i].rolls = fp.readLong();
 			}
