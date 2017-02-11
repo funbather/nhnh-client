@@ -1,0 +1,65 @@
+#charcreate{ position:absolute; width:576px; height:342px; }
+
+/** Name **/
+#charcreate input { position:absolute; top:244px; left:62px; width: 97px; height:14px; padding-top:2px; padding-left:3px; background-color:transparent; border:0; }
+
+/** Chargen **/
+#charcreate .chargen button { position:absolute; width:13px; height:13px; border:0; background-repeat:no-repeat; background-color:transparent; }
+#charcreate .chargen .left   { top:135px; left: 47px; }
+#charcreate .chargen .up       { top:105px; left: 87px; }
+#charcreate .chargen .right { top:135px; left:127px; }
+#charcreate .chargen canvas { position:absolute; top:120px; left:62px; }
+
+/** Graph buttons **/
+#charcreate .graph button { position:absolute; width:36px; height:36px; border:0; background-repeat:no-repeat; background-color:transparent; }
+#charcreate .graph .str { top: 50px; left:270px; }
+#charcreate .graph .int { top:243px; left:270px; }
+#charcreate .graph .vit { top:104px; left:348px; }
+#charcreate .graph .dex { top:190px; left:191px; }
+#charcreate .graph .agi { top:103px; left:191px; }
+#charcreate .graph .luk { top:190px; left:348px; }
+#charcreate .graph canvas { position:absolute; left:209px; top: 86px; }
+
+/** Stats infos **/
+#charcreate .info { position:absolute; top:41px; left:500px; }
+#charcreate .info div { position:absolute; left:0px; }
+#charcreate .info .str { top:16px; }
+#charcreate .info .agi { top:63px; }
+#charcreate .info .vit { top:110px; }
+#charcreate .info .int { top:157px; }
+#charcreate .info .mst { top:204px; }
+#charcreate .info .left { top:0px; }
+
+#charcreate .stats { position:absolute; top:41px; right:0px; width:50px; height:300px; }
+#charcreate .statbutton { position: absolute; border:0; width:13px; height:13px; background-repeat:no-repeat; background-color:transparent; }
+#charcreate .stradd { top:16px; right:23px; }
+#charcreate .strsub { top:16px; right:42px; }
+#charcreate .agiadd { top:63px; right:23px; }
+#charcreate .agisub { top:63px; right:42px; }
+#charcreate .vitadd { top:110px; right:23px; }
+#charcreate .vitsub { top:110px; right:42px; }
+#charcreate .intadd { top:157px; right:23px; }
+#charcreate .intsub { top:157px; right:42px; }
+#charcreate .mstadd { top:204px; right:23px; }
+#charcreate .mstsub { top:204px; right:42px; }
+
+#charcreate .job { position:absolute; top:41px; left:189px; width:184px; height:300px; }
+#charcreate .jobname { top:16px; padding-left:50px; }
+#charcreate .jobdesc { top:63px; }
+
+#charcreate .pickSWD { position: absolute; top:17px; border:0; width:30px; height:30px; background-repeat:no-repeat; background-color:transparent; } 
+#charcreate .pickTHF { position: absolute; top:48px; border:0; width:30px; height:30px; background-repeat:no-repeat; background-color:transparent; } 
+#charcreate .pickACO { position: absolute; top:79px; border:0; width:30px; height:30px; background-repeat:no-repeat; background-color:transparent; } 
+#charcreate .pickARC { position: absolute; top:110px; border:0; width:30px; height:30px; background-repeat:no-repeat; background-color:transparent; } 
+#charcreate .pickMGN { position: absolute; top:141px; border:0; width:30px; height:30px; background-repeat:no-repeat; background-color:transparent; } 
+#charcreate .pickMRC { position: absolute; top:172px; border:0; width:30px; height:30px; background-repeat:no-repeat; background-color:transparent; } 
+
+#charcreate .gender { position:absolute; top:41px; left:388px; }
+#charcreate .male { position: absolute; border:0; width:13px; height:13px; background-repeat:no-repeat; background-color:transparent; top:0px; right:34px; }
+#charcreate .female { position: absolute; border:0; width:13px; height:13px; background-repeat:no-repeat; background-color:transparent; top:0px; right:18px; }
+
+/** Buttons **/
+#charcreate .btns { position:absolute; bottom:4px; width:100%; height:20px; }
+#charcreate .btn { position: absolute; border:0;   width:42px; height:20px; background-repeat:no-repeat; background-color:transparent; }
+#charcreate .make { right:50px; }
+#charcreate .cancel { right:4px; }
