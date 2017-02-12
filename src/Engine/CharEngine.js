@@ -335,20 +335,13 @@ define(function( require )
 	{
 		var pkt;
 
-		// Old Packet required stats
-		//if (PACKETVER.value < 20120307) {
-			pkt = new PACKET.CH.MAKE_CHAR();
-			pkt.Str  = Str;
-			pkt.Agi  = Agi;
-			pkt.Vit  = Vit;
-			pkt.Int  = Int;
-			pkt.Dex  = Dex;
-			pkt.Luk  = Luk;
-		/*}
-		else {
-			pkt = new PACKET.CH.MAKE_CHAR2();
-		}*/
-
+		pkt = new PACKET.CH.MAKE_CHAR();
+		pkt.Str  = Str;
+		pkt.Agi  = Agi;
+		pkt.Vit  = Vit;
+		pkt.Int  = Int;
+		pkt.Dex  = Dex;
+		pkt.Luk  = Luk;
 		pkt.name    = name;
 		pkt.head    = hair;
 		pkt.headPal = color;

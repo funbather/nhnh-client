@@ -198,14 +198,12 @@ define(['Utils/gl-matrix', 'Renderer/Renderer'], function( glMatrix, Renderer )
 		lines[1] = '';
 
 		// Add the party name
-		if (this.party_name.length && this.guild_name == "X") {
-      lines[0] = this.party_name + ' ' + this.name.split('#')[0];
-		} else if (this.party_name.length) { // Dumb workaround
+		if (this.party_name.length) {
 			lines[0] += ' (' + this.party_name + ')';
 		}
 
 		// Add guild name
-		if (this.guild_name.length && this.guild_name != "X") {
+		if (this.guild_name.length) {
 			lines[1]  = this.guild_name;
 
 			// Add guild rank

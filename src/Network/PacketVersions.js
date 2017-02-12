@@ -41,8 +41,8 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.ADD_FRIENDS,0x0202,26,2],
 			[PACKET.CZ.ACK_REQ_ADD_FRIENDS,0x0208,11,2,6,10],
 		],
-		
-		
+
+
 		//2004-07-05aSakexe
 		20040705: [
 			[PACKET.CZ.ENTER,0x0072,22,5,9,13,17,21],
@@ -53,8 +53,8 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.USE_SKILL_TOGROUNDMoreInfo,0x0190,95,4,9,11,13,15],
 			[PACKET.CZ.ACK_REQ_ADD_FRIENDS,0x0208,14,2,6,10],
 		],
-		
-		
+
+
 		//2004-07-13aSakexe
 		20040713: [
 			[PACKET.CZ.ENTER,0x0072,39,12,22,30,34,38],
@@ -66,8 +66,8 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.USE_SKILL_TOGROUND,0x0116,19,7,9,15,17],
 			[PACKET.CZ.USE_SKILL_TOGROUNDMoreInfo,0x0190,99,7,9,15,17,19],
 		],
-		
-		
+
+
 		//2004-07-26aSakexe
 		20040726: [
 			[PACKET.CZ.ITEM_THROW,0x0072,14,5,12],
@@ -88,8 +88,8 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.MOVE_ITEM_FROM_STORE_TO_BODY,0x0190,26,10,22],
 			[PACKET.CZ.REQUEST_ACT,0x0193,9,3,8],
 		],
-		
-		
+
+
 		//2004-08-09aSakexe
 		20040809: [
 			[PACKET.CZ.ITEM_THROW,0x0072,17,8,15],
@@ -108,8 +108,8 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.MOVE_ITEM_FROM_STORE_TO_BODY,0x0190,26,11,22],
 			[PACKET.CZ.REQUEST_ACT,0x0193,18,7,17],
 		],
-		
-		
+
+
 		//2004-09-06aSakexe
 		20040906: [
 			[PACKET.CZ.USE_ITEM,0x0072,20,9,20],
@@ -130,8 +130,8 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.USE_SKILL,0x0190,22,9,15,18],
 			[PACKET.CZ.MOVE_ITEM_FROM_STORE_TO_BODY,0x0193,17,3,13],
 		],
-		
-		
+
+
 		//2004-09-20aSakexe
 		20040920: [
 			[PACKET.CZ.USE_ITEM,0x0072,18,10,14],
@@ -150,8 +150,8 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.USE_SKILL,0x0190,14,4,7,10],
 			[PACKET.CZ.MOVE_ITEM_FROM_STORE_TO_BODY,0x0193,12,4,8],
 		],
-		
-		
+
+
 		//2004-10-05aSakexe
 		20041005: [
 			[PACKET.CZ.USE_ITEM,0x0072,17,6,13],
@@ -169,8 +169,8 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.USE_SKILL,0x0190,20,7,12,16],
 			[PACKET.CZ.MOVE_ITEM_FROM_STORE_TO_BODY,0x0193,26,10,22],
 		],
-		
-		
+
+
 		//2004-10-25aSakexe
 		20041025: [
 			[PACKET.CZ.USE_ITEM,0x0072,13,5,9],
@@ -188,8 +188,8 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.USE_SKILL,0x0190,26,4,10,22],
 			[PACKET.CZ.MOVE_ITEM_FROM_STORE_TO_BODY,0x0193,22,12,18],
 		],
-		
-		
+
+
 		//2004-11-29aSakexe
 		20041129: [
 			[PACKET.CZ.USE_SKILL,0x0072,22,8,12,18],
@@ -210,8 +210,8 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.USE_ITEM,0x0190,15,3,11],
 			[PACKET.CZ.MOVE_ITEM_FROM_STORE_TO_BODY,0x0193,21,4,17],
 		],
-		
-		
+
+
 		//2004-12-13aSakexe
 		20050110: [
 			[PACKET.CZ.USE_SKILL,0x0072,26,8,16,22],
@@ -232,14 +232,14 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.REQUEST_ACT,0x0190,20,9,19],
 			[PACKET.CZ.CLOSE_STORE,0x0193,2,0],
 		],
-		
-		
+
+
 		//2005-04-25aSakexe
 		20050425: [
 			[PACKET.CZ.COMMAND_MER,0x022d,5,2,4],
 		],
-		
-		
+
+
 		//2005-05-09aSakexe
 		20050509: [
 			[PACKET.CZ.USE_SKILL,0x0072,25,6,10,21],
@@ -258,14 +258,14 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.ITEM_THROW,0x0116,10,5,8],
 			[PACKET.CZ.REQUEST_ACT,0x0190,19,5,18],
 		],
-		
-		
+
+
 		//2005-05-30aSakexe
 		20050608: [
 			[PACKET.CZ.ACK_STORE_PASSWORD,0x023b,36,2,4,20],
 		],
-		
-		
+
+
 		//2005-06-08aSakexe
 		20050628: [
 			[PACKET.CZ.USE_SKILL,0x0072,34,6,17,30],
@@ -284,8 +284,8 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.ITEM_THROW,0x0116,12,3,10],
 			[PACKET.CZ.REQUEST_ACT,0x0190,24,11,23],
 		],
-		
-		
+
+
 		//2005-07-18aSakexe
 		20050718: [
 			[PACKET.CZ.USE_SKILL,0x0072,19,5,11,15],
@@ -304,8 +304,8 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.ITEM_THROW,0x0116,12,6,10],
 			[PACKET.CZ.REQUEST_ACT,0x0190,21,5,20],
 		],
-		
-		
+
+
 		//2005-07-19bSakexe
 		20050719: [
 			[PACKET.CZ.USE_SKILL,0x0072,34,6,17,30],
@@ -324,8 +324,8 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.ITEM_THROW,0x0116,12,3,10],
 			[PACKET.CZ.REQUEST_ACT,0x0190,24,11,23],
 		],
-		
-		
+
+
 		//2006-03-27aSakexe
 		20060327: [
 			[PACKET.CZ.USE_SKILL,0x0072,26,11,18,22],
@@ -344,8 +344,8 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.ITEM_THROW,0x0116,17,8,15],
 			[PACKET.CZ.REQUEST_ACT,0x0190,18,7,17],
 		],
-		
-		
+
+
 		//2007-01-08aSakexe
 		20070108: [
 			[PACKET.CZ.USE_SKILL,0x0072,30,10,14,26],
@@ -364,8 +364,8 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.ITEM_THROW,0x0116,19,11,17],
 			[PACKET.CZ.REQUEST_ACT,0x0190,10,4,9],
 		],
-		
-		
+
+
 		//2007-02-12aSakexe
 		20070212: [
 			[PACKET.CZ.USE_SKILL,0x0072,25,6,10,21],
@@ -384,27 +384,27 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.ITEM_THROW,0x0116,10,5,8],
 			[PACKET.CZ.REQUEST_ACT,0x0190,19,5,18],
 		],
-		
-		
+
+
 		//2007-05-07aSakexe
 		20070507: [
 			[PACKET.CZ.REQ_ITEMREPAIR,0x01fd,15,2],
 		],
-		
-		
+
+
 		//2007-02-27aSakexe to 2007-10-02aSakexe
 		20070227: [
 			[PACKET.CZ.PC_BUY_CASH_POINT_ITEM,0x0288,10,2,4,6],
 			[PACKET.CZ.REQ_JOIN_GROUP,0x02c4,26,2],
 		],
-		
-		
+
+
 		//2008-01-02aSakexe
 		20080102: [
 			[PACKET.CZ.REQ_ACCOUNTNAME,0x01df,6,2],
 		],
-		
-		
+
+
 		//2008-09-10aSakexe
 		20080910: [
 			[PACKET.CZ.ENTER,0x0436,19,2,6,10,14,18],
@@ -412,8 +412,8 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.USE_SKILL,0x0438,10,2,4,6],
 			[PACKET.CZ.USE_ITEM,0x0439,8,2,4],
 		],
-		
-		
+
+
 		//2008-08-27aRagexeRE
 		20080827: [
 			[PACKET.CZ.USE_SKILL,0x0072,22,9,15,18],
@@ -432,69 +432,70 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.ITEM_THROW,0x0116,17,6,15],
 			[PACKET.CZ.REQUEST_ACT,0x0190,23,9,22],
 		],
-		
+
+
 		//2009-08-18aRagexeRE
 		20090818: [
 			[PACKET.CZ.ITEMLISTWIN_RES,0x07e4,-1,2,4,8],
 		],
-		
-		
+
+
 		//2009-10-27aRagexeRE
 		20091027: [
 			[PACKET.CZ.REQ_ACCOUNTNAME,0x07f5,6,2],
 		],
-		
-		
+
+
 		//2009-12-22aRagexeRE
 		20091222: [
 			[PACKET.CZ.PARTY_BOOKING_REQ_REGISTER,0x0802,18,2,4,6],
 			[PACKET.CZ.PARTY_BOOKING_REQ_DELETE,0x0806,4,2],
 		],
-		
-		
+
+
 		//2009-12-29aRagexeRE
 		20091229: [
 			[PACKET.CZ.PARTY_BOOKING_REQ_SEARCH,0x0804,14,2,4,6,8,12],
 			[PACKET.CZ.PARTY_BOOKING_REQ_DELETE,0x0806,2,0],
 			[PACKET.CZ.PARTY_BOOKING_REQ_DELETE,0x0808,14,2],
 		],
-		
-		
-		
+
+
+
 		//2010-03-03aRagexeRE
 		20100303: [
 			[PACKET.CZ.REQ_OPEN_BUYING_STORE,0x0811,-1,2,4,8,9,89],
 		],
-		
-		
+
+
 		//2010-04-20aRagexeRE
 		20100420: [
 			[PACKET.CZ.REQ_CLOSE_BUYING_STORE,0x0815,2,0],
 			[PACKET.CZ.REQ_CLICK_TO_BUYING_STORE,0x0817,6,2],
 			[PACKET.CZ.REQ_TRADE_BUYING_STORE,0x0819,-1,2,4,8,12],
 		],
-		
-		
+
+
 		//2010-06-01aRagexeRE
 		20100601: [
 			[PACKET.CZ.SEARCH_STORE_INFO,0x0835,-1,2,4,5,9,13,14,15],
 		],
-		
-		
+
+
 		//2010-06-08aRagexeR
 		20100608: [
 			[PACKET.CZ.SEARCH_STORE_INFO_NEXT_PAGE,0x0838,2,0],
 			[PACKET.CZ.CLOSE_SEARCH_STORE_INFO,0x083B,2,0],
 			[PACKET.CZ.SSILIST_ITEM_CLICK,0x083C,12,2,6,10],
 		],
-		
-		
+
+
 		//2010-08-03aRagexeRE
 		20100803: [
 			[PACKET.CZ.REMOVE_AID_SSO,0x0843,6,2],
 		],
-		
-		
+
+
 		//2010-11-24aRagexeRE
 		20101124: [
 			[PACKET.CZ.PC_BUY_CASH_POINT_ITEM,0x0288,-1,4,8],
@@ -511,8 +512,8 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.REQNAME,0x0368,6,2],
 			[PACKET.CZ.REQNAME_BYGID,0x0369,6,2],
 		],
-		
-		
+
+
 		//2011-07-18aRagexe
 		20110718: [
 			//[clif->pCashShopOpen,0x0844,2,2],
@@ -521,8 +522,8 @@ define( ['./PacketStructure'], function( PACKET )
 			//[clif->pCashShopSchedule,0x08c9,2,0],
 			//[clif->pCashShopBuy,0x0848,-1,2],
 		],
-		
-		
+
+
 		//2011-10-05aRagexeRE
 		20111005: [
 			[PACKET.CZ.REQUEST_MOVE,0x0364,5,2],
@@ -542,8 +543,8 @@ define( ['./PacketStructure'], function( PACKET )
 			//[clif->pBGQueueRevokeReq,0x08da,26,2],
 			//[clif->pBGQueueBattleBeginAck,0x08e0,51,2],
 		],
-		
-		
+
+
 		//2011-11-02aRagexe
 		20111102: [
 			[PACKET.CZ.ADD_FRIENDS,0x0436,26,2],
@@ -563,8 +564,8 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.SEARCH_STORE_INFO_NEXT_PAGE,0x088b,2,0],
 			[PACKET.CZ.SSILIST_ITEM_CLICK,0x08a2,12,2,6,10],
 		],
-		
-		
+
+
 		//2012-03-07fRagexeRE
 		20120307: [
 			[PACKET.CZ.ENTER,0x086A,19,2,6,10,14,18],
@@ -596,8 +597,8 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.SSILIST_ITEM_CLICK,0x0838,12,2,6,10],
 			[PACKET.CZ.USE_ITEM,0x0439,8,2,4],
 		],
-		
-		
+
+
 		//2012-04-10aRagexeRE
 		20120410: [
 			[PACKET.CZ.REQ_ITEMREPAIR,0x01FD,15,2],
@@ -639,8 +640,8 @@ define( ['./PacketStructure'], function( PACKET )
 			//[clif->pDull,0x08FB,6,2],
 			//[clif->pMoveItem,0x0907,5,2,4],
 		],
-		
-		
+
+
 		//2012-04-18aRagexeRE
 		20120418: [
 			[PACKET.CZ.ADD_FRIENDS,0x023B,26,2],
@@ -659,8 +660,8 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.REQNAME_BYGID,0x0368,6,2],
 			[PACKET.CZ.PARTY_BOOKING_REQ_REGISTER,0x08E5,41,2,4],
 		],
-		
-		
+
+
 		//2012-07-02aRagexeRE
 		20120702: [
 			[PACKET.CZ.ENTER,0x0363,19,2,6,10,14,18],
@@ -678,14 +679,14 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.REQUEST_MOVE,0x0953,5,2],
 			[PACKET.CZ.CHANGE_DIRECTION,0x0960,5,2,4],
 		],
-		
-		
+
+
 		//2012-07-10
 		20120710: [
 			[PACKET.CZ.REQ_CLOSE_BUYING_STORE,0x0886,2,0],
 		],
-		
-		
+
+
 		//2012-07-16aRagExe
 		20120716: [
 			[PACKET.CZ.MOVE_ITEM_FROM_STORE_TO_BODY,0x0364,8,2,4],
@@ -718,8 +719,8 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.REQNAME,0x096A,6,2],
 			[PACKET.CZ.REQNAME_BYGID,0x0368,6,2],
 		],
-		
-		
+
+
 		//2013-03-20Ragexe
 		20130320: [
 			[PACKET.CZ.REQUEST_ACT,0x088E,7,2,6],
@@ -751,8 +752,8 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.ACK_STORE_PASSWORD,0x0947,36,0],
 			[PACKET.CZ.REQ_WEAR_EQUIP,0x0998,8,2,4],
 		],
-		
-		
+
+
 		//2013-05-15aRagexe
 		20130515: [
 			[PACKET.CZ.REQUEST_ACT,0x0369,7,2,6],
@@ -783,8 +784,8 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.COMMAND_MER,0x0931,5,2,4],
 			[PACKET.CZ.ACK_STORE_PASSWORD,0x093E,36,0],
 		],
-		
-		
+
+
 		//2013-05-22Ragexe
 		20130522: [
 			[PACKET.CZ.REQUEST_ACT,0x08A2,7,2,6],
@@ -901,8 +902,8 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.COMMAND_MER,0x093A,5,2,4],
 			[PACKET.CZ.ACK_STORE_PASSWORD,0x0964,36,0],
 		],
-	
-	
+
+
 		//2013-06-18Ragexe
 		20130618: [
 			[PACKET.CZ.REQUEST_ACT,0x0889,7,2,6],
@@ -939,8 +940,8 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.COMMAND_MER,0x02C4,5,2,4],
 			[PACKET.CZ.ACK_STORE_PASSWORD,0x0864,36,0],
 		],
-	
-	
+
+
 		//2013-06-26Ragexe
 		20130626: [
 			[PACKET.CZ.REQUEST_ACT,0x0369,7,2,6],
@@ -977,26 +978,8 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.COMMAND_MER,0x0960,5,2,4],
 			[PACKET.CZ.ACK_STORE_PASSWORD,0x0930,36,0],
 		],
-	
-	
-		// Bank system
-		20130724: [
-	/*
-			[0x09A6,12], // ZC_BANKING_CHECK
-			[0x09A7,10,clif->pBankDeposit,2,4,6],
-			[0x09A8,16], // ZC_ACK_BANKING_DEPOSIT
-			[0x09A9,10,clif->pBankWithdraw,2,4,6],
-			[0x09AA,16], // ZC_ACK_BANKING_WITHDRAW
-			[0x09AB,6,clif->pBankCheck,2,4],
 
-			[0x09B6,6,clif->pBankOpen,2,4],
-			[0x09B7,4], // ZC_ACK_OPEN_BANKING
-			[0x09B8,6,clif->pBankClose,2,4],
-			[0x09B9,4], // ZC_ACK_CLOSE_BANKING
-	*/
-		],
-	
-	
+
 		//2013-07-03Ragexe
 		20130703: [
 			[PACKET.CZ.CHANGE_DIRECTION,0x0930,5,2,4],
@@ -1022,8 +1005,26 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.ACK_STORE_PASSWORD,0x0873,36,0],
 			//[0x097C,4,clif->pRanklist],
 		],
-	
-	
+
+
+		// Bank system
+		20130724: [
+	/*
+			[0x09A6,12], // ZC_BANKING_CHECK
+			[0x09A7,10,clif->pBankDeposit,2,4,6],
+			[0x09A8,16], // ZC_ACK_BANKING_DEPOSIT
+			[0x09A9,10,clif->pBankWithdraw,2,4,6],
+			[0x09AA,16], // ZC_ACK_BANKING_WITHDRAW
+			[0x09AB,6,clif->pBankCheck,2,4],
+
+			[0x09B6,6,clif->pBankOpen,2,4],
+			[0x09B7,4], // ZC_ACK_OPEN_BANKING
+			[0x09B8,6,clif->pBankClose,2,4],
+			[0x09B9,4], // ZC_ACK_CLOSE_BANKING
+	*/
+		],
+
+
 		//2013-08-07Ragexe
 		20130807: [
 			[PACKET.CZ.REQUEST_ACT,0x0369,7,2,6],
@@ -1144,9 +1145,30 @@ define( ['./PacketStructure'], function( PACKET )
 
 		// 2013-12-23cRagexe
 		20131223: [
+			[PACKET.CZ.REQUEST_ACT,0x0369,7,2,6],
+			[PACKET.CZ.USE_SKILL,0x083C,10,2,4,6],
+			[PACKET.CZ.REQUEST_MOVE,0x0437,5,2],
+			[PACKET.CZ.REQUEST_TIME,0x035F,6,2],
 			[PACKET.CZ.CHANGE_DIRECTION,0x0202,5,2,4],
+			[PACKET.CZ.ITEM_PICKUP,0x07E4,6,2],
+			[PACKET.CZ.ITEM_THROW,0x0362,6,2,4],
+			[PACKET.CZ.MOVE_ITEM_FROM_BODY_TO_STORE,0x07EC,8,2,4],
+			[PACKET.CZ.MOVE_ITEM_FROM_STORE_TO_BODY,0x0364,8,2,4],
+			[PACKET.CZ.USE_SKILL_TOGROUND,0x0438,10,2,4,6,8],
+			[PACKET.CZ.USE_SKILL_TOGROUNDMoreInfo,0x0366,90,2,4,6,8,10],
+			[PACKET.CZ.REQNAME,0x096A,6,2],
+			[PACKET.CZ.REQNAME_BYGID,0x0368,6,2],
+			[PACKET.CZ.SSILIST_ITEM_CLICK,0x0838,12,2,6,10],
+			[PACKET.CZ.SEARCH_STORE_INFO_NEXT_PAGE,0x0835,2,0],
+			[PACKET.CZ.SEARCH_STORE_INFO,0x0819,-1,2,4,5,9,13,14,15],
 			[PACKET.CZ.REQ_TRADE_BUYING_STORE,0x0811,-1,2,4,8,12],
+			[PACKET.CZ.REQ_CLICK_TO_BUYING_STORE,0x0360,6,2],
+			[PACKET.CZ.REQ_CLOSE_BUYING_STORE,0x0817,2,0],
+			[PACKET.CZ.REQ_OPEN_BUYING_STORE,0x0815,-1,2,4,8,9,89],
+			[PACKET.CZ.PARTY_BOOKING_REQ_REGISTER,0x0365,18,2,4],
+			[PACKET.CZ.ITEMLISTWIN_RES,0x0281,-1,2,4,8],
 			[PACKET.CZ.ENTER,0x022d,19,2,6,10,14,18],
+			[PACKET.CZ.PARTY_JOIN_REQ,0x0802,26,2],
 			[PACKET.CZ.ADD_FRIENDS,0x023B,26,2],
 			[PACKET.CZ.COMMAND_MER,0x0361,5,2,4],
 			[PACKET.CZ.ACK_STORE_PASSWORD,0x08A4,36,0],
@@ -1179,7 +1201,7 @@ define( ['./PacketStructure'], function( PACKET )
 			// packet(0x093E,8); // CZ_JOIN_BATTLE_FIELD
 			[PACKET.CZ.ITEMLISTWIN_RES,0x022D,-1,2,4,8],
 			[PACKET.CZ.ENTER,0x089C,19,2,6,10,14,18],
-			[PACKET.CZ.PARTY_JOIN_REQ,0x088A9,26,2],
+			[PACKET.CZ.PARTY_JOIN_REQ,0x08A9,26,2],
 			// packet(0x087E,4); // CZ_GANGSI_RANK
 			[PACKET.CZ.ADD_FRIENDS,0x0943,26,2],
 			[PACKET.CZ.COMMAND_MER,0x0949,5,2,4],
@@ -1252,7 +1274,6 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.ADD_FRIENDS,0x023B,26,2],
 			[PACKET.CZ.COMMAND_MER,0x0361,5,2,4],
 			[PACKET.CZ.ACK_STORE_PASSWORD,0x0938,36,0],
-			// packet(0x09df,7);
 		],
 
 
@@ -1282,12 +1303,13 @@ define( ['./PacketStructure'], function( PACKET )
 			// packet(0x0363,8); // CZ_JOIN_BATTLE_FIELD
 			[PACKET.CZ.ITEMLISTWIN_RES,0x0281,-1,2,4,8],
 			[PACKET.CZ.ENTER,0x0438,19,2,6,10,14,18],
-			[PACKET.CZ.PARTY_JOIN_REQ,26,0x0802,2],
+			[PACKET.CZ.PARTY_JOIN_REQ,0x0802,26,2],
 			// packet(0x0878,4); // CZ_GANGSI_RANK
 			[PACKET.CZ.ADD_FRIENDS,0x07E4,26,2],
 			[PACKET.CZ.COMMAND_MER,0x0934,5,2,4],
-			[PACKET.CZ.ACK_STORE_PASSWORD,0x095e,36,0]
+			[PACKET.CZ.ACK_STORE_PASSWORD,0x095e,36,0],
 		],
+
 
 		// 2014-04-02gRagexe
 		20140402: [
@@ -1319,8 +1341,9 @@ define( ['./PacketStructure'], function( PACKET )
 			// packet(0x088C,4); // CZ_GANGSI_RANK
 			[PACKET.CZ.ADD_FRIENDS,0x089A,26,2],
 			[PACKET.CZ.COMMAND_MER,0x0896,5,2,4],
-			[PACKET.CZ.ACK_STORE_PASSWORD,0x0926,36,0]
+			[PACKET.CZ.ACK_STORE_PASSWORD,0x0926,36,0],
 		],
+
 
 		// 2014-04-16aRagexe
 		20140416: [
@@ -1352,21 +1375,34 @@ define( ['./PacketStructure'], function( PACKET )
 			// packet(0x0436,4); // CZ_GANGSI_RANK
 			[PACKET.CZ.ADD_FRIENDS,0x023B,26,2],
 			[PACKET.CZ.COMMAND_MER,0x0361,5,2,4],
-			[PACKET.CZ.ACK_STORE_PASSWORD,0x095C,36,0]
+			[PACKET.CZ.ACK_STORE_PASSWORD,0x095C,36,0],
 		],
+
 
 		// 2014-10-16aRagexe
 		20141016: [
 			[PACKET.CZ.CHANGE_DIRECTION,0x0967,5,2,4],
 			[PACKET.CZ.MOVE_ITEM_FROM_STORE_TO_BODY,0x022D,8,2,4],
+			// packet(0x0363,8); // CZ_JOIN_BATTLE_FIELD
 			[PACKET.CZ.ENTER,0x086E,19,2,6,10,14,18],
 			// packet(0x0922,4); // CZ_GANGSI_RANK
 			[PACKET.CZ.ADD_FRIENDS,0x094B,26,2],
 			[PACKET.CZ.COMMAND_MER,0x0364,5,2,4],
-			[PACKET.CZ.ACK_STORE_PASSWORD,0x0936,36,0]
+			[PACKET.CZ.ACK_STORE_PASSWORD,0x0936,36,0],
 			// packet(0x09DF,7);
 			// packet(0x0a00,269);
+			// packet(0x0A19,2,clif->pRouletteOpen,0);     // HEADER_CZ_REQ_OPEN_ROULETTE
+			// packet(0x0A1A,23);                          // HEADER_ZC_ACK_OPEN_ROULETTE
+			// packet(0x0A1B,2,clif->pRouletteInfo,0);     // HEADER_CZ_REQ_ROULETTE_INFO
+			// packet(0x0A1C,-1);                          // HEADER_ZC_ACK_ROULEITTE_INFO
+			// packet(0x0A1D,2,clif->pRouletteClose,0);    // HEADER_CZ_REQ_CLOSE_ROULETTE
+			// packet(0x0A1E,3);                           // HEADER_ZC_ACK_CLOSE_ROULETTE
+			// packet(0x0A1F,2,clif->pRouletteGenerate,0); // HEADER_CZ_REQ_GENERATE_ROULETTE
+			// packet(0x0A20,21);                          // HEADER_ZC_ACK_GENERATE_ROULETTE
+			// packet(0x0A21,3,clif->pRouletteRecvItem,2); // HEADER_CZ_RECV_ROULETTE_ITEM
+			// packet(0x0A22,5);                           // HEADER_ZC_RECV_ROULETTE_ITEM
 		],
+
 
 		// 2014-10-22bRagexe
 		20141022: [
@@ -1374,7 +1410,7 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.ITEM_PICKUP,0x094E,6,2],
 			[PACKET.CZ.ITEM_THROW,0x087D,6,2,4],
 			[PACKET.CZ.MOVE_ITEM_FROM_BODY_TO_STORE,0x0878,8,2,4],
-			[PACKET.CZ.MOVE_ITEM_FROM_STORE_TO_BODY,0x0811,8,2,4],
+			[PACKET.CZ.MOVE_ITEM_FROM_STORE_TO_BODY,0x08AA,8,2,4],
 			[PACKET.CZ.USE_SKILL_TOGROUND,0x023B,10,2,4,6,8],
 			[PACKET.CZ.SSILIST_ITEM_CLICK,0x0835,12,2,6,10],
 			[PACKET.CZ.SEARCH_STORE_INFO_NEXT_PAGE,0x0940,2,0],
@@ -1385,7 +1421,63 @@ define( ['./PacketStructure'], function( PACKET )
 			// packet(0x08AB,4); // CZ_GANGSI_RANK
 			[PACKET.CZ.ADD_FRIENDS,0x091A,26,2],
 			[PACKET.CZ.COMMAND_MER,0x0899,5,2,4],
-			[PACKET.CZ.ACK_STORE_PASSWORD,0x0438,36,0]
+			[PACKET.CZ.ACK_STORE_PASSWORD,0x0438,36,0],
+		],
+
+
+		// 2015-05-13aRagexe
+		20150513: [
+			[PACKET.CZ.CHANGE_DIRECTION,0x0924,5,2,4],
+			[PACKET.CZ.ITEM_PICKUP,0x0958,6,2],
+			[PACKET.CZ.ITEM_THROW,0x0885,6,2,4],
+			[PACKET.CZ.MOVE_ITEM_FROM_BODY_TO_STORE,0x0879,8,2,4],
+			[PACKET.CZ.MOVE_ITEM_FROM_STORE_TO_BODY,0x0864,8,2,4],
+			[PACKET.CZ.USE_SKILL_TOGROUND,0x0438,10,2,4,6,8],
+			[PACKET.CZ.SSILIST_ITEM_CLICK,0x0838,12,2,6,10],
+			[PACKET.CZ.SEARCH_STORE_INFO_NEXT_PAGE,0x0835,2,0],
+			[PACKET.CZ.REQ_CLOSE_BUYING_STORE,0x022D,2,0],
+			[PACKET.CZ.PARTY_BOOKING_REQ_REGISTER,0x0883,18,2,4],
+			// packet(0x02C4,8); // CZ_JOIN_BATTLE_FIELD
+			[PACKET.CZ.ITEMLISTWIN_RES,0x0960,-1,2,4,8],
+			[PACKET.CZ.ENTER,0x0363,19,2,6,10,14,18],
+			[PACKET.CZ.PARTY_JOIN_REQ,0x094A,26,2],
+			// packet(0x0927,4); // CZ_GANGSI_RANK
+			[PACKET.CZ.ADD_FRIENDS,0x08A8,26,2],
+			[PACKET.CZ.COMMAND_MER,0x0817,5,2,4],
+			[PACKET.CZ.ACK_STORE_PASSWORD,0x0923,36,0],
+			// packet(0x09e8,11); //CZ_OPEN_MAILBOX
+			// packet(0x0a2e,6); //TITLE
+		],
+
+		// 20170000
+		20170000: [
+			[PACKET.CZ.REQUEST_ACT,0x089D,7,2,6],
+			[PACKET.CZ.USE_SKILL,0x0968,10,2,4,6],
+			[PACKET.CZ.REQUEST_MOVE,0x08A2,5,2],
+			[PACKET.CZ.REQUEST_TIME,0x085B,6,2],
+			[PACKET.CZ.CHANGE_DIRECTION,0x022D,5,2,4],
+			[PACKET.CZ.ITEM_PICKUP,0x08A9,6,2],
+			[PACKET.CZ.ITEM_THROW,0x0966,6,2,4],
+			[PACKET.CZ.MOVE_ITEM_FROM_BODY_TO_STORE,0x08AC,8,2,4],
+			[PACKET.CZ.MOVE_ITEM_FROM_STORE_TO_BODY,0x0864,8,2,4],
+			[PACKET.CZ.USE_SKILL_TOGROUND,0x0865,10,2,4,6,8],
+			[PACKET.CZ.USE_SKILL_TOGROUNDMoreInfo,0x0874,90,2,4,6,8,10],
+			[PACKET.CZ.REQNAME,0x088B,6,2],
+			[PACKET.CZ.REQNAME_BYGID,0x089E,6,2],
+			[PACKET.CZ.SSILIST_ITEM_CLICK,0x0436,12,2,6,10],
+			[PACKET.CZ.SEARCH_STORE_INFO_NEXT_PAGE,0x0960,2,0],
+			[PACKET.CZ.SEARCH_STORE_INFO,0x0944,-1,2,4,5,9,13,14,15],
+			[PACKET.CZ.REQ_TRADE_BUYING_STORE,0x0954,-1,2,4,8,12],
+			[PACKET.CZ.REQ_CLICK_TO_BUYING_STORE,0x0361,6,2],
+			[PACKET.CZ.REQ_CLOSE_BUYING_STORE,0x083C,2,0],
+			[PACKET.CZ.REQ_OPEN_BUYING_STORE,0x0870,-1,2,4,8,9,89],
+			[PACKET.CZ.PARTY_BOOKING_REQ_REGISTER,0x0365,18,2,4],
+			[PACKET.CZ.ITEMLISTWIN_RES,0x0949,-1,2,4,8],
+			[PACKET.CZ.ENTER,0x0947,19,2,6,10,14,18],
+			[PACKET.CZ.PARTY_JOIN_REQ,0x086E,26,2],
+			[PACKET.CZ.ADD_FRIENDS,0x091D,26,2],
+			[PACKET.CZ.COMMAND_MER,0x0362,5,2,4],
+			[PACKET.CZ.ACK_STORE_PASSWORD,0x0885,36,0],
 		],
 	};
 });

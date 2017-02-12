@@ -199,7 +199,7 @@ define(function(require)
 			_chargen.entity.head,
 			_chargen.entity.headpalette,
 			_chargen.entity.sex,
-			33,
+			0,
 			parseJobClass( ui.find('.jobname').text())
 		);
 	}

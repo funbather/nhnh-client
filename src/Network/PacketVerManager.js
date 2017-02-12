@@ -113,35 +113,15 @@ define(['Core/Configs'], function( Configs )
 		}
 
 		var i, count, out = [];
-		var blockSize = 151;//Configs.get('charBlockSize') || calculateBlockSize();
+		var blockSize = 151;
 		var length = end - fp.tell();
 
 		// Nothing to parse
 		if (length <= 0) {
 			return out;
 		}
-
-		// Invalid blocksize...
-		if (!blockSize || length % blockSize) {
-			console.error('CHARACTER_INFO size error!! blockSize : "'+ blockSize +'", list length: ' + length + ', auto-detect...');
-
-			var knownSize = [106, 108, 112, 116, 124, 128, 132, 136, 140, 144, 146, 147, 151];
-			var matches = [];
-
-			for (i = 0, count = knownSize.length; i < count; ++i) {
-				if ((length % knownSize[i]) === 0) {
-					matches.push(knownSize[i]);
-				}
-			}
-
-			// No result, or multiple ones...
-			if (matches.length !== 1) {
-				require('UI/UIManager').showErrorBox('CHARACTER_INFO size error!! blockSize : "'+ blockSize +'", list length: ' + length + ', auto-detect...');
-				return out;
-			}
-
-			blockSize = matches[0];
-		}
+		
+		// Removed blocksize checks, there will only ever be one (1) size at a time
 
 		for (i = 0, count = length / blockSize; i < count; ++i) {
 			out[i] = {};
@@ -156,24 +136,15 @@ define(['Core/Configs'], function( Configs )
 			out[i].virtue = fp.readLong();
 			out[i].honor = fp.readLong();
 			out[i].jobpoint = fp.readShort();
-
-			if (blockSize < 112) {
-				out[i].hp = fp.readShort();
-				out[i].maxhp = fp.readShort();
-			} else {
-				out[i].hp = fp.readLong();
-				out[i].maxhp = fp.readLong();
-			}
-
+			out[i].hp = fp.readLong();
+			out[i].maxhp = fp.readLong();
 			out[i].sp = fp.readShort();
 			out[i].maxsp = fp.readShort();
 			out[i].speed = fp.readShort();
 			out[i].job = fp.readShort();
 			out[i].head = fp.readShort();
-
 			out[i].weapon = fp.readShort(); // There are two blank bytes here in the packet for some reason?
 			out[i].weapon = fp.readShort(); // Just eat it and continue. (char_mmo_char_tobuf)
-
 			out[i].level = fp.readShort();
 			out[i].sppoint = fp.readShort();
 			out[i].accessory = fp.readShort();
@@ -189,48 +160,16 @@ define(['Core/Configs'], function( Configs )
 			out[i].Int = fp.readUChar();
 			out[i].Dex = fp.readUChar();
 			out[i].Luk = fp.readUChar();
-
-			if (blockSize < 108) {
-				out[i].CharNum = fp.readUShort();
-			}
-			else if (blockSize < 124) {
-				out[i].CharNum = fp.readUShort();
-				out[i].haircolor = fp.readUShort();
-			}
-			else {
-				out[i].CharNum = fp.readUChar();
-				out[i].haircolor = fp.readUChar();
-			}
-
-			if (blockSize === 116) {
-				fp.seek(0x04, SEEK_CUR); // unknown
-			}
-
-			if (blockSize >= 124) {
-				out[i].bIsChangedCharName = fp.readShort();
-				out[i].lastMap = fp.readBinaryString(blockSize === 124 ? 12 : 16);
-			}
-
-			if (blockSize >= 132) {
-				out[i].DeleteDate = fp.readLong();
-			}
-
-			if (blockSize >= 136) {
-				out[i].Robe = fp.readLong();
-			}
-
-			if (blockSize >= 140) {
-				out[i].SlotAddon = fp.readLong();
-			}
-
-			if (blockSize >= 144) {
-				out[i].RenameAddon = fp.readLong();
-			}
-
-			if (blockSize >= 147) {
-				out[i].sex = fp.readUChar();
-				out[i].classes = fp.readLong();
-			}
+			out[i].CharNum = fp.readUChar();
+			out[i].haircolor = fp.readUChar();
+			out[i].bIsChangedCharName = fp.readShort();
+			out[i].lastMap = fp.readBinaryString(16);
+			out[i].DeleteDate = fp.readLong();
+			out[i].Robe = fp.readLong();
+			out[i].SlotAddon = fp.readLong();
+			out[i].RenameAddon = fp.readLong();
+			out[i].sex = fp.readUChar();
+			out[i].classes = fp.readLong();
 		}
 
 		return out;
