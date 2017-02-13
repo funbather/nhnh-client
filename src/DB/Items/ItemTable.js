@@ -13,7 +13,7 @@ define(function()
 
 
 	return {
-			"50000": {
+			"1": {
 			"identifiedDisplayName": "Iron Lamellar",
 			"identifiedResourceName": "\xbe\xc6\xb8\xd3",
 			"identifiedDescriptionName": [
@@ -30,7 +30,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-			"50001": {
+			"2": {
 			"identifiedDisplayName": "Steel Chainmail",
 			"identifiedResourceName": "\xb8\xde\xc0\xcf",
 			"identifiedDescriptionName": [
@@ -47,7 +47,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-			"50002": {
+			"3": {
 			"identifiedDisplayName": "Tempered Platemail",
 			"identifiedResourceName": "\xc7\xc3\xb7\xb9\xc0\xcc\xc6\xae",
 			"identifiedDescriptionName": [
@@ -64,7 +64,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-			"50003": {
+			"4": {
 			"identifiedDisplayName": "Ironweave Coat",
 			"identifiedResourceName": "\xb8\xc7\xc6\xb2",
 			"identifiedDescriptionName": [
@@ -83,7 +83,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-			"50004": {
+			"5": {
 			"identifiedDisplayName": "Runic Doublet",
 			"identifiedResourceName": "\xc3\xb5\xbb\xe7\xc0\xc7\xb0\xa1\xc8\xa3",
 			"identifiedDescriptionName": [
@@ -102,7 +102,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-			"50005": {
+			"6": {
 			"identifiedDisplayName": "Battlemage Regalia",
 			"identifiedResourceName": "\xbf\xc0\xb5\xf2\xc0\xc7\xc3\xe0\xba\xb9",
 			"identifiedDescriptionName": [
@@ -121,7 +121,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-			"50006": {
+			"7": {
 			"identifiedDisplayName": "Apprentice Robe",
 			"identifiedResourceName": "\xb7\xd5\xc4\xda\xc6\xae",
 			"identifiedDescriptionName": [
@@ -142,7 +142,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-			"50007": {
+			"8": {
 			"identifiedDisplayName": "Spellweave Gown",
 			"identifiedResourceName": "\xc0\xce\xc5\xa9\xb7\xb9\xb5\xf0\xba\xed\xbf\xdc\xc5\xf5",
 			"identifiedDescriptionName": [
@@ -163,7 +163,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-			"50008": {
+			"9": {
 			"identifiedDisplayName": "Arcane Raiment",
 			"identifiedResourceName": "\xc5\xa9\xb8\xb2\xc1\xf0\xb7\xce\xba\xea",
 			"identifiedDescriptionName": [
@@ -184,7 +184,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-			"50009": {
+			"10": {
 			"identifiedDisplayName": "Iron Buckler",
 			"identifiedResourceName": "\xb9\xf6\xc5\xac\xb7\xaf",
 			"identifiedDescriptionName": [
@@ -203,7 +203,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50010": {
+			"11": {
 			"identifiedDisplayName": "Kite Shield",
 			"identifiedResourceName": "\xbd\xaf\xb5\xe5",
 			"identifiedDescriptionName": [
@@ -222,7 +222,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50011": {
+			"12": {
 			"identifiedDisplayName": "Angelic Shield",
 			"identifiedResourceName": "\xc7\xc3\xb7\xa1\xc6\xbc\xb3\xd1\xbd\xaf\xb5\xe5",
 			"identifiedDescriptionName": [
@@ -241,7 +241,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50012": {
+			"13": {
 			"identifiedDisplayName": "Cantrip Spellbook",
 			"identifiedResourceName": "\xba\xcf",
 			"identifiedDescriptionName": [
@@ -260,7 +260,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50013": {
+			"14": {
 			"identifiedDisplayName": "Ancient Spellbook",
 			"identifiedResourceName": "\xc7\xf6\xc0\xda\xc0\xc7\xc0\xcf\xb1\xe2",
 			"identifiedDescriptionName": [
@@ -279,7 +279,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50014": {
+			"15": {
 			"identifiedDisplayName": "Magus Spellbook",
 			"identifiedResourceName": "\xb8\xde\xb8\xf0\xb6\xf3\xc0\xcc\xc1\xee\xba\xcf",
 			"identifiedDescriptionName": [
@@ -298,7 +298,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50015": {
+			"16": {
 			"identifiedDisplayName": "Iron Gauntlets",
 			"identifiedResourceName": "\xb9\xce\xc3\xb8\xc0\xc7\xb1\xdb\xb7\xaf\xba\xea",
 			"identifiedDescriptionName": [
@@ -318,7 +318,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50016": {
+			"17": {
 			"identifiedDisplayName": "Steel Gauntlets",
 			"identifiedResourceName": "\xb8\xed\xbb\xe7\xbc\xf6\xc0\xc7\xc0\xe5\xb0\xa9",
 			"identifiedDescriptionName": [
@@ -338,7 +338,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50017": {
+			"18": {
 			"identifiedDisplayName": "Soldier Gauntlets",
 			"identifiedResourceName": "\xbc\xf6\xb6\xf3\xc0\xc7\xc0\xe5\xb0\xa9",
 			"identifiedDescriptionName": [
@@ -358,7 +358,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50018": {
+			"19": {
 			"identifiedDisplayName": "Woven Gloves",
 			"identifiedResourceName": "\xb1\xdb\xb7\xaf\xba\xea",
 			"identifiedDescriptionName": [
@@ -377,7 +377,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50019": {
+			"20": {
 			"identifiedDisplayName": "Leather Gloves",
 			"identifiedResourceName": "\xbb\xe7\xbc\xad\xc0\xc7\xc0\xe5\xb0\xa9",
 			"identifiedDescriptionName": [
@@ -396,7 +396,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50020": {
+			"21": {
 			"identifiedDisplayName": "Regal Gloves",
 			"identifiedResourceName": "\xbf\xc0\xb8\xa6\xb7\xb9\xbe\xd3\xc0\xc7\xc0\xe5\xb0\xa9",
 			"identifiedDescriptionName": [
@@ -415,7 +415,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50021": {
+			"22": {
 			"identifiedDisplayName": "Reinforced Belt",
 			"identifiedResourceName": "\xbd\xc3\xb3\xeb\xba\xf1\xc0\xc7\xc7\xe3\xb8\xae\xb6\xec",
 			"identifiedDescriptionName": [
@@ -431,7 +431,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50022": {
+			"23": {
 			"identifiedDisplayName": "Leather Belt",
 			"identifiedResourceName": "\xba\xa7\xc6\xae",
 			"identifiedDescriptionName": [
@@ -449,7 +449,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50023": {
+			"24": {
 			"identifiedDisplayName": "Silken Sash",
 			"identifiedResourceName": "\xb8\xf1\xba\xb8\xc8\xa3\xb4\xeb",
 			"identifiedDescriptionName": [
@@ -467,7 +467,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50024": {
+			"25": {
 			"identifiedDisplayName": "Layered Shawl",
 			"identifiedResourceName": "\xb8\xd3\xc7\xc3\xb7\xaf",
 			"identifiedDescriptionName": [
@@ -484,7 +484,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50025": {
+			"26": {
 			"identifiedDisplayName": "Wool Scarf",
 			"identifiedResourceName": "\xbf\xef\xbd\xba\xc4\xab\xc7\xc1",
 			"identifiedDescriptionName": [
@@ -501,7 +501,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50026": {
+			"27": {
 			"identifiedDisplayName": "Feathered Muffler",
 			"identifiedResourceName": "\xb8\xc5\xc0\xc7\xb3\xaf\xb0\xb3\xbf\xca",
 			"identifiedDescriptionName": [
@@ -518,7 +518,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50027": {
+			"28": {
 			"identifiedDisplayName": "Iron Spaulders",
 			"identifiedResourceName": "\xb0\xd4\xba\xea\xb3\xd7\xc0\xcc\xbe\xee\xb1\xfa\xc0\xe5\xbd\xc4",
 			"identifiedDescriptionName": [
@@ -537,7 +537,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50028": {
+			"29": {
 			"identifiedDisplayName": "Steel Pauldron",
 			"identifiedResourceName": "\xc6\xfa\xb5\xe5\xb7\xb1",
 			"identifiedDescriptionName": [
@@ -556,7 +556,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50029": {
+			"30": {
 			"identifiedDisplayName": "Runic Pauldron",
 			"identifiedResourceName": "\xbf\xec\xb8\xa3\xc0\xc7\xb8\xc1\xc5\xe4",
 			"identifiedDescriptionName": [
@@ -575,7 +575,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50030": {
+			"31": {
 			"identifiedDisplayName": "Leather Shoes",
 			"identifiedResourceName": "\xbd\xb4\xc1\xee",
 			"identifiedDescriptionName": [
@@ -592,7 +592,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50031": {
+			"32": {
 			"identifiedDisplayName": "Reinforced Shoes",
 			"identifiedResourceName": "\xc3\xca\xba\xb8\xc0\xda\xbf\xeb\xbd\xb4\xc1\xee",
 			"identifiedDescriptionName": [
@@ -609,7 +609,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50032": {
+			"33": {
 			"identifiedDisplayName": "Groundpounders",
 			"identifiedResourceName": "\xba\xf1\xb4\xd9\xb8\xa3\xc0\xc7\xba\xce\xc3\xf7",
 			"identifiedDescriptionName": [
@@ -626,7 +626,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50033": {
+			"34": {
 			"identifiedDisplayName": "Plated Boots",
 			"identifiedResourceName": "\xc7\xc1\xb8\xae\xc4\xda\xbd\xb4\xc1\xee",
 			"identifiedDescriptionName": [
@@ -645,7 +645,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50034": {
+			"35": {
 			"identifiedDisplayName": "Ironscale Boots",
 			"identifiedResourceName": "\xb0\xd4\xba\xea\xb3\xd7\xc0\xcc\xc0\xc7\xb1\xba\xc8\xad",
 			"identifiedDescriptionName": [
@@ -664,7 +664,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50035": {
+			"36": {
 			"identifiedDisplayName": "Steel Greaves",
 			"identifiedResourceName": "\xb1\xd7\xb8\xae\xba\xea",
 			"identifiedDescriptionName": [
@@ -683,7 +683,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50036": {
+			"37": {
 			"identifiedDisplayName": "Prayer Beads",
 			"identifiedResourceName": "\xb7\xce\xc0\xda\xb8\xae",
 			"identifiedDescriptionName": [
@@ -699,7 +699,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50037": {
+			"38": {
 			"identifiedDisplayName": "Ritual Incense",
 			"identifiedResourceName": "\xc7\xc7\xbb\xe7\xc7\xe2\xc6\xf7",
 			"identifiedDescriptionName": [
@@ -718,7 +718,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50038": {
+			"39": {
 			"identifiedDisplayName": "Crystalline Ring",
 			"identifiedResourceName": "\xb4\xd9\xc0\xcc\xbe\xc6\xb9\xdd\xc1\xf6",
 			"identifiedDescriptionName": [
@@ -734,7 +734,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50039": {
+			"40": {
 			"identifiedDisplayName": "Diamond Necklace",
 			"identifiedResourceName": "\xb3\xd7\xc5\xac\xb8\xae\xbd\xba",
 			"identifiedDescriptionName": [
@@ -753,7 +753,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50040": {
+			"41": {
 			"identifiedDisplayName": "Verdant Runestone",
 			"identifiedResourceName": "\xb7\xe9\xbd\xba\xc5\xe6_\xba\xa3\xb8\xa3\xc4\xab\xb3\xaa",
 			"identifiedDescriptionName": [
@@ -772,7 +772,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50041": {
+			"42": {
 			"identifiedDisplayName": "Warding Herbs",
 			"identifiedResourceName": "\xb5\xb6\xc3\xca_\xbd\xba\xc4\xda\xc6\xfa\xb8\xae\xbe\xc6",
 			"identifiedDescriptionName": [
@@ -788,7 +788,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50042": {
+			"43": {
 			"identifiedDisplayName": "Golden Coin",
 			"identifiedResourceName": "\xb0\xf1\xb5\xe5\xc4\xda\xc0\xce",
 			"identifiedDescriptionName": [
@@ -804,7 +804,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50043": {
+			"44": {
 			"identifiedDisplayName": "Badge of Valor",
 			"identifiedResourceName": "\xc0\xfc\xc5\xf5\xc8\xd6\xc0\xe5",
 			"identifiedDescriptionName": [
@@ -820,7 +820,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50044": {
+			"45": {
 			"identifiedDisplayName": "Silver Armlet",
 			"identifiedResourceName": "\xc0\xba\xbc\xbc\xb0\xf8\xc6\xc8\xc2\xee",
 			"identifiedDescriptionName": [
@@ -836,7 +836,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-			"50045": {
+			"46": {
 			"identifiedDisplayName": "Iron Bangle",
 			"identifiedResourceName": "\xbe\xc6\xc0\xcc\xbe\xf0\xb8\xae\xbd\xba\xc6\xae",
 			"identifiedDescriptionName": [
@@ -852,7 +852,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-		"51000": {
+		"100": {
 			"identifiedDisplayName": "Curved Blade",
 			"identifiedResourceName": "\xbd\xc3\xb9\xcc\xc5\xcd",
 			"identifiedDescriptionName": [
@@ -867,7 +867,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 2
 		},
-		"51001": {
+		"101": {
 			"identifiedDisplayName": "Arming Sword",
 			"identifiedResourceName": "\xbd\xba\xc5\xb8\xba\xed\xb7\xb9\xc0\xcc\xb5\xe5",
 			"identifiedDescriptionName": [
@@ -882,7 +882,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 2
 		},
-		"51002": {
+		"102": {
 			"identifiedDisplayName": "Hallowed Sabre",
 			"identifiedResourceName": "\xbc\xbc\xc0\xcc\xb9\xf6",
 			"identifiedDescriptionName": [
@@ -897,7 +897,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 2
 		},
-		"51003": {
+		"103": {
 			"identifiedDisplayName": "Cudgel",
 			"identifiedResourceName": "\xbd\xba\xb8\xc5\xbc\xc5",
 			"identifiedDescriptionName": [
@@ -912,7 +912,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 8
 		},
-		"51004": {
+		"104": {
 			"identifiedDisplayName": "Morningstar",
 			"identifiedResourceName": "\xb8\xf0\xb4\xd7\xbd\xba\xc5\xb8",
 			"identifiedDescriptionName": [
@@ -927,7 +927,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 8
 		},
-		"51005": {
+		"105": {
 			"identifiedDisplayName": "Aklys",
 			"identifiedResourceName": "\xc4\xab\xb8\xa3\xb0\xa1\xb8\xde\xc0\xcc\xbd\xba",
 			"identifiedDescriptionName": [
@@ -942,7 +942,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 8
 		},
-		"51006": {
+		"106": {
 			"identifiedDisplayName": "Spiritual Dagger",
 			"identifiedResourceName": "\xbe\xc6\xbd\xb4\xb6\xf3",
 			"identifiedDescriptionName": [
@@ -959,7 +959,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-		"51007": {
+		"107": {
 			"identifiedDisplayName": "Ceremonial Dagger",
 			"identifiedResourceName": "\xbf\xa1\xc0\xce\xbc\xc7\xc6\xae\xb4\xeb\xb0\xc5",
 			"identifiedDescriptionName": [
@@ -976,7 +976,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-		"51008": {
+		"108": {
 			"identifiedDisplayName": "Ivory Dagger",
 			"identifiedResourceName": "\xc7\xcf\xc4\xed\xc1\xf8",
 			"identifiedDescriptionName": [
@@ -993,7 +993,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 1
 		},
-		"51009": {
+		"109": {
 			"identifiedDisplayName": "Longsword",
 			"identifiedResourceName": "\xb9\xd9\xbd\xba\xc5\xb8\xb5\xe5\xbc\xd2\xb5\xe5",
 			"identifiedDescriptionName": [
@@ -1010,7 +1010,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 3
 		},
-		"51010": {
+		"110": {
 			"identifiedDisplayName": "Claymore",
 			"identifiedResourceName": "\xc5\xa9\xb7\xb9\xc0\xcc\xb8\xf0\xbe\xee",
 			"identifiedDescriptionName": [
@@ -1027,7 +1027,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 3
 		},
-		"51011": {
+		"111": {
 			"identifiedDisplayName": "Zweihander",
 			"identifiedResourceName": "\xc1\xee\xb9\xd9\xc0\xcc\xc7\xda\xb4\xf5",
 			"identifiedDescriptionName": [
@@ -1044,7 +1044,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 3
 		},
-		"51012": {
+		"112": {
 			"identifiedDisplayName": "Broadaxe",
 			"identifiedResourceName": "\xb9\xe8\xc6\xb2\xbe\xd7\xbd\xba",
 			"identifiedDescriptionName": [
@@ -1059,7 +1059,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 7
 		},
-		"51013": {
+		"113": {
 			"identifiedDisplayName": "Battleaxe",
 			"identifiedResourceName": "\xbf\xc0\xc5\xb0\xbd\xac\xbe\xd7\xbd\xba",
 			"identifiedDescriptionName": [
@@ -1074,7 +1074,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 7
 		},
-		"51014": {
+		"114": {
 			"identifiedDisplayName": "Grand Labrys",
 			"identifiedResourceName": "\xb1\xd7\xb7\xb9\xc0\xcc\xc6\xae\xbe\xd7\xbd\xba",
 			"identifiedDescriptionName": [
@@ -1089,7 +1089,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 7
 		},
-		"51015": {
+		"115": {
 			"identifiedDisplayName": "Cedar Bow",
 			"identifiedResourceName": "\xba\xb8\xbf\xec",
 			"identifiedDescriptionName": [
@@ -1104,7 +1104,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 11
 		},
-		"51016": {
+		"116": {
 			"identifiedDisplayName": "Composite Bow",
 			"identifiedResourceName": "\xb5\xb5\xb5\xcf\xc0\xc7\xc8\xb0",
 			"identifiedDescriptionName": [
@@ -1119,7 +1119,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 11
 		},
-		"51017": {
+		"117": {
 			"identifiedDisplayName": "Hunting Bow",
 			"identifiedResourceName": "\xc7\xe5\xc5\xcd\xba\xb8\xbf\xec",
 			"identifiedDescriptionName": [
@@ -1134,7 +1134,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 11
 		},
-		"51018": {
+		"118": {
 			"identifiedDisplayName": "Oak Staff",
 			"identifiedResourceName":  "\xb7\xd4\xb5\xe5",
 			"identifiedDescriptionName": [
@@ -1149,7 +1149,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 10
 		},
-		"51019": {
+		"119": {
 			"identifiedDisplayName": "Arcane Wand",
 			"identifiedResourceName": "\xbe\xc6\xc5\xa9\xbf\xcf\xb5\xe5",
 			"identifiedDescriptionName": [
@@ -1164,7 +1164,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 10
 		},
-		"51020": {
+		"120": {
 			"identifiedDisplayName": "Ruby Rod",
 			"identifiedResourceName": "\xc4\xa1\xc0\xaf\xc0\xc7\xc1\xf6\xc6\xce\xc0\xcc",
 			"identifiedDescriptionName": [
@@ -2661,7 +2661,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 10,
 		},
-		"55000": {
+		"500": {
 			"identifiedDisplayName": "Shard of Strength",
 			"identifiedResourceName": "\xc5\xa9\xb8\xae\xbd\xba\xc5\xbb\xc5\xb0",
 			"identifiedDescriptionName": [
@@ -2672,7 +2672,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"55001": {
+		"501": {
 			"identifiedDisplayName": "Shard of Agility",
 			"identifiedResourceName": "\xc5\xa9\xb8\xae\xbd\xba\xc5\xbb\xc5\xb0",
 			"identifiedDescriptionName": [
@@ -2683,7 +2683,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"55002": {
+		"502": {
 			"identifiedDisplayName": "Shard of Vitality",
 			"identifiedResourceName": "\xc5\xa9\xb8\xae\xbd\xba\xc5\xbb\xc5\xb0",
 			"identifiedDescriptionName": [
@@ -2694,7 +2694,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"55003": {
+		"503": {
 			"identifiedDisplayName": "Shard of Intelligence",
 			"identifiedResourceName": "\xc5\xa9\xb8\xae\xbd\xba\xc5\xbb\xc5\xb0",
 			"identifiedDescriptionName": [
@@ -2705,7 +2705,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"55004": {
+		"504": {
 			"identifiedDisplayName": "Shard of Mastery",
 			"identifiedResourceName": "\xc5\xa9\xb8\xae\xbd\xba\xc5\xbb\xc5\xb0",
 			"identifiedDescriptionName": [
@@ -2716,7 +2716,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"55005": {
+		"505": {
 			"identifiedDisplayName": "Shard of Luck",
 			"identifiedResourceName": "\xc5\xa9\xb8\xae\xbd\xba\xc5\xbb\xc5\xb0",
 			"identifiedDescriptionName": [
@@ -2727,7 +2727,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"55006": {
+		"506": {
 			"identifiedDisplayName": "Shard of Health",
 			"identifiedResourceName": "\xc5\xa9\xb8\xae\xbd\xba\xc5\xbb\xc5\xb0",
 			"identifiedDescriptionName": [
@@ -2738,7 +2738,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"55007": {
+		"507": {
 			"identifiedDisplayName": "Shard of Mana",
 			"identifiedResourceName": "\xc5\xa9\xb8\xae\xbd\xba\xc5\xbb\xc5\xb0",
 			"identifiedDescriptionName": [
@@ -2749,7 +2749,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"55008": {
+		"508": {
 			"identifiedDisplayName": "Shard of Defense",
 			"identifiedResourceName": "\xc5\xa9\xb8\xae\xbd\xba\xc5\xbb\xc5\xb0",
 			"identifiedDescriptionName": [
@@ -2760,7 +2760,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"55009": {
+		"509": {
 			"identifiedDisplayName": "Shard of Magic Defense",
 			"identifiedResourceName": "\xc5\xa9\xb8\xae\xbd\xba\xc5\xbb\xc5\xb0",
 			"identifiedDescriptionName": [
@@ -2771,7 +2771,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"55010": {
+		"510": {
 			"identifiedDisplayName": "Shard of Critical Chance",
 			"identifiedResourceName": "\xc5\xa9\xb8\xae\xbd\xba\xc5\xbb\xc5\xb0",
 			"identifiedDescriptionName": [
@@ -2782,7 +2782,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"55011": {
+		"511": {
 			"identifiedDisplayName": "Shard of Critical Damage",
 			"identifiedResourceName": "\xc5\xa9\xb8\xae\xbd\xba\xc5\xbb\xc5\xb0",
 			"identifiedDescriptionName": [
@@ -2793,7 +2793,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"55012": {
+		"512": {
 			"identifiedDisplayName": "Shard of Attack Speed",
 			"identifiedResourceName": "\xc5\xa9\xb8\xae\xbd\xba\xc5\xbb\xc5\xb0",
 			"identifiedDescriptionName": [
@@ -2804,7 +2804,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"55013": {
+		"513": {
 			"identifiedDisplayName": "Shard of Evasion",
 			"identifiedResourceName": "\xc5\xa9\xb8\xae\xbd\xba\xc5\xbb\xc5\xb0",
 			"identifiedDescriptionName": [
@@ -2815,7 +2815,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"55014": {
+		"514": {
 			"identifiedDisplayName": "Shard of Movespeed",
 			"identifiedResourceName": "\xc5\xa9\xb8\xae\xbd\xba\xc5\xbb\xc5\xb0",
 			"identifiedDescriptionName": [
@@ -2826,7 +2826,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"55015": {
+		"515": {
 			"identifiedDisplayName": "Shard of Health Regen",
 			"identifiedResourceName": "\xc5\xa9\xb8\xae\xbd\xba\xc5\xbb\xc5\xb0",
 			"identifiedDescriptionName": [
@@ -2837,7 +2837,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"55016": {
+		"516": {
 			"identifiedDisplayName": "Shard of Mana Regen",
 			"identifiedResourceName": "\xc5\xa9\xb8\xae\xbd\xba\xc5\xbb\xc5\xb0",
 			"identifiedDescriptionName": [
@@ -2848,7 +2848,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"55017": {
+		"517": {
 			"identifiedDisplayName": "Shard of Lifesteal",
 			"identifiedResourceName": "\xc5\xa9\xb8\xae\xbd\xba\xc5\xbb\xc5\xb0",
 			"identifiedDescriptionName": [
@@ -2859,7 +2859,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"55018": {
+		"518": {
 			"identifiedDisplayName": "Shard of Soulsteal",
 			"identifiedResourceName": "\xc5\xa9\xb8\xae\xbd\xba\xc5\xbb\xc5\xb0",
 			"identifiedDescriptionName": [
@@ -2870,7 +2870,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"55100": {
+		"600": {
 			"identifiedDisplayName": "Seal of Health",
 			"identifiedResourceName": "\xb8\xb6\xb7\xc2\xbc\xae_\xb3\xeb\xb6\xfb",
 			"identifiedDescriptionName": [
@@ -2881,7 +2881,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"55101": {
+		"601": {
 			"identifiedDisplayName": "Seal of Mana",
 			"identifiedResourceName": "\xb8\xb6\xb7\xc2\xbc\xae_\xb3\xeb\xb6\xfb",
 			"identifiedDescriptionName": [
@@ -2892,7 +2892,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"55102": {
+		"602": {
 			"identifiedDisplayName": "Seal of Lethality",
 			"identifiedResourceName": "\xb8\xb6\xb7\xc2\xbc\xae_\xb3\xeb\xb6\xfb",
 			"identifiedDescriptionName": [
@@ -2906,7 +2906,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"55103": {
+		"603": {
 			"identifiedDisplayName": "Seal of Aptitude",
 			"identifiedResourceName": "\xb8\xb6\xb7\xc2\xbc\xae_\xb3\xeb\xb6\xfb",
 			"identifiedDescriptionName": [
@@ -2917,7 +2917,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"55104": {
+		"604": {
 			"identifiedDisplayName": "Seal of Body",
 			"identifiedResourceName": "\xb8\xb6\xb7\xc2\xbc\xae_\xb3\xeb\xb6\xfb",
 			"identifiedDescriptionName": [
@@ -2928,7 +2928,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"55105": {
+		"605": {
 			"identifiedDisplayName": "Seal of Mind",
 			"identifiedResourceName": "\xb8\xb6\xb7\xc2\xbc\xae_\xb3\xeb\xb6\xfb",
 			"identifiedDescriptionName": [
@@ -2939,7 +2939,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"55106": {
+		"606": {
 			"identifiedDisplayName": "Seal of Fortune",
 			"identifiedResourceName": "\xb8\xb6\xb7\xc2\xbc\xae_\xb3\xeb\xb6\xfb",
 			"identifiedDescriptionName": [
@@ -2951,7 +2951,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"55107": {
+		"607": {
 			"identifiedDisplayName": "Seal of Broken Will",
 			"identifiedResourceName": "\xb8\xb6\xb7\xc2\xbc\xae_\xb3\xeb\xb6\xfb",
 			"identifiedDescriptionName": [
@@ -2962,7 +2962,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"55108": {
+		"608": {
 			"identifiedDisplayName": "Seal of Broken Spirit",
 			"identifiedResourceName": "\xb8\xb6\xb7\xc2\xbc\xae_\xb3\xeb\xb6\xfb",
 			"identifiedDescriptionName": [
@@ -2973,7 +2973,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"55109": {
+		"609": {
 			"identifiedDisplayName": "Seal of Paralysis",
 			"identifiedResourceName": "\xb8\xb6\xb7\xc2\xbc\xae_\xb3\xeb\xb6\xfb",
 			"identifiedDescriptionName": [
@@ -2987,7 +2987,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"55110": {
+		"610": {
 			"identifiedDisplayName": "Seal of Venom",
 			"identifiedResourceName": "\xb8\xb6\xb7\xc2\xbc\xae_\xb3\xeb\xb6\xfb",
 			"identifiedDescriptionName": [
@@ -3001,7 +3001,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"55111": {
+		"611": {
 			"identifiedDisplayName": "Seal of Hoarfrost",
 			"identifiedResourceName": "\xb8\xb6\xb7\xc2\xbc\xae_\xb3\xeb\xb6\xfb",
 			"identifiedDescriptionName": [
@@ -3015,7 +3015,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"55112": {
+		"612": {
 			"identifiedDisplayName": "Seal of Echoes",
 			"identifiedResourceName": "\xb8\xb6\xb7\xc2\xbc\xae_\xb3\xeb\xb6\xfb",
 			"identifiedDescriptionName": [
@@ -3036,7 +3036,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"56000": {
+		"700": {
 			"identifiedDisplayName": "Fruit Juice",
 			"identifiedResourceName": "\xb5\xa6\xbf\xe4\xb8\xae09",
 			"identifiedDescriptionName": [
@@ -3048,7 +3048,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"56001": {
+		"701": {
 			"identifiedDisplayName": "Mini Potion",
 			"identifiedResourceName": "\xbf\xbb\xb7\xce\xbf\xec\xbd\xbd\xb8\xb2\xc6\xf7\xbc\xc7",
 			"identifiedDescriptionName": [
@@ -3060,7 +3060,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"56002": {
+		"702": {
 			"identifiedDisplayName": "Stout Potion",
 			"identifiedResourceName": "\xb3\xeb\xb6\xf5\xc6\xf7\xbc\xc7",
 			"identifiedDescriptionName": [
@@ -3072,7 +3072,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"56003": {
+		"703": {
 			"identifiedDisplayName": "Mega Potion",
 			"identifiedResourceName": "\xb6\xfb\xc4\xab",
 			"identifiedDescriptionName": [
@@ -3084,7 +3084,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"56004": {
+		"704": {
 			"identifiedDisplayName": "Salve",
 			"identifiedResourceName": "\xb3\xf3\xc3\xe0\xbb\xf8\xb7\xaf\xb8\xb6\xc0\xce\xc1\xf3",
 			"identifiedDescriptionName": [
@@ -3096,7 +3096,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"56005": {
+		"705": {
 			"identifiedDisplayName": "Goddess Tear",
 			"identifiedResourceName": "\xc7\xcf\xb4\xc3\xbb\xf6\xba\xb8\xbc\xae",
 			"identifiedDescriptionName": [
@@ -3108,7 +3108,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"56006": {
+		"706": {
 			"identifiedDisplayName": "Faerie Wing",
 			"identifiedResourceName": "\xc4\xbf\xb4\xd9\xb6\xf5\xb3\xaf\xb0\xb3",
 			"identifiedDescriptionName": [
@@ -3120,7 +3120,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"56007": {
+		"707": {
 			"identifiedDisplayName": "Grand Faerie Wing",
 			"identifiedResourceName": "\xc8\xad\xb7\xc1\xc7\xd1\xbf\xe4\xc1\xa4\xb3\xaf\xb0\xb3",
 			"identifiedDescriptionName": [
@@ -3133,7 +3133,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"57000": {
+		"800": {
 			"identifiedDisplayName": "Mythril Ore",
 			"identifiedResourceName": "\xb9\xcc\xbd\xba\xb8\xb1\xb1\xa4\xbc\xae",
 			"identifiedDescriptionName": [
@@ -3147,7 +3147,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"57001": {
+		"801": {
 			"identifiedDisplayName": "Orichalcum Ore",
 			"identifiedResourceName": "\xc0\xba\xb1\xa4\xbc\xae",
 			"identifiedDescriptionName": [
@@ -3161,7 +3161,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"57002": {
+		"802": {
 			"identifiedDisplayName": "Empty Bijou",
 			"identifiedResourceName": "\x65\x6D\x70\x74\x79\x62\x69\x6A\x6F\x75",
 			"identifiedDescriptionName": [
@@ -3175,7 +3175,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"57003": {
+		"803": {
 			"identifiedDisplayName": "Fervent Bijou",
 			"identifiedResourceName": "\xbf\xeb\xc0\xc7\xba\xb8\xc1\xd6_\xc8\xb2",
 			"identifiedDescriptionName": [
@@ -3189,7 +3189,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"57004": {
+		"804": {
 			"identifiedDisplayName": "Arcane Bijou",
 			"identifiedResourceName": "\xbf\xeb\xc0\xc7\xba\xb8\xc1\xd6_\xc3\xbb",
 			"identifiedDescriptionName": [
@@ -3203,7 +3203,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"57005": {
+		"805": {
 			"identifiedDisplayName": "Blessed Bijou",
 			"identifiedResourceName": "\x62\x6C\x65\x73\x73\x65\x64\x62\x69\x6A\x6F\x75",
 			"identifiedDescriptionName": [
@@ -3217,7 +3217,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"57006": {
+		"806": {
 			"identifiedDisplayName": "Capricious Bijou",
 			"identifiedResourceName": "\xbf\xeb\xc0\xc7\xba\xb8\xc1\xd6_\xb3\xec",
 			"identifiedDescriptionName": [
@@ -3231,7 +3231,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"57007": {
+		"807": {
 			"identifiedDisplayName": "Discordant Bijou",
 			"identifiedResourceName": "\xbf\xeb\xc0\xc7\xba\xb8\xc1\xd6_\xc8\xab",
 			"identifiedDescriptionName": [
@@ -3245,7 +3245,7 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
-		"57008": {
+		"808": {
 			"identifiedDisplayName": "Divine Hammer",
 			"identifiedResourceName": "\xc8\xb2\xb1\xdd\xc0\xc7\xb8\xc1\xc4\xa1",
 			"identifiedDescriptionName": [

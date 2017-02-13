@@ -365,6 +365,7 @@ define(function( require )
 		Network.hookPacket( PACKET.ZC.ITEM_PICKUP_ACK2,       onItemPickAnswer );
 		Network.hookPacket( PACKET.ZC.ITEM_PICKUP_ACK3,       onItemPickAnswer );
 		Network.hookPacket( PACKET.ZC.ITEM_PICKUP_ACK5,       onItemPickAnswer );
+		Network.hookPacket( PACKET.ZC.ITEM_PICKUP_ACK6,       onItemPickAnswer );
 		Network.hookPacket( PACKET.ZC.ITEM_THROW_ACK,         onIventoryRemoveItem );
 		Network.hookPacket( PACKET.ZC.NORMAL_ITEMLIST,        onInventorySetList );
 		Network.hookPacket( PACKET.ZC.NORMAL_ITEMLIST2,       onInventorySetList );
