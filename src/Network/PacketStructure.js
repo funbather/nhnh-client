@@ -10767,8 +10767,8 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 		this.ySize = fp.readUChar();
 		this.clevel = fp.readShort();
 		this.font = fp.readShort();
-		this.hp = fp.readLong();
 		this.maxhp = fp.readLong();
+		this.hp = fp.readLong();
 		this.isBoss = fp.readUChar();
 		this.body = fp.readShort();
 		this.classes = fp.readULong();
