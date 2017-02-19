@@ -4565,9 +4565,67 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 	PACKET.ZC.NOTIFY_UPDATEPLAYER.size = 5;
 
 
-	// 0x78 UNUSED
+	// 0x78
+	PACKET.ZC.NOTIFY_STANDENTRY = function PACKET_ZC_NOTIFY_STANDENTRY(fp, end) {
+		this.objecttype = fp.readUChar();
+		this.GID = fp.readULong();
+		this.speed = fp.readShort();
+		this.bodyState = fp.readShort();
+		this.healthState = fp.readShort();
+		this.effectState = fp.readShort();
+		this.job = fp.readShort();
+		this.head = fp.readShort();
+		this.weapon = fp.readShort();
+		this.accessory = fp.readShort();
+		this.shield = fp.readShort();
+		this.accessory2 = fp.readShort();
+		this.accessory3 = fp.readShort();
+		this.headpalette = fp.readShort();
+		this.bodypalette = fp.readShort();
+		this.headDir = fp.readShort();
+		this.GUID = fp.readULong();
+		this.GEmblemVer = fp.readShort();
+		this.honor = fp.readShort();
+		this.virtue = fp.readShort();
+		this.isPKModeON = fp.readUChar();
+		this.sex = fp.readUChar();
+		this.PosDir = fp.readPos();
+		this.xSize = fp.readUChar();
+		this.ySize = fp.readUChar();
+		this.state = fp.readUChar();
+		this.clevel = fp.readShort();
+	};
+	PACKET.ZC.NOTIFY_STANDENTRY.size = 55;
 
-	// 0x79 UNUSED
+	// 0x79
+	PACKET.ZC.NOTIFY_NEWENTRY = function PACKET_ZC_NOTIFY_NEWENTRY(fp, end) {
+		this.GID = fp.readULong();
+		this.speed = fp.readShort();
+		this.bodyState = fp.readShort();
+		this.healthState = fp.readShort();
+		this.effectState = fp.readShort();
+		this.job = fp.readShort();
+		this.head = fp.readShort();
+		this.weapon = fp.readShort();
+		this.accessory = fp.readShort();
+		this.shield = fp.readShort();
+		this.accessory2 = fp.readShort();
+		this.accessory3 = fp.readShort();
+		this.headpalette = fp.readShort();
+		this.bodypalette = fp.readShort();
+		this.headDir = fp.readShort();
+		this.GUID = fp.readULong();
+		this.GEmblemVer = fp.readShort();
+		this.honor = fp.readShort();
+		this.virtue = fp.readShort();
+		this.isPKModeON = fp.readUChar();
+		this.sex = fp.readUChar();
+		this.PosDir = fp.readPos();
+		this.xSize = fp.readUChar();
+		this.ySize = fp.readUChar();
+		this.clevel = fp.readShort();
+	};
+	PACKET.ZC.NOTIFY_NEWENTRY.size = 53;
 
 
 	// 0x7a
@@ -4603,7 +4661,36 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 	PACKET.ZC.NOTIFY_ACTENTRY.size = 58;
 
 
-	// 0x7b UNUSED
+	// 0x7b
+	PACKET.ZC.NOTIFY_MOVEENTRY = function PACKET_ZC_NOTIFY_MOVEENTRY(fp, end) {
+		this.GID = fp.readULong();
+		this.speed = fp.readShort();
+		this.bodyState = fp.readShort();
+		this.healthState = fp.readShort();
+		this.effectState = fp.readShort();
+		this.job = fp.readShort();
+		this.head = fp.readShort();
+		this.weapon = fp.readShort();
+		this.accessory = fp.readShort();
+		this.moveStartTime = fp.readULong();
+		this.shield = fp.readShort();
+		this.accessory2 = fp.readShort();
+		this.accessory3 = fp.readShort();
+		this.headpalette = fp.readShort();
+		this.bodypalette = fp.readShort();
+		this.headDir = fp.readShort();
+		this.GUID = fp.readULong();
+		this.GEmblemVer = fp.readShort();
+		this.honor = fp.readShort();
+		this.virtue = fp.readShort();
+		this.isPKModeON = fp.readUChar();
+		this.sex = fp.readUChar();
+		this.MoveData = fp.readPos2();
+		this.xSize = fp.readUChar();
+		this.ySize = fp.readUChar();
+		this.clevel = fp.readShort();
+	};
+	PACKET.ZC.NOTIFY_MOVEENTRY.size = 60;
 
 	// 0x7c
 	PACKET.ZC.NOTIFY_STANDENTRY_NPC = function PACKET_ZC_NOTIFY_STANDENTRY_NPC(fp, end) {
@@ -10649,8 +10736,9 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 	PACKET.ZC.NOTIFY_NEWENTRY7.size = -1;
 
 	// 0x9fd
-	PACKET.ZC.NOTIFY_MOVEENTRY = function PACKET_ZC_NOTIFY_MOVEENTRY(fp, end) {
+	PACKET.ZC.NOTIFY_MOVEENTRY8 = function PACKET_ZC_NOTIFY_MOVEENTRY8(fp, end) {
 		this.objecttype = fp.readUChar();
+		this.AID = fp.readULong();
 		this.GID = fp.readULong();
 		this.speed = fp.readShort();
 		this.bodyState = fp.readShort();
@@ -10685,11 +10773,11 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 		this.classes = fp.readULong();
 		this.name = fp.readString(24);
 	};
-	PACKET.ZC.NOTIFY_MOVEENTRY.size = -1;
+	PACKET.ZC.NOTIFY_MOVEENTRY8.size = -1;
 
 
 	// 0x9ff
-	PACKET.ZC.NOTIFY_STANDENTRY = function PACKET_ZC_NOTIFY_STANDENTRY(fp, end) {
+	PACKET.ZC.NOTIFY_STANDENTRY8 = function PACKET_ZC_NOTIFY_STANDENTRY8(fp, end) {
 		this.objecttype = fp.readUChar();
 		this.AID = fp.readULong();
 		this.GID = fp.readULong();
@@ -10726,11 +10814,11 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 		this.classes = fp.readULong();
 		this.name = fp.readString(end - fp.tell());
 	};
-	PACKET.ZC.NOTIFY_STANDENTRY.size = -1;
+	PACKET.ZC.NOTIFY_STANDENTRY8.size = -1;
 
 
 	// 0x90f
-	PACKET.ZC.NOTIFY_NEWENTRY = function PACKET_ZC_NOTIFY_NEWENTRY(fp, end) {
+	PACKET.ZC.NOTIFY_NEWENTRY8 = function PACKET_ZC_NOTIFY_NEWENTRY8(fp, end) {
 		this.objecttype = fp.readUChar();
 		this.AID = fp.readULong();
 		this.GID = fp.readULong();
@@ -10767,7 +10855,7 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 		this.classes = fp.readULong();
 		this.name = fp.readString(end - fp.tell());
 	};
-	PACKET.ZC.NOTIFY_NEWENTRY.size = -1;
+	PACKET.ZC.NOTIFY_NEWENTRY8.size = -1;
 
 
 	// 0x977

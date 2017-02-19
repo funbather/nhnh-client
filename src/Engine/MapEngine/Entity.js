@@ -1040,6 +1040,9 @@ define(function( require )
 		Network.hookPacket( PACKET.ZC.NOTIFY_STANDENTRY7,           onEntitySpam );
 		Network.hookPacket( PACKET.ZC.NOTIFY_NEWENTRY7,             onEntitySpam );
 		Network.hookPacket( PACKET.ZC.NOTIFY_MOVEENTRY7,            onEntitySpam );
+		Network.hookPacket( PACKET.ZC.NOTIFY_STANDENTRY8,           onEntitySpam );
+		Network.hookPacket( PACKET.ZC.NOTIFY_NEWENTRY8,             onEntitySpam );
+		Network.hookPacket( PACKET.ZC.NOTIFY_MOVEENTRY8,            onEntitySpam );
 		Network.hookPacket( PACKET.ZC.NOTIFY_VANISH,                onEntityVanish );
 		Network.hookPacket( PACKET.ZC.NOTIFY_MOVE,                  onEntityMove );
 		Network.hookPacket( PACKET.ZC.STOPMOVE,                     onEntityStopMove );

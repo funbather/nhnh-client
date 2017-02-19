@@ -177,9 +177,6 @@ define( function( require )
 				// Already set
 				case 'sex':
 				case 'job':
-					if(unit.classes) {
-						this.job = parseClass(unit.classes);
-					}
 					break;
 
 				// Not used ?
