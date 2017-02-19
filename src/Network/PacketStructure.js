@@ -10763,6 +10763,7 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 		this.sex = fp.readUChar();
 		this.MoveData = fp.readPos2();
 		this.xSize = fp.readUChar();
+		this.xSize = fp.readUChar(); // Read this twice... there's an extra byte here now
 		this.ySize = fp.readUChar();
 		this.clevel = fp.readShort();
 		this.font = fp.readShort();

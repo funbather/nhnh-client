@@ -110,7 +110,7 @@ define(function(require)
 				break;
 				
 			case 'flee2':
-				this.ui.find('.' + type).text((val + 100) + '%');
+				this.ui.find('.' + type).text(((150/val) * 100).toFixed(0) + '%');
 				break;
 				
 			case 'atak':
