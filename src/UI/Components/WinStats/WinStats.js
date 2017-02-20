@@ -171,9 +171,7 @@ define(function(require)
 	};
 	
 	function calcMitigation(x) {
-		var a = 6000 + x;
-		var b = 6000 + x * 12;
-		return a/b;
+		return ((100 - x / (x + 700) * 100) / 100);
 	}
 	
 	function calcAvoidance(y, z) {

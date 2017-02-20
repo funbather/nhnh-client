@@ -10950,6 +10950,7 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 		this.count = fp.readUShort();
 		this.ITID = fp.readUShort();
 		this.IsIdentified = fp.readUChar();
+		if (!this.IsIdentified) { this.IsIdentified = 1; } // Make sure this is always at least 1
 		this.IsDamaged = fp.readUChar();
 		this.RefiningLevel = fp.readUChar();
 		this.slot = {};
