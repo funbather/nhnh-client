@@ -2294,6 +2294,8 @@ define(function()
 		6049: "MER_BAYERI",
 		6050: "MER_SERA",
 		6051: "MER_DIETER",
-		6052: "MER_ELEANOR"
+		6052: "MER_ELEANOR",
+		10010: "4_F_LYDIA",
+		10079: "4_F_FRUIT",
 	};
 });
