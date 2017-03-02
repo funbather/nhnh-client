@@ -364,11 +364,11 @@ define(function(require)
 		var baseClass = WeaponJobTable[job] || WeaponJobTable[0];
 
 		// ItemID to View Id
-		if ((id in ItemTable) && ('ClassNum' in ItemTable[id])) {
+		if ((id >= 100) && (id in ItemTable) && ('ClassNum' in ItemTable[id])) {
 			id = ItemTable[id].ClassNum;
 		}
 
-		return 'data/sprite/\xc0\xce\xb0\xa3\xc1\xb7/' + baseClass + '/' + baseClass + '_' + SexTable[sex] + ( WeaponTable[id] || ('_' + id) ) ;
+		return 'data/sprite/\xc0\xce\xb0\xa3\xc1\xb7/' + baseClass + '/' + baseClass + '_' + SexTable[sex] + ( WeaponTable[id] ) ;
 	};
 
 
@@ -412,11 +412,14 @@ define(function(require)
 					return ItemTable[id].ClassNum;
 				}
 			}
-
-			// Weapon ID starting at 1100
-			if (id <  1100) {
-				return WeaponType.NONE;
-			}
+			
+			if(id >= 100 && id <= 102)   return WeaponType.SWORD;
+			if(id >= 103 && id <= 105)   return WeaponType.MACE;
+			if(id >= 106 && id <= 108)   return WeaponType.DAGGER;
+			if(id >= 109 && id <= 111)   return WeaponType.TWOHANDSWORD;
+			if(id >= 112 && id <= 114)   return WeaponType.AXE;
+			if(id >= 115 && id <= 117)   return WeaponType.BOW;
+			if(id >= 118 && id <= 120)   return WeaponType.ROD;
 
 			// Specific weapon range inside other range (wtf gravity ?)
 			if (id >= 1116 && id <= 1118)    return WeaponType.TWOHANDSWORD;
@@ -427,14 +430,6 @@ define(function(require)
 			if (gunGatling.indexOf(id) > -1) return WeaponType.GUN_GATLING;
 			if (gunShotGun.indexOf(id) > -1) return WeaponType.GUN_SHOTGUN;
 			if (gunGranade.indexOf(id) > -1) return WeaponType.GUN_GRANADE;
-			
-			if(id >= 51000 && id <= 51002)   return WeaponType.SWORD;
-			if(id >= 51003 && id <= 51005)   return WeaponType.MACE;
-			if(id >= 51006 && id <= 51008)   return WeaponType.DAGGER;
-			if(id >= 51009 && id <= 51011)   return WeaponType.TWOHANDSWORD;
-			if(id >= 51012 && id <= 51014)   return WeaponType.AXE;
-			if(id >= 51015 && id <= 51017)   return WeaponType.BOW;
-			if(id >= 51018 && id <= 51020)   return WeaponType.ROD;
       
 			// Ranges
 			return (

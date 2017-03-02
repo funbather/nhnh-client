@@ -10818,7 +10818,7 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 	PACKET.ZC.NOTIFY_STANDENTRY8.size = -1;
 
 
-	// 0x90f
+	// 0x9fe
 	PACKET.ZC.NOTIFY_NEWENTRY8 = function PACKET_ZC_NOTIFY_NEWENTRY8(fp, end) {
 		this.objecttype = fp.readUChar();
 		this.AID = fp.readULong();
@@ -10846,7 +10846,6 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 		this.PosDir = fp.readPos();
 		this.xSize = fp.readUChar();
 		this.ySize = fp.readUChar();
-		this.state = fp.readUChar();
 		this.clevel = fp.readShort();
 		this.font = fp.readShort();
 		this.maxhp = fp.readLong();

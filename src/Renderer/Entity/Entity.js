@@ -122,6 +122,7 @@ define( function( require )
 	Entity.prototype.clevel       = 0;
 	Entity.prototype.action       = 0;
 	Entity.prototype.costume      = 0;
+	Entity.prototype.classes      = 0;
 
 	Entity.prototype.matrix       = null;
 	Entity.prototype.depth        = 0;
@@ -160,6 +161,7 @@ define( function( require )
 		this.isAdmin = Session.AdminList.indexOf(unit.GID) > -1;
 		this.sex     = unit.hasOwnProperty('sex') ? unit.sex : this._sex;
 		this.job     = unit.hasOwnProperty('job') ? unit.job : this._job;
+		this.classes = unit.classes;
 		this.clothes = 0;
 		keys         = Object.keys( unit );
 		count        = keys.length;
@@ -176,7 +178,7 @@ define( function( require )
 
 				// Already set
 				case 'sex':
-				case 'job':
+				//case 'job':
 					break;
 
 				// Not used ?
