@@ -96,6 +96,10 @@ define(["./SkillConst"], function( SK )
 		y: function(skl){ return (5 + skl); }
 	};
 	
+	SkillDesc[SK.THF_BROWBEAT] = {
+		x: function(skl){ return (20 + 2 * skl); }
+	};
+	
 	SkillDesc[SK.THF_SONICSTRIKE] = {
 		x: function(skl){ return (6 + parseInt(skl / 3)); },
 		y: function(skl){ return (150 + 30 * skl); }

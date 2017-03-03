@@ -280,7 +280,7 @@ define(["./SkillConst"], function( SKID )
 		"Support Spell",
 		"Range: 9",
 		" ",
-		"Remove ^4488BBPoison^000000, ^4488BBIgnite^000000, ^4488BBBleeding^000000, ^4488BBSilence^000000, ^4488BBStun^000000, ^4488BBFreeze^000000, and ^4488BBBlind^000000 from an ally, and heal them for $y% MAG over 4 seconds.\n\n",
+		"Remove ^4488BBPoison^000000, ^4488BBIgnite^000000, ^4488BBBleeding^000000, ^4488BBSilence^000000, ^4488BBStun^000000, ^4488BBFreeze^000000, and ^4488BBBlind^000000 from an ally, and heal them for $x% MAG over 4 seconds.\n\n",
 		"Mastery: Heal amount is increased by 1% per MST.",
 	].join("\n");
 
@@ -289,7 +289,7 @@ define(["./SkillConst"], function( SKID )
 		"Support Spell",
 		"Range: 9",
 		" ",
-		"Heal an ally for $y% MAG.\n\n",
+		"Heal an ally for $x% MAG.\n\n",
 		"Mastery: Heal amount is increased by 2% per MST.",
 	].join("\n");
 
