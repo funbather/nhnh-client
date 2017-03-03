@@ -16,16 +16,16 @@ define(["./SkillConst"], function( SKID )
 	var SkillDescription = {};
 
 	SkillDescription[SKID.SWD_SOUL] = [
-		"Swordsman Soul",
+		"Soul of the Swordsman",
 		"Innate Passive",
 		" ",
 		"+20% VIT",
-		"+15% HP",
+		"+35% Base HP",
 		"-10% Physical Damage Taken",
 	].join("\n");
 
-	SkillDescription[SKID.SWD_HARDHEARTED] = [
-		"Hardhearted",
+	SkillDescription[SKID.SWD_FORCEOFWILL] = [
+		"Force of Will",
 		"Passive",
 		" ",
 		"You take $x% less physical damage from attacks. The damage reduction grows as you lose HP, up to $y% when at ^4488BBCritical HP^000000.",
@@ -38,8 +38,8 @@ define(["./SkillConst"], function( SKID )
 		"Gain +$x% DEF for each enemy attacking you.",
 	].join("\n");
 
-	SkillDescription[SKID.SWD_MAINTENANCE] = [
-		"Maintenance",
+	SkillDescription[SKID.SWD_HARDHEARTED] = [
+		"Hardhearted",
 		"Passive",
 		" ",
 		"+$x% DEF",
@@ -55,94 +55,96 @@ define(["./SkillConst"], function( SKID )
 
 	SkillDescription[SKID.SWD_SWASHBUCKLING] = [
 		"Swashbuckling",
-		"Active",
-		"PBAoE Range: $y",
+		"Support Spell",
+		"Range: $y",
 		" ",
-		"^4488BBProvoke^000000 nearby enemies into attacking you, while lowering their ATK by $x% for 8 seconds.",
+		"^4488BBProvoke^000000 nearby enemies into attacking you, while also lowering their ATK by $x% for 8 seconds.\n\n",
+		"Mastery: Debuff duration is increased by 1% per MST.",
 	].join("\n");
 
 	SkillDescription[SKID.SWD_SECONDWIND] = [
 		"Second Wind",
-		"Active",
+		"Support Spell",
 		"Cooldown: $zs, Requires: ^99BBFFCritical HP^000000",
 		" ",
-		"Heal $x% of your maximum HP over $y seconds, and cleanse yourself of ^4488BBPoison, Ignite, Bleeding, and Blind^000000.",
+		"Heal $x% of your Max HP over $y seconds, and cleanse yourself of ^4488BBPoison^000000, ^4488BBIgnite^000000, ^4488BBBleeding^000000, and ^4488BBBlind^000000.\n\n",
+		"Mastery: Total amount of HP healed is increased by 1% per MST.",
 	].join("\n");
 
-	SkillDescription[SKID.SWD_EYETOEYE] = [
-		"Eye To Eye",
-		"Active",
-		"Cooldown: 4s, Range: 9",
+	SkillDescription[SKID.SWD_SWAGGER] = [
+		"Swagger",
+		"Support Spell",
+		"Range: 9",
 		" ",
-		"^4488BBProvoke^000000 an enemy, and gain +$x% Physical and Magical Block Chance against their attacks for 8 seconds.",
+		"^4488BBProvoke^000000 an enemy, and gain +$x% Physical and Magical Block Chance against their attacks and spells for 8 seconds.\n\n",
+		"Mastery: Buff duration increased by 1% per MST.",
 	].join("\n");
 
 	SkillDescription[SKID.SWD_ENDURE] = [
 		"Endure",
-		"Active",
+		"Support Spell",
 		"Cooldown: 12s",
 		" ",
-		"Gain a barrier for 8 seconds that absorbs incoming damage, up to $x% of your maximum HP.",
+		"Gain a barrier for 8 seconds that absorbs incoming damage, up to $x% of your Max HP.\n\n",
+		"Mastery: You take 0.2% less physical and magical damage per MST while Endure is active.",
 	].join("\n");
 
 	SkillDescription[SKID.SWD_UMBOBLOW] = [
 		"Umbo Blow",
-		"Active - Physical",
-		"Cooldown: 4s, Range: 2, Requires: ^99BBFFShield^000000",
+		"Attack",
+		"Range: 2, Requires: ^99BBFFShield^000000",
 		" ",
 		"Deal $x% ATK damage with a powerful strike from your shield.",
 		" ",
-		"Damage dealt with this attack is increased by $y% for every 1% Physical Block Chance you have.",
+		"Umbo Blow deals a bonus $y% ATK damage for every 1% Physical Block Chance you have.",
+	].join("\n");
+
+	SkillDescription[SKID.SWD_METEORMASH] = [
+		"Meteor Mash",
+		"Attack",
+		"Cooldown: 5s, Range: 2",
+		" ",
+		"Slam your shield down into the ground, dealing $x% ATK damage and ^4488BBSquashing^000000 all nearby enemies. ^4488BBSquashed^000000 enemies are ^4488BBProvoked^000000 and have -50% MSPD.",
 	].join("\n");
 
 	SkillDescription[SKID.SWD_SHIELDBOOMERANG] = [
 		"Shield Boomerang",
-		"Active - Physical",
-		"Cooldown: 4s, Range: 9, Requires: ^99BBFFShield^000000",
+		"Attack",
+		"Range: 9, Requires: ^99BBFFShield^000000",
 		" ",
-		"Deal $x% ATK damage and ^4488BBProvoke^000000 an enemy by flinging your shield at them.",
+		"Fling your shield at an enemy, dealing $x% ATK damage and ^4488BBProvoking^000000 them on impact.",
 	].join("\n");
 
-	SkillDescription[SKID.SWD_HILTBASH] = [
-		"Hilt Bash",
-		"Active - Physical",
-		"Cooldown: 4s, Range: 2",
+	SkillDescription[SKID.SWD_SKULLCRACK] = [
+		"Skullcrack",
+		"Attack",
+		"Range: 2",
 		" ",
-		"Deal $x% ATK damage and ^4488BBStun^000000 an enemy for $y seconds.",
-	].join("\n");
-
-	SkillDescription[SKID.SWD_HEAVYSWING] = [
-		"Heavy Swing",
-		"Active - Physical",
-		"Cooldown: 4s, Range: 2",
-		" ",
-		"Deal $x% ATK damage with a powerful blow.",
+		"Deal $x% ATK damage to an enemy with a powerful blow, with a 35% chance to ^4488BBStun^000000 them for 2 seconds.",
 	].join("\n");
 
 	SkillDescription[SKID.SWD_SLEDGEHAMMER] = [
 		"Sledgehammer",
-		"Active - Physical",
-		"Range: 2",
+		"Attack",
+		"Cooldown: 2s, Range: 2",
 		" ",
-		"Deal $x% ATK damage by slamming your weapon into the enemy.",
-		" ",
-		"This skill can only be used as a follow-up to Heavy Swing.",
+		"Deal $x% ATK damage to your target and all enemies within 2 tiles of them with a deadly swing of your weapon.",
 	].join("\n");
 
 	SkillDescription[SKID.THF_SOUL] = [
-		"Thief Soul",
+		"Soul of the Thief",
 		"Innate Passive",
 		" ",
 		"+20% AGI",
 		"+15% Physical Damage Dealt",
-		"+0.2 to Base Attack Speed",
+		"+0.2 Base ASPD",
 	].join("\n");
 
-	SkillDescription[SKID.THF_QUICKHANDS] = [
-		"Quick Hands",
+	SkillDescription[SKID.THF_DOUBLESTRIKE] = [
+		"Double Strike",
 		"Passive",
 		" ",
-		"+$x% ASPD",
+		"Your Basic Attacks have a $x% chance to hit twice.",
 	].join("\n");
 
 	SkillDescription[SKID.THF_REFLEXES] = [
@@ -164,30 +166,50 @@ define(["./SkillConst"], function( SKID )
 		"Adrenaline Rush",
 		"Passive",
 		" ",
-		"+$x% MSPD while in combat.",
+		"+$x% to MSPD\n",
+		"This bonus is doubled while in combat.",
+	].join("\n");
+
+	SkillDescription[SKID.THF_PICKPOCKET] = [
+		"Pickpocket",
+		"Passive",
+		" ",
+		"You have a $x% chance to gain a Coin Bag when killing an enemy.\n",
+		"Coin Bags give a small amount of Munny and also have a chance of containing a crafting item.",
 	].join("\n");
 
 	SkillDescription[SKID.THF_CAMOUFLAGE] = [
 		"Camouflage",
-		"Active",
+		"Support Spell",
 		"Cooldown: 20s",
 		" ",
-		"Blend into your surroundings, gaining +$x% EVA for 8 seconds.",
+		"Blend into your surroundings, gaining +$x% EVA for 8 seconds.\n\n",
+		"Mastery: Camouflage also grants +2 EVA per MST while active.",
 	].join("\n");
 
 	SkillDescription[SKID.THF_DOUBLETEAM] = [
 		"Double Team",
-		"Active",
+		"Support Spell",
 		"Cooldown: 20s",
 		" ",
-		"Create an afterimage of yourself for $x seconds that copies all of your attacks. While the afterimage is active, you gain +$y% ASPD and your attacks will always Double Strike.",
+		"Create an afterimage of yourself for $x seconds that copies all of your attacks. While the afterimage is active, you gain +$y% ASPD and your Basic Attacks will always Double Strike.",
 		" ",
-		"Using an offensive skill ends this effect.",
+		"Using an offensive skill ends this effect.\n\n",
+		"Mastery: You deal +0.5% more physical damage per MST while Double Team is active.",
+	].join("\n");
+
+	SkillDescription[SKID.THF_BROWBEAT] = [
+		"Browbeat",
+		"Support Spell",
+		"Range: 9",
+		" ",
+		"Very nicely coerce an enemy into giving up its valuable items. Browbeated enemies immediately become passive and have a $x% chance to drop an additional item when killed.\n\n",
+		"Mastery: Browbeated enemies are 1% more likely to drop an item per MST.",
 	].join("\n");
 
 	SkillDescription[SKID.THF_SONICSTRIKE] = [
 		"Sonic Strike",
-		"Active - Physical",
+		"Attack",
 		"Cooldown: 8s, Range: $x",
 		" ",
 		"Dash towards an enemy and deal $y% ATK damage on impact.",
@@ -197,7 +219,7 @@ define(["./SkillConst"], function( SKID )
 
 	SkillDescription[SKID.THF_BONECUTTER] = [
 		"Bonecutter",
-		"Active - Physical",
+		"Attack",
 		"Range: 2",
 		" ",
 		"Deal $x% ATK damage with a deadly slash.",
@@ -207,36 +229,113 @@ define(["./SkillConst"], function( SKID )
 
 	SkillDescription[SKID.THF_BLADEFLOURISH] = [
 		"Blade Flourish",
-		"Active - Physical",
-		"Cooldown: 4s, PBAoE Range: 4",
+		"Attack",
+		"Cooldown: 4s, Range: 4",
 		" ",
 		"Deal $x% ATK damage to all enemies around you with a wide slash.",
 	].join("\n");
 
-	SkillDescription[SKID.THF_HAMSTRING] = [
-		"Hamstring",
-		"Active - Physical",
-		"Cooldown: 8s, Range: 2",
-		" ",
-		"Deal $x% ATK damage and ^4488BBStun^000000 an enemy for 2 seconds.",
-	].join("\n");
-
-	SkillDescription[SKID.THF_STIFLE] = [
-		"Stifle",
-		"Active - Physical",
-		"Cooldown: 8s, Range: 2",
-		" ",
-		"Deal $x% ATK damage and ^4488BBSilence^000000 an enemy for 4 seconds.",
-		" ",
-		"If this skill interrupts an enemy's spellcasting, it deals double damage.",
-	].join("\n");
-
 	SkillDescription[SKID.THF_PUNCTURE] = [
 		"Puncture",
-		"Active - Physical",
-		"Cooldown: 8s, Range: 2",
+		"Attack",
+		"Range: 2",
 		" ",
 		"Deal $x% ATK damage and inflict ^4488BBBleeding^000000 on an enemy for $y seconds.",
+	].join("\n");
+
+	SkillDescription[SKID.ACO_SOUL] = [
+		"Soul of the Acolyte",
+		"Innate Passive",
+		" ",
+		"+20% MST",
+		"+35% HP Regen",
+		"+35% MP Regen",
+		"+25% Buff Duration",
+	].join("\n");
+
+	SkillDescription[SKID.ACO_LIFELINK] = [
+		"Life Link",
+		"Passive",
+		" ",
+		"+$x% Healing Power\n",
+		"When casting Cure on an ally, you are also healed for $y% of the amount."
+	].join("\n");
+
+	SkillDescription[SKID.ACO_BENEVOLENCE] = [
+		"Benevolence",
+		"Passive",
+		" ",
+		"Spells you cast consume $x% less MP when targeting an ally.",
+	].join("\n");
+
+	SkillDescription[SKID.ACO_SPIRITWARD] = [
+		"Spirit Ward",
+		"Passive",
+		" ",
+		"-$x% duration of ^4488BBPoison^000000, ^4488BBIgnite^000000, ^4488BBBleeding^000000, ^4488BBSilence^000000, ^4488BBStun^000000, ^4488BBFreeze^000000, and ^4488BBBlind^000000 status ailments inflicted on you.",
+	].join("\n");
+
+	SkillDescription[SKID.ACO_PURIFY] = [
+		"Purify",
+		"Support Spell",
+		"Range: 9",
+		" ",
+		"Remove ^4488BBPoison^000000, ^4488BBIgnite^000000, ^4488BBBleeding^000000, ^4488BBSilence^000000, ^4488BBStun^000000, ^4488BBFreeze^000000, and ^4488BBBlind^000000 from an ally, and heal them for $y% MAG over 4 seconds.\n\n",
+		"Mastery: Heal amount is increased by 1% per MST.",
+	].join("\n");
+
+	SkillDescription[SKID.ACO_CURE] = [
+		"Cure",
+		"Support Spell",
+		"Range: 9",
+		" ",
+		"Heal an ally for $y% MAG.\n\n",
+		"Mastery: Heal amount is increased by 2% per MST.",
+	].join("\n");
+
+	SkillDescription[SKID.ACO_RAISE] = [
+		"Raise",
+		"Support Spell",
+		"Range: 9",
+		" ",
+		"Bring a fallen ally back to life with $x% of their Max HP, while also giving them a shield that provides damage immunity for 5 seconds.\n\n",
+		"Mastery: Raise casts 1% faster per MST.",
+	].join("\n");
+
+	SkillDescription[SKID.ACO_FORCEARMOR] = [
+		"Force Armor",
+		"Support Spell",
+		"Range: 9",
+		" ",
+		"Grant a barrier to an ally that decreases physical damage taken by $x% for 60 seconds.\n\n",
+		"Mastery: Force Armor also grants +1% DEF per MST while active.",
+	].join("\n");
+
+	SkillDescription[SKID.ACO_GODSSTRENGTH] = [
+		"God's Strength",
+		"Support Spell",
+		"Range: 9",
+		" ",
+		"Bless an ally with a heavenly aura, increasing their physical and magical damage by $x% for 60 seconds.\n\n",
+		"Mastery: God's Strength also grants +1% Base ATK per MST while active.",
+	].join("\n");
+
+	SkillDescription[SKID.ACO_HALLOWEDBOLT] = [
+		"Hallowed Bolt",
+		"Offensive Spell",
+		"Range: 9",
+		" ",
+		"Deal $x% MAG damage to an enemy with holy magic.\n\n",
+		"Mastery: Hallowed Bolt deals 1% more damage per MST.",
+	].join("\n");
+
+	SkillDescription[SKID.ACO_HEAVENLYBLOW] = [
+		"Heavenly Blow",
+		"Offensive Spell",
+		"Range: 2",
+		" ",
+		"Embue your weapon with holy energies and strike an enemy, dealing $x% MAG + $y% ATK damage.\n\n",
+		"Mastery: Heavenly Blow deals 2% more damage per MST.",
 	].join("\n");
 	
 	SkillDescription[SKID.ALL_RESURRECTION] = [

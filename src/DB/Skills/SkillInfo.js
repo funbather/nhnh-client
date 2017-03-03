@@ -20,265 +20,192 @@ define(["./SkillConst", "DB/Jobs/JobConst"], function( SK, JobId )
 	
 	SkillInfo[SK.SWD_SOUL] = {
 		Name: "SWD_SOUL",
-		SkillName : "Swordsman Soul",
-		MaxLv : 1,
-		SpAmount : [ 0 ],
-		bSeperateLv : false,
-		AttackRange : [ 0 ]
+		SkillName : "Soul of the Swordsman",
 	};
 	
-	SkillInfo[SK.SWD_HARDHEARTED] = {
-		Name: "SWD_HARDHEARTED",
-		SkillName : "Hardhearted",
-		MaxLv : 15,
-		SpAmount : [ 0 ],
-		bSeperateLv : false,
-		AttackRange : [ 0 ]
+	SkillInfo[SK.SWD_FORCEOFWILL] = {
+		Name: "SWD_FORCEOFWILL",
+		SkillName : "Force of Will",
 	};
 	
 	SkillInfo[SK.SWD_DAUNTLESS] = {
 		Name: "SWD_DAUNTLESS",
 		SkillName : "Dauntless",
-		MaxLv : 15,
-		SpAmount : [ 0 ],
-		bSeperateLv : false,
-		AttackRange : [ 0 ]
 	};
 	
-	SkillInfo[SK.SWD_MAINTENANCE] = {
-		Name: "SWD_MAINTENANCE",
-		SkillName : "Maintenance",
-		MaxLv : 15,
-		SpAmount : [ 0 ],
-		bSeperateLv : false,
-		AttackRange : [ 0 ]
+	SkillInfo[SK.SWD_HARDHEARTED] = {
+		Name: "SWD_HARDHEARTED",
+		SkillName : "Hardhearted",
 	};
 	
 	SkillInfo[SK.SWD_PAVISE] = {
 		Name: "SWD_PAVISE",
 		SkillName : "Pavise",
-		MaxLv : 15,
-		SpAmount : [ 0 ],
-		bSeperateLv : false,
-		AttackRange : [ 0 ]
 	};
 	
 	SkillInfo[SK.SWD_SWASHBUCKLING] = {
 		Name: "SWD_SWASHBUCKLING",
 		SkillName : "Swashbuckling",
-		MaxLv : 15,
-		SpAmount : [ 35 ],
-		bSeperateLv : false,
-		AttackRange : [ 0 ]
 	};
 	
 	SkillInfo[SK.SWD_SECONDWIND] = {
 		Name: "SWD_SECONDWIND",
 		SkillName : "Second Wind",
-		MaxLv : 15,
-		SpAmount : [ 30 ],
-		bSeperateLv : false,
-		AttackRange : [ 0 ]
 	};
 	
-	SkillInfo[SK.SWD_EYETOEYE] = {
-		Name: "SWD_EYETOEYE",
-		SkillName : "Eye To Eye",
-		MaxLv : 15,
-		SpAmount : [ 10 ],
-		bSeperateLv : false,
-		AttackRange : [ 9 ]
+	SkillInfo[SK.SWD_SWAGGER] = {
+		Name: "SWD_SWAGGER",
+		SkillName : "Swagger",
 	};
 	
 	SkillInfo[SK.SWD_ENDURE] = {
 		Name: "SWD_ENDURE",
 		SkillName : "Endure",
-		MaxLv : 15,
-		SpAmount : [ 20 ],
-		bSeperateLv : false,
-		AttackRange : [ 0 ]
 	};
 	
 	SkillInfo[SK.SWD_UMBOBLOW] = {
 		Name: "SWD_UMBOBLOW",
 		SkillName : "Umbo Blow",
-		MaxLv : 15,
-		SpAmount : [ 10 ],
-		bSeperateLv : false,
-		AttackRange : [ 2 ],
-		ActionType: "ATTACK"
+	};
+	
+	SkillInfo[SK.SWD_METEORMASH] = {
+		Name: "SWD_METEORMASH",
+		SkillName : "Meteor Mash",
 	};
 	
 	SkillInfo[SK.SWD_SHIELDBOOMERANG] = {
 		Name: "SWD_SHIELDBOOMERANG",
 		SkillName : "Shield Boomerang",
-		MaxLv : 15,
-		SpAmount : [ 15 ],
-		bSeperateLv : false,
-		AttackRange : [ 9 ],
-		ActionType: "ATTACK"
 	};
 	
-	SkillInfo[SK.SWD_HILTBASH] = {
-		Name: "SWD_HILTBASH",
-		SkillName : "Hilt Bash",
-		MaxLv : 15,
-		SpAmount : [ 15 ],
-		bSeperateLv : false,
-		AttackRange : [ 2 ],
-		ActionType: "ATTACK"
-	};
-	
-	SkillInfo[SK.SWD_HEAVYSWING] = {
-		Name: "SWD_HEAVYSWING",
-		SkillName : "Heavy Swing",
-		MaxLv : 15,
-		SpAmount : [ 10 ],
-		bSeperateLv : false,
-		AttackRange : [ 2 ],
-		ActionType: "ATTACK"
+	SkillInfo[SK.SWD_SKULLCRACK] = {
+		Name: "SWD_SKULLCRACK",
+		SkillName : "Skullcrack",
 	};
 	
 	SkillInfo[SK.SWD_SLEDGEHAMMER] = {
 		Name: "SWD_SLEDGEHAMMER",
 		SkillName : "Sledgehammer",
-		MaxLv : 15,
-		SpAmount : [ 20 ],
-		bSeperateLv : false,
-		AttackRange : [ 2 ],
-		ActionType: "ATTACK"
 	};
 	
 	SkillInfo[SK.THF_SOUL] = {
 		Name: "THF_SOUL",
-		SkillName : "Thief Soul",
-		MaxLv : 1,
-		SpAmount : [ 0 ],
-		bSeperateLv : false,
-		AttackRange : [ 0 ]
+		SkillName : "Soul of the Thief",
 	};
 	
-	SkillInfo[SK.THF_QUICKHANDS] = {
-		Name: "THF_QUICKHANDS",
-		SkillName : "Quick Hands",
-		MaxLv : 15,
-		SpAmount : [ 0 ],
-		bSeperateLv : false,
-		AttackRange : [ 0 ]
+	SkillInfo[SK.THF_DOUBLESTRIKE] = {
+		Name: "THF_DOUBLESTRIKE",
+		SkillName : "Double Strike",
 	};
 	
 	SkillInfo[SK.THF_REFLEXES] = {
 		Name: "THF_REFLEXES",
 		SkillName : "Reflexes",
-		MaxLv : 15,
-		SpAmount : [ 0 ],
-		bSeperateLv : false,
-		AttackRange : [ 0 ]
 	};
 	
 	SkillInfo[SK.THF_MERCILESS] = {
 		Name: "THF_MERCILESS",
 		SkillName : "Merciless",
-		MaxLv : 15,
-		SpAmount : [ 0 ],
-		bSeperateLv : false,
-		AttackRange : [ 0 ]
 	};
 	
 	SkillInfo[SK.THF_ADRENALINERUSH] = {
 		Name: "THF_ADRENALINERUSH",
 		SkillName : "Adrenaline Rush",
-		MaxLv : 15,
-		SpAmount : [ 0 ],
-		bSeperateLv : false,
-		AttackRange : [ 0 ]
+	};
+	
+	SkillInfo[SK.THF_PICKPOCKET] = {
+		Name: "THF_PICKPOCKET",
+		SkillName : "Pickpocket",
 	};
 	
 	SkillInfo[SK.THF_CAMOUFLAGE] = {
 		Name: "THF_CAMOUFLAGE",
 		SkillName : "Camouflage",
-		MaxLv : 15,
-		SpAmount : [ 30 ],
-		bSeperateLv : false,
-		AttackRange : [ 0 ]
 	};
 	
 	SkillInfo[SK.THF_DOUBLETEAM] = {
 		Name: "THF_DOUBLETEAM",
 		SkillName : "Double Team",
-		MaxLv : 15,
-		SpAmount : [ 40 ],
-		bSeperateLv : false,
-		AttackRange : [ 0 ]
+	};
+	
+	SkillInfo[SK.THF_BROWBEAT] = {
+		Name: "THF_BROWBEAT",
+		SkillName : "Browbeat",
 	};
 	
 	SkillInfo[SK.THF_SONICSTRIKE] = {
 		Name: "THF_SONICSTRIKE",
 		SkillName : "Sonic Strike",
-		MaxLv : 15,
-		SpAmount : [ 20 ],
-		bSeperateLv : false,
-		AttackRange : [ 6 ],
-		ActionType: "ATTACK"
 	};
 	
 	SkillInfo[SK.THF_BONECUTTER] = {
 		Name: "THF_BONECUTTER",
 		SkillName : "Bonecutter",
-		MaxLv : 15,
-		SpAmount : [ 15 ],
-		bSeperateLv : false,
-		AttackRange : [ 2 ],
-		ActionType: "ATTACK"
 	};
 	
 	SkillInfo[SK.THF_BLADEFLOURISH] = {
 		Name: "THF_BLADEFLOURISH",
 		SkillName : "Blade Flourish",
-		MaxLv : 15,
-		SpAmount : [ 25 ],
-		bSeperateLv : false,
-		AttackRange : [ 2 ],
-		ActionType: "ATTACK"
-	};
-	
-	SkillInfo[SK.THF_HAMSTRING] = {
-		Name: "THF_HAMSTRING",
-		SkillName : "Hamstring",
-		MaxLv : 15,
-		SpAmount : [ 20 ],
-		bSeperateLv : false,
-		AttackRange : [ 2 ],
-		ActionType: "ATTACK"
-	};
-	
-	SkillInfo[SK.THF_STIFLE] = {
-		Name: "THF_STIFLE",
-		SkillName : "Stifle",
-		MaxLv : 15,
-		SpAmount : [ 20 ],
-		bSeperateLv : false,
-		AttackRange : [ 2 ],
-		ActionType: "ATTACK"
 	};
 	
 	SkillInfo[SK.THF_PUNCTURE] = {
 		Name: "THF_PUNCTURE",
 		SkillName : "Puncture",
-		MaxLv : 15,
-		SpAmount : [ 20 ],
-		bSeperateLv : false,
-		AttackRange : [ 2 ],
-		ActionType: "ATTACK"
 	};
-		
-	SkillInfo[SK.ALL_RESURRECTION] = {
-		Name: "ALL_RESURRECTION",
-		SkillName : "Recucitate",
-		MaxLv : 1,
-		SpAmount : [ 35 ],
-		bSeperateLv : false,
-		AttackRange : [ 2 ],
+	
+	SkillInfo[SK.ACO_SOUL] = {
+		Name: "ACO_SOUL",
+		SkillName : "Soul of the Acolyte",
+	};
+	
+	SkillInfo[SK.ACO_LIFELINK] = {
+		Name: "ACO_LIFELINK",
+		SkillName : "Life Link",
+	};
+	
+	SkillInfo[SK.ACO_BENEVOLENCE] = {
+		Name: "ACO_BENEVOLENCE",
+		SkillName : "Benevolence",
+	};
+	
+	SkillInfo[SK.ACO_SPIRITWARD] = {
+		Name: "ACO_SPIRITWARD",
+		SkillName : "Spirit Ward",
+	};
+	
+	SkillInfo[SK.ACO_PURIFY] = {
+		Name: "ACO_PURIFY",
+		SkillName : "Purify",
+	};
+	
+	SkillInfo[SK.ACO_CURE] = {
+		Name: "ACO_CURE",
+		SkillName : "Cure",
+	};
+	
+	SkillInfo[SK.ACO_RAISE] = {
+		Name: "ACO_RAISE",
+		SkillName : "Raise",
+	};
+	
+	SkillInfo[SK.ACO_FORCEARMOR] = {
+		Name: "ACO_FORCEARMOR",
+		SkillName : "Force Armor",
+	};
+	
+	SkillInfo[SK.ACO_GODSSTRENGTH] = {
+		Name: "ACO_GODSSTRENGTH",
+		SkillName : "God's Strength",
+	};
+	
+	SkillInfo[SK.ACO_HALLOWEDBOLT] = {
+		Name: "ACO_HALLOWEDBOLT",
+		SkillName : "Hallowed Bolt",
+	};
+	
+	SkillInfo[SK.ACO_HEAVENLYBLOW] = {
+		Name: "ACO_HEAVENLYBLOW",
+		SkillName : "Heavenly Blow",
 	};
 
 	SkillInfo[SK.AL_WARP] = {
