@@ -31,7 +31,7 @@ define(["./SkillConst"], function( SK )
 	
 	SkillDesc[SK.SWD_SECONDWIND] = {
 		x: function(skl){ return (40 + 6 * skl); },
-		y: function(skl){ return (10 - parseInt(skl / 3)); },
+		y: function(skl){ return (8 - parseInt(skl / 3)); },
 		z: function(skl){ return (31 - skl); }
 	};
 	

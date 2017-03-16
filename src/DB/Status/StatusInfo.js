@@ -42,10 +42,10 @@ define(['./StatusConst'], function( SC )
 		]
 	};
 
-	StatusInfo[SC.EYETOEYE] = {
+	StatusInfo[SC.SWAGGER] = {
 		icon: "\xc4\xc9\xb9\xcc\xc4\xc3\xc7\xc1\xb7\xce\xc5\xd8\xbc\xc7\x5b\xbd\xaf\xb5\xe5\x5d.tga",
 		descript: [
-			["Eye to Eye", COLOR_TITLE_BUFF],
+			["Swagger", COLOR_TITLE_BUFF],
 			["Block chance increased."],
 		]
 	};
@@ -57,132 +57,6 @@ define(['./StatusConst'], function( SC )
 			["HP barrier active."],
 		]
 	};
-
-	StatusInfo[SC.CAMO] = {
-		icon: "\xc7\xcf\xc0\xcc\xb5\xf9.tga",
-		descript: [
-			["Camouflage", COLOR_TITLE_BUFF],
-			["EVA increased."],
-		]
-	};
-
-	StatusInfo[SC.DOUBLETEAM] = {
-		icon: "\xc5\xf5\xc7\xda\xb5\xe5\xc4\xfb\xc5\xab.tga",
-		descript: [
-			["Double Team", COLOR_TITLE_BUFF],
-			["ASPD and Double Strike chance increased."],
-		]
-	};
-
-  StatusInfo[3001] = {
-		icon: "\xc7\xc1\xb7\xce\xbd\xba\xc6\xae\xbf\xfe\xc6\xf9.tga",
-		descript: [
-			["Varuna", COLOR_TITLE_BUFF],
-		]
-	};
-	
-	StatusInfo[3016] = {
-		icon: "\xc7\xc1\xb7\xb9\xc0\xd3\xb7\xb1\xc3\xc4.tga",
-		descript: [
-			["Agni", COLOR_TITLE_BUFF],
-		]
-	};
-	
-	StatusInfo[3256] = {
-		icon: "\xb6\xf3\xc0\xcc\xc6\xae\xb4\xd7\xb7\xce\xb4\xf5.tga",
-		descript: [
-			["Indra", COLOR_TITLE_BUFF],
-		]
-	};
-	
-	StatusInfo[SC.III_EXHAUST] = {
-		icon: "\xbc\xf6\xc1\xdd\xc0\xba\xc7\xcf\xb7\xe7\xc0\xc7\xbf\xec\xbf\xef.tga",
-		descript: [
-			["Rejuvenate is on cooldown.", COLOR_TITLE_BUFF],
-		]
-	};
-	StatusInfo[SC.IIF_EXHAUST] = {
-		icon: "\xbc\xf6\xc1\xdd\xc0\xba\xc7\xcf\xb7\xe7\xc0\xc7\xbf\xec\xbf\xef.tga",
-		descript: [
-			["Invigorate is on cooldown.", COLOR_TITLE_BUFF],
-		]
-	};
-	StatusInfo[SC.IFF_EXHAUST] = {
-		icon: "\xbc\xf6\xc1\xdd\xc0\xba\xc7\xcf\xb7\xe7\xc0\xc7\xbf\xec\xbf\xef.tga",
-		descript: [
-			["Call Sentinel is on cooldown.", COLOR_TITLE_BUFF],
-		]
-	};
-	StatusInfo[SC.FFF_EXHAUST] = {
-		icon: "\xbc\xf6\xc1\xdd\xc0\xba\xc7\xcf\xb7\xe7\xc0\xc7\xbf\xec\xbf\xef.tga",
-		descript: [
-			["Arcane Cannon is on cooldown.", COLOR_TITLE_BUFF],
-		]
-	};
-	StatusInfo[SC.FFW_EXHAUST] = {
-		icon: "\xbc\xf6\xc1\xdd\xc0\xba\xc7\xcf\xb7\xe7\xc0\xc7\xbf\xec\xbf\xef.tga",
-		descript: [
-			["Surge is on cooldown.", COLOR_TITLE_BUFF],
-		]
-	};
-	StatusInfo[SC.FWW_EXHAUST] = {
-		icon: "\xbc\xf6\xc1\xdd\xc0\xba\xc7\xcf\xb7\xe7\xc0\xc7\xbf\xec\xbf\xef.tga",
-		descript: [
-			["Plasma Field is on cooldown.", COLOR_TITLE_BUFF],
-		]
-	};
-	StatusInfo[SC.WWW_EXHAUST] = {
-		icon: "\xbc\xf6\xc1\xdd\xc0\xba\xc7\xcf\xb7\xe7\xc0\xc7\xbf\xec\xbf\xef.tga",
-		descript: [
-			["Arcane Vortex is on cooldown.", COLOR_TITLE_BUFF],
-		]
-	};
-	StatusInfo[SC.WWI_EXHAUST] = {
-		icon: "\xbc\xf6\xc1\xdd\xc0\xba\xc7\xcf\xb7\xe7\xc0\xc7\xbf\xec\xbf\xef.tga",
-		descript: [
-			["Flash Freeze is on cooldown.", COLOR_TITLE_BUFF],
-		]
-	};
-	StatusInfo[SC.WII_EXHAUST] = {
-		icon: "\xbc\xf6\xc1\xdd\xc0\xba\xc7\xcf\xb7\xe7\xc0\xc7\xbf\xec\xbf\xef.tga",
-		descript: [
-			["Energize is on cooldown.", COLOR_TITLE_BUFF],
-		]
-	};
-	StatusInfo[SC.IFW_EXHAUST] = {
-		icon: "\xbc\xf6\xc1\xdd\xc0\xba\xc7\xcf\xb7\xe7\xc0\xc7\xbf\xec\xbf\xef.tga",
-		descript: [
-			["Aurabolt is on cooldown.", COLOR_TITLE_BUFF],
-		]
-	};
-	StatusInfo[SC.INVIGORATE] = {
-		icon: "i_kaupe.tga",
-		descript: [
-			["ATK, MAG, and Precision increased.", COLOR_TITLE_BUFF],
-		]
-	};
-	StatusInfo[SC.ENERGIZE] = {
-		icon: "\xbf\xc0\xb9\xf6\xc6\xae\xb7\xaf\xbd\xba\xc6\xae.tga",
-		descript: [
-			["ASPD and Celerity increased.", COLOR_TITLE_BUFF],
-		]
-	};		
-	StatusInfo[SC.MONKEYGRIP] = {
-		icon: "monkeygrip.tga",
-		descript: [
-			["Monkey Grip", COLOR_TITLE_BUFF],
-			["Hold two-handed weapons with one hand."],
-		]
-	};
-			
-	StatusInfo[SC.TWINHAND] = {
-		icon: "twinhand.tga",
-		descript: [
-			["Twinhand", COLOR_TITLE_BUFF],
-			["Hold one-handed weapons with two hands."],
-		]
-	};
-	
 				
 	StatusInfo[SC.SHATTER] = {
 		icon: "\xc1\xfd\xc1\xdf\xb7\xc2\xc7\xe2\xbb\xf3.tga",
@@ -192,37 +66,25 @@ define(['./StatusConst'], function( SC )
 		]
 	};
 				
-	StatusInfo[SC.STONESTANCE] = {
-		icon: "stonestance.tga",
+	StatusInfo[SC.IGNITE] = {
+		icon: "\xc1\xfd\xc1\xdf\xb7\xc2\xc7\xe2\xbb\xf3.tga",
 		descript: [
-			["Stonestance", COLOR_TITLE_BUFF],
-			["DEF increased."],
-			["Rapidly regenerating HP."],
+			["Ignite", COLOR_TITLE_BUFF],
+			["Taking continuous magical damage."],
 		]
 	};
-				
-	StatusInfo[SC.POISONIMPRINT] = {
-		icon: "poisonimprint.tga",
+
+	StatusInfo[SC.BLOODING] = {
 		descript: [
-			["Poison Imprint", COLOR_TITLE_BUFF],
-			["Chance on-hit to cause Poison."],
-			["Increased damage vs. Poisoned enemies."],
+			["Bleeding", COLOR_TITLE_BUFF],
+			["Taking continuous physical damage."],
 		]
 	};
-				
-	StatusInfo[SC.EARTHENSHIELD] = {
-		icon: "earthenshield.tga",
+
+	StatusInfo[SC.HEALTHSTATE_POISON] = {
 		descript: [
-			["Earthen Shield", COLOR_TITLE_BUFF],
-			["Absorbs damage."],
-		]
-	};
-				
-	StatusInfo[SC.MANABATTERY] = {
-		icon: "manabattery.tga",
-		descript: [
-			["Mana Battery", COLOR_TITLE_BUFF],
-			["Your Mana Battery is active."],
+			["Poisoned", COLOR_TITLE_BUFF],
+			["Continuously losing HP."]
 		]
 	};
 
@@ -239,38 +101,6 @@ define(['./StatusConst'], function( SC )
 		descript: [
 			["Cover", COLOR_TITLE_BUFF],
 			["Incoming damage taken by someone else."]
-		]
-	};
-
-	StatusInfo[SC.LODESTONE_CHARGED] = {
-		icon: "lodestone.tga",
-		descript: [
-			["Charged", COLOR_TITLE_BUFF],
-			["Your shield is charged."]
-		]
-	};
-	
-  StatusInfo[SC.SPIRIT_1] = {
-		icon: "\xbf\xc0\xb9\xf6\xc6\xae\xb7\xaf\xbd\xba\xc6\xae.tga",
-		descript: [
-			["Spirit 1", COLOR_TITLE_BUFF],
-			["Dummy description."],
-		]
-	};
-
-  StatusInfo[SC.SPIRIT_2] = {
-		icon: "\xbf\xc0\xb9\xf6\xc6\xae\xb7\xaf\xbd\xba\xc6\xae.tga",
-		descript: [
-			["Spirit 2", COLOR_TITLE_BUFF],
-			["Dummy description."],
-		]
-	};
-	
-  StatusInfo[SC.SPIRIT_3] = {
-		icon: "\xbf\xc0\xb9\xf6\xc6\xae\xb7\xaf\xbd\xba\xc6\xae.tga",
-		descript: [
-			["Spirit 3", COLOR_TITLE_BUFF],
-			["Dummy description."],
 		]
 	};
 

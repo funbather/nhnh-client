@@ -987,7 +987,6 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 		return pkt;
 	};
 
-
 	// 0x116
 	PACKET.CZ.USE_SKILL_TOGROUND = function PACKET_CZ_USE_SKILL_TOGROUND() {
 		this.selectedLevel = 0;
@@ -5746,6 +5745,15 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 	};
 	PACKET.ZC.USE_SKILL.size = 15;
 
+	// 0x9cb
+	PACKET.ZC.USE_SKILL2 = function PACKET_ZC_USE_SKILL2(fp, end) {
+		this.SKID = fp.readUShort();
+		this.level = fp.readLong();
+		this.targetAID = fp.readULong();
+		this.srcAID = fp.readULong();
+		this.result = fp.readUChar();
+	};
+	PACKET.ZC.USE_SKILL.size = 17;
 
 	// 0x11c
 	PACKET.ZC.WARPLIST = function PACKET_ZC_WARPLIST(fp, end) {
@@ -6019,6 +6027,12 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 	};
 	PACKET.ZC.RECOVERY.size = 6;
 
+	// 0xa27
+	PACKET.ZC.RECOVERY2 = function PACKET_ZC_RECOVERY2(fp, end) {
+		this.varID = fp.readShort();
+		this.amount = fp.readLong();
+	};
+	PACKET.ZC.RECOVERY2.size = 8;
 
 	// 0x13e
 	PACKET.ZC.USESKILL_ACK = function PACKET_ZC_USESKILL_ACK(fp, end) {

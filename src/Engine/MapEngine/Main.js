@@ -595,5 +595,6 @@ define(function( require )
 		Network.hookPacket( PACKET.ZC.ACTION_FAILURE,              onActionFailure );
 		Network.hookPacket( PACKET.ZC.MSG,                         onMessage );
 		Network.hookPacket( PACKET.ZC.RECOVERY,                    onRecovery );
+		Network.hookPacket( PACKET.ZC.RECOVERY2,                    onRecovery );
 	};
 });

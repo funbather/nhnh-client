@@ -3259,6 +3259,17 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
+		"809": {
+			"identifiedDisplayName": "Coin Bag",
+			"identifiedResourceName": "\xc1\xd6\xb8\xd3\xb4\xcf",
+			"identifiedDescriptionName": [
+				"Consumable",
+				" ",
+				"Contains a small amount of Munny.\nMay also contain a crafting item.",
+			],
+			"slotCount": 0,
+			"ClassNum": 0
+		},
 		"19526": {
 			"identifiedDisplayName": "Helm",
 			"identifiedResourceName": "\xc7\xef\xb8\xa7",

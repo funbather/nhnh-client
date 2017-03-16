@@ -58,8 +58,8 @@ define(["./SkillConst"], function( SKID )
 		"Support Spell",
 		"Range: $y",
 		" ",
-		"^4488BBProvoke^000000 nearby enemies into attacking you, while also lowering their ATK by $x% for 8 seconds.\n\n",
-		"Mastery: Debuff duration is increased by 1% per MST.",
+		"^4488BBProvoke^000000 nearby enemies into attacking you, while also lowering their ATK by $x% for 10 seconds.\n\n",
+		"Mastery: Enemies have their ATK lowered by an additional 0.25% per MST.",
 	].join("\n");
 
 	SkillDescription[SKID.SWD_SECONDWIND] = [
@@ -68,7 +68,7 @@ define(["./SkillConst"], function( SKID )
 		"Cooldown: $zs, Requires: ^99BBFFCritical HP^000000",
 		" ",
 		"Heal $x% of your Max HP over $y seconds, and cleanse yourself of ^4488BBPoison^000000, ^4488BBIgnite^000000, ^4488BBBleeding^000000, and ^4488BBBlind^000000.\n\n",
-		"Mastery: Total amount of HP healed is increased by 1% per MST.",
+		"Mastery: Second Wind heals 1% more HP per MST.",
 	].join("\n");
 
 	SkillDescription[SKID.SWD_SWAGGER] = [
@@ -76,7 +76,7 @@ define(["./SkillConst"], function( SKID )
 		"Support Spell",
 		"Range: 9",
 		" ",
-		"^4488BBProvoke^000000 an enemy, and gain +$x% Physical and Magical Block Chance against their attacks and spells for 8 seconds.\n\n",
+		"^4488BBProvoke^000000 an enemy, and gain +$x% Physical and Magical Block Chance against their attacks and spells for 10 seconds.\n\n",
 		"Mastery: Buff duration increased by 1% per MST.",
 	].join("\n");
 
@@ -86,7 +86,7 @@ define(["./SkillConst"], function( SKID )
 		"Cooldown: 12s",
 		" ",
 		"Gain a barrier for 8 seconds that absorbs incoming damage, up to $x% of your Max HP.\n\n",
-		"Mastery: You take 0.2% less physical and magical damage per MST while Endure is active.",
+		"Mastery: You take 0.25% less physical and magical damage per MST while Endure is active.",
 	].join("\n");
 
 	SkillDescription[SKID.SWD_UMBOBLOW] = [
@@ -166,8 +166,8 @@ define(["./SkillConst"], function( SKID )
 		"Adrenaline Rush",
 		"Passive",
 		" ",
-		"+$x% to MSPD\n",
-		"This bonus is doubled while in combat.",
+		"+$x% to MSPD\n\n",
+		"This bonus is doubled for 5 seconds after being attacked.",
 	].join("\n");
 
 	SkillDescription[SKID.THF_PICKPOCKET] = [
