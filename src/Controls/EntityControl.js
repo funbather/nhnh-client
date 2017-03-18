@@ -106,10 +106,6 @@ define(function( require )
 			case this.display.TYPE.COMPLETE:
 				mat4.multiply( _matrix, Camera.projection, this.matrix );
 				this.display.render(_matrix);
-				if(this.display.alwaysOn) {
-					this.xSize = 10;
-					this.ySize = 10;
-				}
 				this.display.add();
 				break;
 		}
@@ -132,9 +128,6 @@ define(function( require )
 			if(!this.display.alwaysOn) {
 				this.display.display = false;
 				this.display.remove();
-			} else {
-				this.xSize = 8;
-				this.ySize = 8;
 			}
 		}
 	}

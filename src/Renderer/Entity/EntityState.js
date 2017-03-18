@@ -30,6 +30,8 @@ define(function( require )
 		this.effectColor[1] = this._bodyStateColor[1] * this._healthStateColor[1] * this._effectStateColor[1];
 		this.effectColor[2] = this._bodyStateColor[2] * this._healthStateColor[2] * this._effectStateColor[2];
 		this.effectColor[3] = this._bodyStateColor[3] * this._healthStateColor[3] * this._effectStateColor[3];
+		this.xSize = this._xSize;
+		this.ySize = this._ySize;
 	}
 
 
@@ -50,7 +52,8 @@ define(function( require )
 		this._bodyStateColor[1] = 1.0;
 		this._bodyStateColor[2] = 1.0;
 		this._bodyStateColor[3] = 1.0;
-
+		this._xSize = 5;
+		this._ySize = 5;
 
 		// Remove previous effect
 		switch (this._bodyState) {
@@ -158,6 +161,8 @@ define(function( require )
 		this._healthStateColor[1] = 1.0;
 		this._healthStateColor[2] = 1.0;
 		this._healthStateColor[3] = 1.0;
+		this._xSize = 5;
+		this._ySize = 5;
 
 		// Curse
 		if (value & StatusConst.HealthState.CURSE) {
@@ -271,20 +276,29 @@ define(function( require )
 			this.attachments.remove('particle7');
 		}
 		
-		// Rare Drop - Items Only
-		if (value & 0x4000) {
-
-			// Do not attach multiple times.
-			if (!(this._healthState & StatusConst.HealthState.SILENCE)) {
-				Sound.play('effect/ab_ancilla.wav');
+		if (value & StatusConst.HealthState.FORCEARMOR) {
+		
+			this._healthStateColor[0] *= 1.00;
+			this._healthStateColor[1] *= 1.00;
+			this._healthStateColor[2] *= 1.30;
+			
+			if (!(this._healthState & StatusConst.HealthState.FORCEARMOR)) {
 				this.attachments.add({
 					repeat:    true,
-					uid:       'raredrop',
-					file:      'raredrop',
-					head:      false,
+					uid:       'particle6',
+					file:      'particle6',
+					head:      true,
 					opacity:   1
 				});
 			}
+		}
+		else if (!(value & StatusConst.HealthState.FORCEARMOR)) {
+			this.attachments.remove('particle6');
+		}
+		
+		if (value & StatusConst.HealthState.GODSSTRENGTH) {
+			this._xSize = 6;
+			this._ySize = 6;
 		}
 
 		this._healthState = value;

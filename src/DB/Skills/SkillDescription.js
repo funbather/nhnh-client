@@ -76,8 +76,8 @@ define(["./SkillConst"], function( SKID )
 		"Support Spell",
 		"Range: 9",
 		" ",
-		"^4488BBProvoke^000000 an enemy, and gain +$x% Physical and Magical Block Chance against their attacks and spells for 10 seconds.\n\n",
-		"Mastery: Buff duration increased by 1% per MST.",
+		"^4488BBProvoke^000000 an enemy, and make their attacks $x% less likely to hit you for 10 seconds.\n\n",
+		"Mastery: You are 1% more likely to block the attacks of Swaggered enemies per MST.",
 	].join("\n");
 
 	SkillDescription[SKID.SWD_ENDURE] = [
@@ -183,7 +183,7 @@ define(["./SkillConst"], function( SKID )
 		"Support Spell",
 		"Cooldown: 20s",
 		" ",
-		"Blend into your surroundings, gaining +$x% EVA for 8 seconds.\n\n",
+		"Blend into your surroundings, gaining +$x% EVA and +20% to MSPD for 8 seconds.\n\n",
 		"Mastery: Camouflage also grants +2 EVA per MST while active.",
 	].join("\n");
 
@@ -272,7 +272,7 @@ define(["./SkillConst"], function( SKID )
 		"Spirit Ward",
 		"Passive",
 		" ",
-		"-$x% duration of ^4488BBPoison^000000, ^4488BBIgnite^000000, ^4488BBBleeding^000000, ^4488BBSilence^000000, ^4488BBStun^000000, ^4488BBFreeze^000000, and ^4488BBBlind^000000 status ailments inflicted on you.",
+		"-$x% duration of status ailments inflicted on you.",
 	].join("\n");
 
 	SkillDescription[SKID.ACO_PURIFY] = [
@@ -290,7 +290,7 @@ define(["./SkillConst"], function( SKID )
 		"Range: 9",
 		" ",
 		"Heal an ally for $x% MAG.\n\n",
-		"Mastery: Heal amount is increased by 2% per MST.",
+		"Mastery: Heal amount is increased by 1% per MST.",
 	].join("\n");
 
 	SkillDescription[SKID.ACO_RAISE] = [

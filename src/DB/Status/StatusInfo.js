@@ -57,6 +57,55 @@ define(['./StatusConst'], function( SC )
 			["HP barrier active."],
 		]
 	};
+
+	StatusInfo[SC.CAMO] = {
+		icon: "flower_leaf.tga",
+		descript: [
+			["Camouflage", COLOR_TITLE_BUFF],
+			["EVA and MSPD increased."],
+		]
+	};
+
+	StatusInfo[SC.DOUBLETEAM] = {
+		icon: "i_bunsin.tga",
+		descript: [
+			["Double Team", COLOR_TITLE_BUFF],
+			["Attacks always Double Strike."],
+			["ASPD increased."],
+		]
+	};
+
+	StatusInfo[SC.PURIFY] = {
+		icon: "glastheim_heal.tga",
+		descript: [
+			["Purify", COLOR_TITLE_BUFF],
+			["Rapidly regenerating HP."],
+		]
+	};
+
+	StatusInfo[SC.RAISE] = {
+		icon: "icon05.tga",
+		descript: [
+			["Raise", COLOR_TITLE_BUFF],
+			["Shielded from incoming damage."],
+		]
+	};
+
+	StatusInfo[SC.FORCEARMOR] = {
+		icon: "efst_def.tga",
+		descript: [
+			["Force Armor", COLOR_TITLE_BUFF],
+			["Taking less physical damage."],
+		]
+	};
+
+	StatusInfo[SC.GODSSTRENGTH] = {
+		icon: "efst_atk.tga",
+		descript: [
+			["God's Strength", COLOR_TITLE_BUFF],
+			["Dealing increased damage."],
+		]
+	};
 				
 	StatusInfo[SC.SHATTER] = {
 		icon: "\xc1\xfd\xc1\xdf\xb7\xc2\xc7\xe2\xbb\xf3.tga",

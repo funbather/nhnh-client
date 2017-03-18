@@ -778,5 +778,11 @@ define(function()
 		SECONDWIND:                             969,
 		SWAGGER:                                970,
 		ENDURE_:                                971,
+		CAMO:                                   972,
+		DOUBLETEAM:                             973,
+		PURIFY:                                 974,
+		RAISE:                                  975,
+		FORCEARMOR:                             976,
+		GODSSTRENGTH:                           977,
 	};
 });

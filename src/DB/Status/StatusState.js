@@ -39,6 +39,8 @@ define(function()
 			MARKED       : 0x0400,
 			SHATTER      : 0x0800,
 			CAMO         : 0x1000,
+			FORCEARMOR   : 0x2000,
+			GODSSTRENGTH : 0x4000,
 		},
 
 		EffectState: {

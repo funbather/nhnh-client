@@ -617,7 +617,8 @@ define(function( require )
 			// In healing skill, the level parameter stored the healed value
 			if (pkt.SKID === SkillId.AL_HEAL ||
 			    pkt.SKID === SkillId.AB_HIGHNESSHEAL ||
-			    pkt.SKID === SkillId.AB_CHEAL) {
+			    pkt.SKID === SkillId.AB_CHEAL ||
+			    pkt.SKID === SkillId.ACO_CURE) {
 				Damage.add( pkt.level, dstEntity, Renderer.tick, Damage.TYPE.HEAL );
 			}
 

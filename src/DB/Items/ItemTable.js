@@ -312,7 +312,7 @@ define(function()
 			],
 			"BaseHP": 17,
 			"BaseDEF": 8,
-			"BaseBonus1": 13,
+			"BaseBonus1": 16,
 			"Multiplier1": 2,
 			"Rating": 1,
 			"slotCount": 0,
@@ -332,7 +332,7 @@ define(function()
 			],
 			"BaseHP": 20,
 			"BaseDEF": 9,
-			"BaseBonus1": 13,
+			"BaseBonus1": 18,
 			"Multiplier1": 2,
 			"Rating": 2,
 			"slotCount": 0,
@@ -352,7 +352,7 @@ define(function()
 			],
 			"BaseHP": 23,
 			"BaseDEF": 10,
-			"BaseBonus1": 13,
+			"BaseBonus1": 20,
 			"Multiplier1": 2,
 			"Rating": 3,
 			"slotCount": 0,
@@ -371,8 +371,8 @@ define(function()
 				"+$cspd$% Casting Speed"
 			],
 			"BaseHP": 14,
-			"BaseASPD": 9,
-			"BaseCSPD": 11,
+			"BaseASPD": 13,
+			"BaseCSPD": 15,
 			"Rating": 1,
 			"slotCount": 0,
 			"ClassNum": 1
@@ -390,8 +390,8 @@ define(function()
 				"+$cspd$% Casting Speed"
 			],
 			"BaseHP": 16,
-			"BaseASPD": 10,
-			"BaseCSPD": 13,
+			"BaseASPD": 14,
+			"BaseCSPD": 17,
 			"Rating": 2,
 			"slotCount": 0,
 			"ClassNum": 1
@@ -409,8 +409,8 @@ define(function()
 				"+$cspd$% Casting Speed"
 			],
 			"BaseHP": 18,
-			"BaseASPD": 11,
-			"BaseCSPD": 15,
+			"BaseASPD": 15,
+			"BaseCSPD": 19,
 			"Rating": 3,
 			"slotCount": 0,
 			"ClassNum": 1
@@ -443,7 +443,7 @@ define(function()
 				"+$bonus1$% DEF"
 			],
 			"BaseHP": 15,
-			"BaseBonus1": 9,
+			"BaseBonus1": 10,
 			"Multiplier1": 2,
 			"Rating": 3,
 			"slotCount": 0,
@@ -461,7 +461,7 @@ define(function()
 				"+$bonus1$% MDEF"
 			],
 			"BaseHP": 15,
-			"BaseBonus1": 13,
+			"BaseBonus1": 15,
 			"Multiplier1": 2,
 			"Rating": 3,
 			"slotCount": 0,
@@ -728,7 +728,7 @@ define(function()
 				" ",
 				"+$bonus1$ MP",
 			],
-			"BaseBonus1": 10,
+			"BaseBonus1": 20,
 			"Multiplier1": 4,
 			"Rating": 3,
 			"slotCount": 0,
@@ -745,9 +745,9 @@ define(function()
 				"+$bonus1$% MP Regen",
 				"+$bonus2$% Casting Speed",
 			],
-			"BaseBonus1": 15,
+			"BaseBonus1": 20,
 			"Multiplier1": 2,
-			"BaseBonus2": 8,
+			"BaseBonus2": 14,
 			"Multiplier2": 2,
 			"Rating": 3,
 			"slotCount": 0,
@@ -762,12 +762,9 @@ define(function()
 				"Quality: $quality$%",
 				" ",
 				"+$bonus1$% HP Regen",
-				"+$bonus2$% HP Regen Rate",
 			],
-			"BaseBonus1": 20,
-			"Multiplier1": 3,
-			"BaseBonus2": 10,
-			"Multiplier2": 3,
+			"BaseBonus1": 30,
+			"Multiplier1": 2,
 			"Rating": 3,
 			"slotCount": 0,
 			"ClassNum": 1
@@ -831,7 +828,7 @@ define(function()
 				"+$bonus3$% to CRIT",
 			],
 			"BaseBonus3": 10,
-			"Multiplier3": 4,
+			"Multiplier3": 8,
 			"Rating": 3,
 			"slotCount": 0,
 			"ClassNum": 1
@@ -846,8 +843,8 @@ define(function()
 				" ",
 				"+$bonus1$% to CRIT DMG",
 			],
-			"BaseBonus1": 10,
-			"Multiplier1": 4,
+			"BaseBonus1": 8,
+			"Multiplier1": 8,
 			"Rating": 3,
 			"slotCount": 0,
 			"ClassNum": 1
@@ -954,7 +951,7 @@ define(function()
 				"+$cspd$% Casting Speed",
 			],
 			"BaseMAG": 8,
-			"BaseCSPD": 10,
+			"BaseCSPD": 20,
 			"Rating": 1,
 			"slotCount": 0,
 			"ClassNum": 1
@@ -971,7 +968,7 @@ define(function()
 				"+$cspd$% Casting Speed",
 			],
 			"BaseMAG": 9,
-			"BaseCSPD": 12,
+			"BaseCSPD": 24,
 			"Rating": 2,
 			"slotCount": 0,
 			"ClassNum": 1
@@ -988,7 +985,7 @@ define(function()
 				"+$cspd$% Casting Speed",
 			],
 			"BaseMAG": 10,
-			"BaseCSPD": 14,
+			"BaseCSPD": 28,
 			"Rating": 3,
 			"slotCount": 0,
 			"ClassNum": 1
@@ -1144,7 +1141,7 @@ define(function()
 				" ",
 				"+$mag$ MAG",
 			],
-			"BaseMAG": 18,
+			"BaseMAG": 24,
 			"Rating": 1,
 			"slotCount": 0,
 			"ClassNum": 10
@@ -1159,7 +1156,7 @@ define(function()
 				" ",
 				"+$mag$ MAG",
 			],
-			"BaseMAG": 19,
+			"BaseMAG": 27,
 			"Rating": 2,
 			"slotCount": 0,
 			"ClassNum": 10
@@ -1174,7 +1171,7 @@ define(function()
 				" ",
 				"+$mag$ MAG",
 			],
-			"BaseMAG": 20,
+			"BaseMAG": 30,
 			"Rating": 3,
 			"slotCount": 0,
 			"ClassNum": 10
@@ -2733,8 +2730,8 @@ define(function()
 			"identifiedDescriptionName": [
 				"$shard +$roll1$% HP",
 			],
-			"BaseRoll1": 5,
-			"RollMultiplier1": 3,
+			"BaseRoll1": 4,
+			"RollMultiplier1": 2,
 			"slotCount": 0,
 			"ClassNum": 0
 		},
@@ -2745,7 +2742,7 @@ define(function()
 				"$shard +$roll1$ MP",
 			],
 			"BaseRoll1": 5,
-			"RollMultiplier1": 3,
+			"RollMultiplier1": 4,
 			"slotCount": 0,
 			"ClassNum": 0
 		},
@@ -2756,7 +2753,7 @@ define(function()
 				"$shard +$roll1$ DEF",
 			],
 			"BaseRoll1": 3,
-			"RollMultiplier1": 5,
+			"RollMultiplier1": 7,
 			"slotCount": 0,
 			"ClassNum": 0
 		},
@@ -2767,7 +2764,7 @@ define(function()
 				"$shard +$roll1$ MDEF",
 			],
 			"BaseRoll1": 5,
-			"RollMultiplier1": 5,
+			"RollMultiplier1": 8,
 			"slotCount": 0,
 			"ClassNum": 0
 		},
@@ -2778,7 +2775,7 @@ define(function()
 				"$shard +$roll3$% to CRIT",
 			],
 			"BaseRoll3": 4,
-			"RollMultiplier3": 6,
+			"RollMultiplier3": 10,
 			"slotCount": 0,
 			"ClassNum": 0
 		},
@@ -2788,8 +2785,8 @@ define(function()
 			"identifiedDescriptionName": [
 				"$shard +$roll1$% to CRIT DMG",
 			],
-			"BaseRoll1": 6,
-			"RollMultiplier1": 2,
+			"BaseRoll1": 5,
+			"RollMultiplier1": 5,
 			"slotCount": 0,
 			"ClassNum": 0
 		},
@@ -2799,8 +2796,8 @@ define(function()
 			"identifiedDescriptionName": [
 				"$shard +$roll1$% ASPD",
 			],
-			"BaseRoll1": 7,
-			"RollMultiplier1": 2,
+			"BaseRoll1": 5,
+			"RollMultiplier1": 4,
 			"slotCount": 0,
 			"ClassNum": 0
 		},
@@ -2810,8 +2807,8 @@ define(function()
 			"identifiedDescriptionName": [
 				"$shard +$roll1$ EVA",
 			],
-			"BaseRoll1": 5,
-			"RollMultiplier1": 5,
+			"BaseRoll1": 8,
+			"RollMultiplier1": 4,
 			"slotCount": 0,
 			"ClassNum": 0
 		},
@@ -2854,7 +2851,7 @@ define(function()
 			"identifiedDescriptionName": [
 				"$shard +$roll3$% Lifesteal",
 			],
-			"BaseRoll3": 5,
+			"BaseRoll3": 8,
 			"RollMultiplier3": 10,
 			"slotCount": 0,
 			"ClassNum": 0
@@ -2887,7 +2884,7 @@ define(function()
 			"identifiedDescriptionName": [
 				"$seal +$roll1$ MP",
 			],
-			"BaseRoll1": 20,
+			"BaseRoll1": 30,
 			"RollMultiplier1": 2,
 			"slotCount": 0,
 			"ClassNum": 0
@@ -2899,10 +2896,10 @@ define(function()
 				"$seal +$roll3$% to CRIT",
 				"$seal +$roll2$% to CRIT DMG",
 			],
-			"BaseRoll3": 40,
+			"BaseRoll3": 25,
 			"RollMultiplier3": 3,
-			"BaseRoll2": 10,
-			"RollMultiplier2": 3,
+			"BaseRoll2": 15,
+			"RollMultiplier2": 4,
 			"slotCount": 0,
 			"ClassNum": 0
 		},
