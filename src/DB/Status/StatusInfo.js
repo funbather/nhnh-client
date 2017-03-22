@@ -106,6 +106,14 @@ define(['./StatusConst'], function( SC )
 			["Dealing increased damage."],
 		]
 	};
+
+	StatusInfo[SC.SQUASHED] = {
+		icon: "all_ray_of_protection.tga",
+		descript: [
+			["Squashed", COLOR_TITLE_BUFF],
+			["Movement speed greatly decreased."],
+		]
+	};
 				
 	StatusInfo[SC.SHATTER] = {
 		icon: "\xc1\xfd\xc1\xdf\xb7\xc2\xc7\xe2\xbb\xf3.tga",

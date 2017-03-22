@@ -784,5 +784,6 @@ define(function()
 		RAISE:                                  975,
 		FORCEARMOR:                             976,
 		GODSSTRENGTH:                           977,
+		SQUASHED:                               978,
 	};
 });

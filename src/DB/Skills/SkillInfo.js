@@ -46,6 +46,7 @@ define(["./SkillConst", "DB/Jobs/JobConst"], function( SK, JobId )
 	SkillInfo[SK.SWD_SWASHBUCKLING] = {
 		Name: "SWD_SWASHBUCKLING",
 		SkillName : "Swashbuckling",
+		Splash: true
 	};
 	
 	SkillInfo[SK.SWD_SECONDWIND] = {
@@ -66,11 +67,14 @@ define(["./SkillConst", "DB/Jobs/JobConst"], function( SK, JobId )
 	SkillInfo[SK.SWD_UMBOBLOW] = {
 		Name: "SWD_UMBOBLOW",
 		SkillName : "Umbo Blow",
+		ActionType: "ATTACK"
 	};
 	
 	SkillInfo[SK.SWD_METEORMASH] = {
 		Name: "SWD_METEORMASH",
 		SkillName : "Meteor Mash",
+		ActionType: "ATTACK",
+		Splash: true
 	};
 	
 	SkillInfo[SK.SWD_SHIELDBOOMERANG] = {
@@ -81,11 +85,14 @@ define(["./SkillConst", "DB/Jobs/JobConst"], function( SK, JobId )
 	SkillInfo[SK.SWD_SKULLCRACK] = {
 		Name: "SWD_SKULLCRACK",
 		SkillName : "Skullcrack",
+		ActionType: "ATTACK"
 	};
 	
 	SkillInfo[SK.SWD_SLEDGEHAMMER] = {
 		Name: "SWD_SLEDGEHAMMER",
 		SkillName : "Sledgehammer",
+		ActionType: "ATTACK",
+		Splash: true
 	};
 	
 	SkillInfo[SK.THF_SOUL] = {
@@ -136,21 +143,26 @@ define(["./SkillConst", "DB/Jobs/JobConst"], function( SK, JobId )
 	SkillInfo[SK.THF_SONICSTRIKE] = {
 		Name: "THF_SONICSTRIKE",
 		SkillName : "Sonic Strike",
+		ActionType: "ATTACK"
 	};
 	
 	SkillInfo[SK.THF_BONECUTTER] = {
 		Name: "THF_BONECUTTER",
 		SkillName : "Bonecutter",
+		ActionType: "ATTACK"
 	};
 	
 	SkillInfo[SK.THF_BLADEFLOURISH] = {
 		Name: "THF_BLADEFLOURISH",
 		SkillName : "Blade Flourish",
+		ActionType: "ATTACK",
+		Splash: true
 	};
 	
 	SkillInfo[SK.THF_PUNCTURE] = {
 		Name: "THF_PUNCTURE",
 		SkillName : "Puncture",
+		ActionType: "ATTACK"
 	};
 	
 	SkillInfo[SK.ACO_SOUL] = {
@@ -206,6 +218,7 @@ define(["./SkillConst", "DB/Jobs/JobConst"], function( SK, JobId )
 	SkillInfo[SK.ACO_HEAVENLYBLOW] = {
 		Name: "ACO_HEAVENLYBLOW",
 		SkillName : "Heavenly Blow",
+		ActionType: "ATTACK"
 	};
 
 	SkillInfo[SK.AL_WARP] = {

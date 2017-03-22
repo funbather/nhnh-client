@@ -113,7 +113,7 @@ define(function( require )
 		}
 
 		// Resize character
-		this.xSize = this.ySize = DB.isBaby(job) ? 4 : 5;
+		//this.xSize = this.ySize = DB.isBaby(job) ? 4 : 5;
 
 
 		this.files.shadow.size = job in ShadowTable ? ShadowTable[job] : 1.0;

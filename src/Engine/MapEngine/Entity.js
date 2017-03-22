@@ -602,12 +602,12 @@ define(function( require )
 		var dstEntity = EntityManager.get(pkt.targetAID);
 
 		// Only mob to don't display skill name ?
-		if (srcEntity && srcEntity.objecttype !== Entity.TYPE_MOB && (SkillInfo[pkt.SKID] && SkillInfo[pkt.SKID].SkillName )) { // Normal attack splash damage sent as a skill
-			srcEntity.dialog.set(
-				( (SkillInfo[pkt.SKID] && SkillInfo[pkt.SKID].SkillName ) || 'Unknown Skill' ) + '!',
-				'white'
-			);
-		}
+		//if (srcEntity && srcEntity.objecttype !== Entity.TYPE_MOB && (SkillInfo[pkt.SKID] && SkillInfo[pkt.SKID].SkillName )) { // Normal attack splash damage sent as a skill
+		//	srcEntity.dialog.set(
+		//		( (SkillInfo[pkt.SKID] && SkillInfo[pkt.SKID].SkillName ) || 'Unknown Skill' ) + '!',
+		//		'white'
+		//	);
+		//}
 
 		if (dstEntity) {
 			if (srcEntity && dstEntity !== srcEntity) {
@@ -665,9 +665,9 @@ define(function( require )
 			srcEntity.attack_speed = pkt.attackMT;
 
 
-			if (srcEntity.objecttype !== Entity.TYPE_MOB && (SkillInfo[pkt.SKID] && SkillInfo[pkt.SKID].SkillName )) {
-				srcEntity.dialog.set( ( (SkillInfo[pkt.SKID] && SkillInfo[pkt.SKID].SkillName ) || 'Unknown Skill' ) + '!' );
-			}
+			//if (srcEntity.objecttype !== Entity.TYPE_MOB && (SkillInfo[pkt.SKID] && SkillInfo[pkt.SKID].SkillName )) {
+			//	srcEntity.dialog.set( ( (SkillInfo[pkt.SKID] && SkillInfo[pkt.SKID].SkillName ) || 'Unknown Skill' ) + '!' );
+			//}
 
 			var action = (SkillInfo[pkt.SKID] && SkillInfo[pkt.SKID].ActionType) || 'SKILL';
 
@@ -689,7 +689,6 @@ define(function( require )
 		if (dstEntity) {
 			var target = pkt.damage ? dstEntity : srcEntity;
 			var i;
-			var splash;
 
 			if (pkt.damage && target) {
 
@@ -741,9 +740,7 @@ define(function( require )
 			}
 		}
 
-		if( pkt.SKID == 4085 ) { splash = 1; } // Do not play skill effect on splash damage targets
-
-		if (srcEntity && dstEntity && !splash) {
+		if (srcEntity && dstEntity && !SkillInfo[pkt.SKID].Splash) {  // Do not play skill effect on splash damage targets
 			EffectManager.spamSkill( pkt.SKID, dstEntity.GID, null, Renderer.tick + pkt.attackMT);
 		}
 	}
@@ -788,12 +785,12 @@ define(function( require )
 		}
 
 		// Only mob to don't display skill name ?
-		if (srcEntity.objecttype !== Entity.TYPE_MOB && (SkillInfo[pkt.SKID] && SkillInfo[pkt.SKID].SkillName )) {
-			srcEntity.dialog.set(
-				( ( SkillInfo[pkt.SKID] && SkillInfo[pkt.SKID].SkillName ) || 'Unknown Skill' ) + '!',
-				'white'
-			);
-		}
+		//if (srcEntity.objecttype !== Entity.TYPE_MOB && (SkillInfo[pkt.SKID] && SkillInfo[pkt.SKID].SkillName )) {
+		//	srcEntity.dialog.set(
+		//		( ( SkillInfo[pkt.SKID] && SkillInfo[pkt.SKID].SkillName ) || 'Unknown Skill' ) + '!',
+		//		'white'
+		//	);
+		//}
 
 		if (dstEntity && dstEntity !== srcEntity) {
 			srcEntity.lookTo( dstEntity.position[0], dstEntity.position[1] );
@@ -838,7 +835,6 @@ define(function( require )
 	function onEntityStatusChange( pkt )
 	{
 		var entity = EntityManager.get( pkt.AID );
-		var extras = 0;
 
 		if (!entity) {
 			return;
@@ -880,21 +876,11 @@ define(function( require )
 					}
 				});
 			break;
-
-      case StatusConst.SPIRIT_1:
-          if(pkt.val) { extras = pkt.val[0]+3000; }
-      break;
-      case StatusConst.SPIRIT_2:
-          if(pkt.val) { extras = pkt.val[0]+3000; }
-      break;
-      case StatusConst.SPIRIT_3:
-          if(pkt.val) { extras = pkt.val[0]+3000; }
-      break;
 		}
 
 		// Modify icon
 		if (entity === Session.Entity) {
-			StatusIcons.update( pkt.index, pkt.state, pkt.RemainMS, extras );
+			StatusIcons.update( pkt.index, pkt.state, pkt.RemainMS );
 		}
 	}
 

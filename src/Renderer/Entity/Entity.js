@@ -178,7 +178,7 @@ define( function( require )
 
 				// Already set
 				case 'sex':
-				//case 'job':
+				case 'job':
 					break;
 
 				// Not used ?

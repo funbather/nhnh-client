@@ -41,6 +41,7 @@ define(function()
 			CAMO         : 0x1000,
 			FORCEARMOR   : 0x2000,
 			GODSSTRENGTH : 0x4000,
+			SQUASHED     : 0x0020,
 		},
 
 		EffectState: {
@@ -55,7 +56,7 @@ define(function()
 			WEDDING      : 0x00001000,
 			RUWACH       : 0x00002000,
 			CHASEWALK    : 0x00004000,
-			FLYING       : 0x00008000,
+			//FLYING       : 0x00008000,
 			XMAS         : 0x00010000,
 			TRANSFORM    : 0x00020000,
 			SUMMER       : 0x00040000,

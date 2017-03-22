@@ -239,7 +239,7 @@ define(function( require )
 		
 		2026: [{
 			type: 'STR',
-			file: 'mil_shield',
+			file: 'proboc',
 			wav: 'effect/black_maximize_power_sword',
 			attachedEntity: true
 		}],
@@ -292,7 +292,70 @@ define(function( require )
 			wav: 'effect/ef_hit5',
 			attachedEntity: true
 		}],
-				
+
+		2034: [{
+			type: 'STR',
+			file: 'ab_offertorium',
+			wav: 'effect/rk_luxanima',
+			attachedEntity: true
+		}],
+
+		2037: [{
+			type: 'STR',
+			file: 'RL_D_TAIL/DTDT',
+			wav: 'effect/ef_hit5',
+			attachedEntity: true
+		}],
+
+		2038: [{
+			type: 'STR',
+			file: 'sonic_claw',
+			wav: 'effect/ef_hit5',
+			attachedEntity: true
+		}],
+
+		2039: [{
+			type: 'STR',
+			file: 'groomy',
+			wav: 'effect/priest_suffragium',
+			attachedEntity: true
+		}],
+
+		2040: [{
+			type: 'STR',
+			file: 'asum',
+			wav: 'effect/priest_recovery',
+			attachedEntity: true
+		}],
+
+		2041: [{
+			type: 'STR',
+			file: 'ÇÏ¾áÆ÷¼Ç',
+			wav: 'effect/Èí±â',
+			attachedEntity: true
+		}],
+
+		2042: [{
+			type: 'STR',
+			file: 'rk_luxanima',
+			wav: 'effect/¼¼Å©¸®ÆÄÀÌ½º',
+			attachedEntity: true
+		}],
+
+		2043: [{
+			type: 'STR',
+			file: 'ado',
+			wav: 'effect/ab_judex',
+			attachedEntity: true
+		}],
+
+		2044: [{
+			type: 'STR',
+			file: 'holyhit',
+			wav: 'effect/ef_hit2',
+			attachedEntity: true
+		}],
+		
 		666: [{
 			type: 'SPR',
 			file: '¾î½ºÄùÀÌÅ©',
