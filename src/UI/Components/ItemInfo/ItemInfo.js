@@ -196,11 +196,11 @@ define(function(require)
 
 			if (itemId && card) {
 				element.on('contextmenu',function(){
-					ItemInfo.setItem({
-						ITID:         itemId,
-						IsIdentified: true,
-						type:         6
-					});
+					//ItemInfo.setItem({
+					//	ITID:         itemId,
+					//	IsIdentified: true,
+					//	type:         6
+					//});
 					return false;
 				});
 			}

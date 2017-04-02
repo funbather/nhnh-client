@@ -48,11 +48,9 @@
 #charcreate .jobdesc { top:63px; }
 
 #charcreate .pickSWD { position: absolute; top:17px; border:0; width:30px; height:30px; background-repeat:no-repeat; background-color:transparent; } 
-#charcreate .pickTHF { position: absolute; top:48px; border:0; width:30px; height:30px; background-repeat:no-repeat; background-color:transparent; } 
-#charcreate .pickACO { position: absolute; top:79px; border:0; width:30px; height:30px; background-repeat:no-repeat; background-color:transparent; } 
-#charcreate .pickARC { position: absolute; top:110px; border:0; width:30px; height:30px; background-repeat:no-repeat; background-color:transparent; } 
-#charcreate .pickMGN { position: absolute; top:141px; border:0; width:30px; height:30px; background-repeat:no-repeat; background-color:transparent; } 
-#charcreate .pickMRC { position: absolute; top:172px; border:0; width:30px; height:30px; background-repeat:no-repeat; background-color:transparent; } 
+#charcreate .pickTHF { position: absolute; top:53px; border:0; width:30px; height:30px; background-repeat:no-repeat; background-color:transparent; } 
+#charcreate .pickACO { position: absolute; top:89px; border:0; width:30px; height:30px; background-repeat:no-repeat; background-color:transparent; }
+#charcreate .pickMGN { position: absolute; top:125px; border:0; width:30px; height:30px; background-repeat:no-repeat; background-color:transparent; }
 
 #charcreate .gender { position:absolute; top:41px; left:388px; }
 #charcreate .male { position: absolute; border:0; width:13px; height:13px; background-repeat:no-repeat; background-color:transparent; top:0px; right:34px; }
