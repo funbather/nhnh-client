@@ -143,5 +143,7 @@ define(['./SkillConst'], function( SK )
 
 		0x101: SK.NC_MAGMA_ERUPTION,
 		0x104: SK.RL_B_TRAP,
+		0x108: SK.MGN_IONPULSE,
+		0x109: SK.MGN_STORMLOCUS,
 	};
 });

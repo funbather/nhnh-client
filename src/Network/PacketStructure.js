@@ -4570,7 +4570,7 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 		this.GID = fp.readULong();
 		this.speed = fp.readShort();
 		this.bodyState = fp.readShort();
-		this.healthState = fp.readShort();
+		this.healthState = fp.readULong();
 		this.effectState = fp.readShort();
 		this.job = fp.readShort();
 		this.head = fp.readShort();
@@ -4601,7 +4601,7 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 		this.GID = fp.readULong();
 		this.speed = fp.readShort();
 		this.bodyState = fp.readShort();
-		this.healthState = fp.readShort();
+		this.healthState = fp.readULong();
 		this.effectState = fp.readShort();
 		this.job = fp.readShort();
 		this.head = fp.readShort();
@@ -7788,11 +7788,11 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 	PACKET.ZC.STATE_CHANGE3 = function PACKET_ZC_STATE_CHANGE3(fp, end) {
 		this.AID = fp.readULong();
 		this.bodyState = fp.readShort();
-		this.healthState = fp.readShort();
+		this.healthState = fp.readULong();
 		this.effectState = fp.readLong();
 		this.isPKModeON = fp.readUChar();
 	};
-	PACKET.ZC.STATE_CHANGE3.size = 15;
+	PACKET.ZC.STATE_CHANGE3.size = 17;
 
 
 	// 0x22a
@@ -10756,7 +10756,7 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 		this.GID = fp.readULong();
 		this.speed = fp.readShort();
 		this.bodyState = fp.readShort();
-		this.healthState = fp.readShort();
+		this.healthState = fp.readULong();
 		this.effectState = fp.readLong();
 		this.job = fp.readShort();
 		this.head = fp.readShort();
@@ -10798,7 +10798,7 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 		this.GID = fp.readULong();
 		this.speed = fp.readShort();
 		this.bodyState = fp.readShort();
-		this.healthState = fp.readShort();
+		this.healthState = fp.readULong();
 		this.effectState = fp.readLong();
 		this.job = fp.readShort();
 		this.head = fp.readShort();
@@ -10839,7 +10839,7 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 		this.GID = fp.readULong();
 		this.speed = fp.readShort();
 		this.bodyState = fp.readShort();
-		this.healthState = fp.readShort();
+		this.healthState = fp.readULong();
 		this.effectState = fp.readLong();
 		this.job = fp.readShort();
 		this.head = fp.readShort();

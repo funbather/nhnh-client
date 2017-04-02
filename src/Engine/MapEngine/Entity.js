@@ -602,12 +602,12 @@ define(function( require )
 		var dstEntity = EntityManager.get(pkt.targetAID);
 
 		// Only mob to don't display skill name ?
-		//if (srcEntity && srcEntity.objecttype !== Entity.TYPE_MOB && (SkillInfo[pkt.SKID] && SkillInfo[pkt.SKID].SkillName )) { // Normal attack splash damage sent as a skill
-		//	srcEntity.dialog.set(
-		//		( (SkillInfo[pkt.SKID] && SkillInfo[pkt.SKID].SkillName ) || 'Unknown Skill' ) + '!',
-		//		'white'
-		//	);
-		//}
+		if (srcEntity && srcEntity.objecttype !== Entity.TYPE_MOB && (SkillInfo[pkt.SKID] && SkillInfo[pkt.SKID].SkillName )) { // Normal attack splash damage sent as a skill
+			srcEntity.dialog.set(
+				( (SkillInfo[pkt.SKID] && SkillInfo[pkt.SKID].SkillName ) || 'Unknown Skill' ) + '!',
+				'white'
+			);
+		}
 
 		if (dstEntity) {
 			if (srcEntity && dstEntity !== srcEntity) {
@@ -665,9 +665,9 @@ define(function( require )
 			srcEntity.attack_speed = pkt.attackMT;
 
 
-			//if (srcEntity.objecttype !== Entity.TYPE_MOB && (SkillInfo[pkt.SKID] && SkillInfo[pkt.SKID].SkillName )) {
-			//	srcEntity.dialog.set( ( (SkillInfo[pkt.SKID] && SkillInfo[pkt.SKID].SkillName ) || 'Unknown Skill' ) + '!' );
-			//}
+			if (srcEntity.objecttype !== Entity.TYPE_MOB && (SkillInfo[pkt.SKID] && SkillInfo[pkt.SKID].SkillName )) {
+				srcEntity.dialog.set( ( (SkillInfo[pkt.SKID] && SkillInfo[pkt.SKID].SkillName ) || 'Unknown Skill' ) + '!' );
+			}
 
 			var action = (SkillInfo[pkt.SKID] && SkillInfo[pkt.SKID].ActionType) || 'SKILL';
 
@@ -688,58 +688,51 @@ define(function( require )
 
 		if (dstEntity) {
 			var target = pkt.damage ? dstEntity : srcEntity;
-			var i;
-
-			if (pkt.damage && target) {
-
-				var addDamage = function(i) {
-					return function addDamageClosure() {
-						var isAlive = dstEntity.action !== dstEntity.ACTION.DIE;
-						var isCombo = target.objecttype !== Entity.TYPE_PC && pkt.count > 1;
-
-						EffectManager.spamSkillHit( pkt.SKID, dstEntity.GID, Renderer.tick);
-						if(pkt.action == 10) // Skill crit?
-              Damage.add( pkt.damage / pkt.count, target, Renderer.tick, Damage.TYPE.CRIT);
-            else
-              Damage.add( pkt.damage / pkt.count, target, Renderer.tick);
-
-						// Only display combo if the target is not entity and
-						// there are multiple attacks
-						if (isCombo) {
+			var isCombo = target.objecttype !== Entity.TYPE_PC && pkt.count > 1;
+			var takeHit = function(i) {
+				return function takeHitFunc() {
+					if (dstEntity.action !== dstEntity.ACTION.DIE) {
+						dstEntity.setAction({
+							action: dstEntity.ACTION.HURT,
+							frame:  0,
+							repeat: false,
+							play:   true,
+							next: {
+								action: dstEntity.ACTION.READYFIGHT,
+								frame:  0,
+								repeat: true,
+								play:   true,
+								next:   false
+							}
+						});
+					}
+				}
+			}
+								
+			for(var i = 0; i < pkt.count; i++) {
+				EffectManager.spamSkillHit( pkt.SKID, dstEntity.GID, Renderer.tick + pkt.attackMT + (200 * i));
+				if (pkt.damage && target) {
+					if(pkt.action == 10) // Skill crit?
+						Damage.add( pkt.damage / pkt.count, target, Renderer.tick + pkt.attackMT + (200 * i), Damage.TYPE.CRIT);
+					else
+						Damage.add( pkt.damage / pkt.count, target, Renderer.tick + pkt.attackMT + (200 * i));
+						
+					if (isCombo) {
 							Damage.add(
 								pkt.damage / pkt.count * (i+1),
 								target,
-								Renderer.tick,
+								Renderer.tick + pkt.attackMT + (200 * i),
 								Damage.TYPE.COMBO | ( (i+1) === pkt.count ? Damage.TYPE.COMBO_FINAL : 0 )
 							);
-						}
-
-						if (isAlive) {
-							dstEntity.setAction({
-								action: dstEntity.ACTION.HURT,
-								frame:  0,
-								repeat: false,
-								play:   true,
-								next: {
-									action: dstEntity.ACTION.READYFIGHT,
-									frame:  0,
-									repeat: true,
-									play:   true,
-									next:   false
-								}
-							});
-						}
-					};
-				};
-
-				for (i = 0; i < pkt.count; ++i) {
-					Events.setTimeout( addDamage(i), pkt.attackMT + (200 * i)); //TOFIX: why 200 ?
+					}
+					
+					Events.setTimeout( takeHit(i), pkt.attackMT + (200 * i) );
+				}	else if (pkt.action == 21) { // Target blocked damage?
+					Damage.add( 0, dstEntity, Renderer.tick + pkt.attackMT, Damage.TYPE.BLOCKED);
 				}
-			} else if (pkt.action == 21) { // Target blocked damage?
-				Damage.add( 0, dstEntity, Renderer.tick + pkt.attackMT, Damage.TYPE.BLOCKED);
 			}
 		}
-
+		
 		if (srcEntity && dstEntity && !SkillInfo[pkt.SKID].Splash) {  // Do not play skill effect on splash damage targets
 			EffectManager.spamSkill( pkt.SKID, dstEntity.GID, null, Renderer.tick + pkt.attackMT);
 		}
@@ -785,12 +778,12 @@ define(function( require )
 		}
 
 		// Only mob to don't display skill name ?
-		//if (srcEntity.objecttype !== Entity.TYPE_MOB && (SkillInfo[pkt.SKID] && SkillInfo[pkt.SKID].SkillName )) {
-		//	srcEntity.dialog.set(
-		//		( ( SkillInfo[pkt.SKID] && SkillInfo[pkt.SKID].SkillName ) || 'Unknown Skill' ) + '!',
-		//		'white'
-		//	);
-		//}
+		if (srcEntity.objecttype !== Entity.TYPE_MOB && (SkillInfo[pkt.SKID] && SkillInfo[pkt.SKID].SkillName )) {
+			srcEntity.dialog.set(
+				( ( SkillInfo[pkt.SKID] && SkillInfo[pkt.SKID].SkillName ) || 'Unknown Skill' ) + '!',
+				'white'
+			);
+		}
 
 		if (dstEntity && dstEntity !== srcEntity) {
 			srcEntity.lookTo( dstEntity.position[0], dstEntity.position[1] );

@@ -98,13 +98,19 @@ define(function(require)
 		this.uid = id;
 		var desc = SkillDB[id] || '...';
 		var sklvl = level || 1; // Should always be Skill Level
-		var xx = SkillVars[id].x ? SkillVars[id].x(sklvl) : "";
-		var yy = SkillVars[id].y ? SkillVars[id].y(sklvl) : "";
-		var zz = SkillVars[id].z ? SkillVars[id].z(sklvl) : "";
 		
-		desc = desc.replace("$x", "^FF6622" + xx + "^000000");
-		desc = desc.replace("$y", "^FF6622" + yy + "^000000");
-		desc = desc.replace("$z", "^FF6622" + zz + "^000000");
+		var mst = parseFloat(WinStats.ui.find('.stats .dex').text());
+		mst = parseFloat(WinStats.ui.find('.bonus .dex').text()) ? mst + parseFloat(WinStats.ui.find('.bonus .dex').text()) : mst;
+		
+		var x = SkillVars[id].x ? SkillVars[id].x(sklvl) : ""; //
+		var y = SkillVars[id].y ? SkillVars[id].y(sklvl) : ""; // x, y, z are varying skill-specific values (SkillVars)
+		var z = SkillVars[id].z ? SkillVars[id].z(sklvl) : ""; // 
+		var m = SkillVars[id].m ? SkillVars[id].m(mst) : ""; // skill-specific mastery info
+		
+		desc = desc.replace("$x", "^DD3322" + x + "^000000");
+		desc = desc.replace("$y", "^DD3322" + y + "^000000");
+		desc = desc.replace("$z", "^DD3322" + z + "^000000");
+		desc += m;
 
 		this.ui.find('.content').text(desc);
 

@@ -114,6 +114,23 @@ define(['./StatusConst'], function( SC )
 			["Movement speed greatly decreased."],
 		]
 	};
+
+	StatusInfo[SC.CHILLED] = {
+		icon: "i_stormkick.tga",
+		descript: [
+			["Chilled", COLOR_TITLE_BUFF],
+			["MSPD and ASPD reduced."],
+		]
+	};
+
+	StatusInfo[SC.DEEPFREEZE] = {
+		icon: "´ÙÀÌ¾Æ¸óµå´õ½ºÆ®.tga",
+		descript: [
+			["Deep Freeze", COLOR_TITLE_BUFF],
+			["Cannot move or act."],
+			["Receiving more damage."],
+		]
+	};
 				
 	StatusInfo[SC.SHATTER] = {
 		icon: "\xc1\xfd\xc1\xdf\xb7\xc2\xc7\xe2\xbb\xf3.tga",
@@ -150,6 +167,15 @@ define(['./StatusConst'], function( SC )
 		descript: [
 			["Hidden", COLOR_TITLE_BUFF],
 			["Hidden underground."]
+		]
+	};
+
+	StatusInfo[SC.DISCHARGE] = {
+		icon: "rk_enchant.tga",
+		descript: [
+			["Discharge", COLOR_TITLE_BUFF],
+			["Charged with magic."],
+			["Bonus ATK on your next attack."],
 		]
 	};
 

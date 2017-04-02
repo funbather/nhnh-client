@@ -785,5 +785,8 @@ define(function()
 		FORCEARMOR:                             976,
 		GODSSTRENGTH:                           977,
 		SQUASHED:                               978,
+		CHILLED:                                979,
+		DEEPFREEZE:                             980,
+		DISCHARGE:                              981,
 	};
 });

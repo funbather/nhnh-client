@@ -92,7 +92,6 @@ define(["./SkillConst", "DB/Jobs/JobConst"], function( SK, JobId )
 		Name: "SWD_SLEDGEHAMMER",
 		SkillName : "Sledgehammer",
 		ActionType: "ATTACK",
-		Splash: true
 	};
 	
 	SkillInfo[SK.THF_SOUL] = {
@@ -219,6 +218,75 @@ define(["./SkillConst", "DB/Jobs/JobConst"], function( SK, JobId )
 		Name: "ACO_HEAVENLYBLOW",
 		SkillName : "Heavenly Blow",
 		ActionType: "ATTACK"
+	};
+	
+	SkillInfo[SK.MGN_SOUL] = {
+		Name: "MGN_SOUL",
+		SkillName : "Soul of the Magician",
+	};
+	
+	SkillInfo[SK.MGN_FIRELANCE] = {
+		Name: "MGN_FIRELANCE",
+		SkillName : "Fire Lance",
+	};
+	
+	SkillInfo[SK.MGN_INCINERATE] = {
+		Name: "MGN_INCINERATE",
+		SkillName : "Incinerate",
+	};
+	
+	SkillInfo[SK.MGN_EXPLOSION] = {
+		Name: "MGN_EXPLOSION",
+		SkillName : "Explosion",
+		Splash: true
+	};
+	
+	SkillInfo[SK.MGN_COMET] = {
+		Name: "MGN_COMET",
+		SkillName : "Comet",
+	};
+	
+	SkillInfo[SK.MGN_ICICLEEDGE] = {
+		Name: "MGN_ICICLEEDGE",
+		SkillName : "Icicle Edge",
+	};
+	
+	SkillInfo[SK.MGN_CRYSTALLIZE] = {
+		Name: "MGN_CRYSTALLIZE",
+		SkillName : "Crystallize",
+	};
+	
+	SkillInfo[SK.MGN_ICENOVA] = {
+		Name: "MGN_ICENOVA",
+		SkillName : "Ice Nova",
+		Splash: true
+	};
+	
+	SkillInfo[SK.MGN_FROSTBITE] = {
+		Name: "MGN_FROSTBITE",
+		SkillName : "Frostbite",
+		Splash: true
+	};
+	
+	SkillInfo[SK.MGN_LIGHTNINGBOLT] = {
+		Name: "MGN_LIGHTNINGBOLT",
+		SkillName : "Lightning Bolt",
+	};
+	
+	SkillInfo[SK.MGN_IONPULSE] = {
+		Name: "MGN_IONPULSE",
+		SkillName : "Ion Pulse",
+		Splash: true
+	};
+	
+	SkillInfo[SK.MGN_DISCHARGE] = {
+		Name: "MGN_DISCHARGE",
+		SkillName : "Discharge",
+	};
+	
+	SkillInfo[SK.MGN_STORMLOCUS] = {
+		Name: "MGN_STORMLOCUS",
+		SkillName : "Storm Locus",
 	};
 
 	SkillInfo[SK.AL_WARP] = {

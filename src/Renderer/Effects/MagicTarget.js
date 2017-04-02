@@ -71,9 +71,7 @@ define(function( require ) {
 	CastSize[ SkillId.HW_GANBANTEIN ]     =  1;
 	CastSize[ SkillId.HW_GRAVITATION ]    =  7;
 	CastSize[ SkillId.CR_CULTIVATION ]    =  7;
-	CastSize[ SkillId.TR_POISONBLOW ]     =  7;	
-	CastSize[ SkillId.TR_TOXICDELUGE ]    =  9;
-	CastSize[ SkillId.TR_HEAVENSDRIVE ]   =  11;
+	CastSize[ SkillId.MGN_COMET ]         = 17;
 
 
 	/**

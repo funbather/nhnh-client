@@ -274,9 +274,9 @@ define(function( require )
 		
 		if (value & StatusConst.HealthState.FORCEARMOR) {
 		
-			this._healthStateColor[0] *= 1.00;
-			this._healthStateColor[1] *= 1.00;
-			this._healthStateColor[2] *= 1.50;
+			this._healthStateColor[0] *= 1.60;
+			this._healthStateColor[1] *= 1.60;
+			this._healthStateColor[2] *= 1.85;
 			
 			if (!(this._healthState & StatusConst.HealthState.FORCEARMOR)) {
 				this.attachments.add({
@@ -284,7 +284,7 @@ define(function( require )
 					uid:       'particle6',
 					file:      'particle6',
 					head:      true,
-					opacity:   1
+					opacity:   0.5
 				});
 			}
 		}
@@ -292,15 +292,17 @@ define(function( require )
 			this.attachments.remove('particle6');
 		}
 
-		if ( (value & StatusConst.HealthState.GODSSTRENGTH) ) {
+		if (value & StatusConst.HealthState.GODSSTRENGTH) {
 			xSize *= 1.2;
 			ySize *= 1.2;
 		}
 		
-		if ( (value & StatusConst.HealthState.SQUASHED) ) {
+		if (value & StatusConst.HealthState.SQUASHED)
 			ySize *= 0.35;
-		}
 		
+		if (value & StatusConst.HealthState.CHILLED)
+			this._healthStateColor[2] *= 1.75;
+	
 		this.xSize = xSize;
 		this.ySize = ySize;
 		this._healthState = value;
