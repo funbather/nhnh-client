@@ -157,12 +157,6 @@ define(function( require )
 				pkt = new PACKET.CZ.REQ_USER_COUNT();
 				Network.sendPacket(pkt);
 				return;
-				
-      case 'cp':
-			case 'checkpoint':
-				pkt = new PACKET.CZ.REMEMBER_WARPPOINT();
-				Network.sendPacket(pkt);
-				return;
 
 			case 'chat':
 				getModule('UI/Components/ChatRoomCreate/ChatRoomCreate').show();
@@ -212,8 +206,10 @@ define(function( require )
 				}
 				break;
 				
-			case 'autotarget': // It's handled server-side, I dunno how else to do this and I'm trying avoid @command usage
-				this.onRequestTalk( "", "@autotarget", 0 );
+			case 'at':
+			case 'autotarget': // Close range skills auto-target current attack target
+				pkt = new PACKET.CZ.SET_AUTOTARGET();
+				Network.sendPacket(pkt);
 				return;
 		}
 

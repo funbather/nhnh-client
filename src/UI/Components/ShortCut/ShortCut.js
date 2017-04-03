@@ -94,10 +94,11 @@ define(function(require)
 	ShortCut.onAppend = function onAppend()
 	{
 		// Apply preferences
+		var _h = 34 * _preferences.size;
 		this.ui.css({
-			top:  Math.min( Math.max( 0, _preferences.y), Renderer.height - this.ui.height()),
+			top:  Math.min( Math.max( 0, _preferences.y), Renderer.height - _h),
 			left: Math.min( Math.max( 0, _preferences.x), Renderer.width  - this.ui.width()),
-			height: 34 * _preferences.size
+			height: _h
 		});
 	};
 

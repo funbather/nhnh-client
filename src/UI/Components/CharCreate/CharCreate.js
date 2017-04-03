@@ -81,9 +81,7 @@ define(function(require)
 		this.ui.find('.pickSWD'       ).mousedown(updateCharacterGeneric('job', 0x01000001));
 		this.ui.find('.pickTHF'       ).mousedown(updateCharacterGeneric('job', 0x06000010));
 		this.ui.find('.pickACO'       ).mousedown(updateCharacterGeneric('job', 0x0B000100));
-		this.ui.find('.pickARC'       ).mousedown(updateCharacterGeneric('job', 0x10001000));
-		this.ui.find('.pickMGN'       ).mousedown(updateCharacterGeneric('job', 0x15010000));
-		this.ui.find('.pickMRC'       ).mousedown(updateCharacterGeneric('job', 0x1A100000));
+		this.ui.find('.pickMGN'       ).mousedown(updateCharacterGeneric('job', 0x15001000));
 		//this.ui.find('.graph button'  ).mousedown(updateStats);
 
 		this.ui.find('input').mousedown(function(event){
@@ -130,7 +128,6 @@ define(function(require)
 		this.ui.find('input').val('').focus();
 
 		Renderer.render(render);
-		//updateGraphic();
 	};
 
 
@@ -209,9 +206,7 @@ define(function(require)
 			case "Swordsman": return 0x01000001;
 			case "Thief": return 0x06000010;
 			case "Acolyte": return 0x0B000100;
-			case "Archer": return 0x10001000;
-			case "Magician": return 0x15010000;
-			case "Merchant": return 0x1A100000;
+			case "Magician": return 0x15001000;
 		}
 		return 0x01000001;
 	}
@@ -273,17 +268,9 @@ define(function(require)
 						_chargen.entity.job = 4;
 						CharCreate.ui.find('.jobname').text("Acolyte");
 						break;
-					case 0x10001000:
-						_chargen.entity.job = 3;
-						CharCreate.ui.find('.jobname').text("Archer");
-						break;
-					case 0x15010000:
+					case 0x15001000:
 						_chargen.entity.job = 2;
 						CharCreate.ui.find('.jobname').text("Magician");
-						break;
-					case 0x1A100000:
-						_chargen.entity.job = 5;
-						CharCreate.ui.find('.jobname').text("Merchant");
 						break;
 				}
 				break;
@@ -320,48 +307,17 @@ define(function(require)
 		}
 	}
 
-
-	/**
-	 * Update the polygon
-	 */
-	/*function updateGraphic()
-	{
-		// Update graphique.
-		var ctx    = _graph;
-		var width  = ctx.canvas.width;
-		var height = ctx.canvas.height;
-		var i, x = width/2, y = height/2;
-		var list = ['dex', 'agi', 'str', 'vit', 'luk', 'int'];
-
-		ctx.clearRect(0, 0, width, height);
-		ctx.save();
-		ctx.fillStyle = '#7b94ce';
-		ctx.translate(x, y);
-		ctx.beginPath();
-		ctx.moveTo( 0, Math.floor( y/10 * ( parseInt(CharCreate.ui.find('.info .'+list[5]).text())+1 ) ) );
-
-		for (i = 0; i < 6; i++) {
-			ctx.rotate( 60 * Math.PI / 180 );
-			ctx.lineTo( 0, Math.floor( y/10 * ( parseInt(CharCreate.ui.find('.info .'+list[i]).text())+1 )) );
-		}
-
-		ctx.closePath();
-		ctx.fill();
-		ctx.restore();
-	}*/
-
-
 	/**
 	 * Rendering the Character
 	 */
 	function render( tick )
 	{
-		// Update direction each 500ms
-		//if (_chargen.tick + 1000 < tick) {
-		//	Camera.direction++;
-		//	Camera.direction %= 8;
-		//	_chargen.tick = tick;
-		//}
+		// Update direction each 1000ms
+		if (_chargen.tick + 1000 < tick) {
+			Camera.direction++;
+			Camera.direction %= 8;
+			_chargen.tick = tick;
+		}
 
 		// Rendering
 		SpriteRenderer.bind2DContext(_chargen.ctx, 32, 115);

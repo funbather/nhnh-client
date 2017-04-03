@@ -1478,6 +1478,7 @@ define( ['./PacketStructure'], function( PACKET )
 			[PACKET.CZ.ADD_FRIENDS,0x091D,26,2],
 			[PACKET.CZ.COMMAND_MER,0x0362,5,2,4],
 			[PACKET.CZ.ACK_STORE_PASSWORD,0x0885,36,0],
+			[PACKET.CZ.SET_AUTOTARGET,0x0556,2,0],
 		],
 	};
 });

@@ -5132,6 +5132,16 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 		this.NAID = fp.readULong();
 	};
 	PACKET.ZC.CLEAR_TEXT.size = 2;
+	
+	// 0x556
+	PACKET.CZ.SET_AUTOTARGET = function PACKET_CZ_SET_AUTOTARGET() { };
+	PACKET.CZ.SET_AUTOTARGET.prototype.build = function() {
+		var pkt_buf = new BinaryWriter(2);
+		
+		pkt_buf.writeShort(0x556);
+		
+		return pkt_buf;
+	};
 
 	// 0xb6
 	PACKET.ZC.CLOSE_DIALOG = function PACKET_ZC_CLOSE_DIALOG(fp, end) {
