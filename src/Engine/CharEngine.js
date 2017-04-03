@@ -213,15 +213,18 @@ define(function( require )
 		// Ask the mail
 		function onOk(){
 			InputBox.append();
-			InputBox.setType('mail', true);
+			InputBox.setType('text', false);
+			InputBox.ui.find('.text').text("^FF0000^boThis character is dead to me.^000000^ld");
 			InputBox.ui.css('zIndex',101);
 			InputBox.onSubmitRequest = onSubmit;
 			_ui_box.append(); // don't remove message box
 		}
 
 		// Display prompt message
-		_ui_box  = UIManager.showPromptBox( DB.getMessage(19), 'ok', 'cancel', onOk, onCancel);
-		_overlay = jQuery('<div/>').addClass('win_popup_overlay').appendTo('body');
+		_ui_box  = UIManager.showPromptBox( "Are you sure you want to delete this character?", 'ok', 'cancel', onOk, onCancel);
+		_overlay = jQuery('<div/>').addClass('win_popup_overlay').css('zIndex',50).appendTo('body');
+		InputBox.append();
+		InputBox.remove();
 
 		// Submit the mail
 		function onSubmit(email){
@@ -292,7 +295,7 @@ define(function( require )
 	 */
 	function onDeleteAnswer(pkt)
 	{
-		var result = typeof( pkt.ErrorCode ) === 'undefined' ? -1 : pkt.ErrorCode;
+		var result = pkt.ErrorCode;
 		CharSelect.deleteAnswer(result);
 	}
 

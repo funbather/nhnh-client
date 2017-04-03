@@ -278,6 +278,8 @@ define(function(require)
 		Client.loadFile( DB.INTERFACE_PATH + 'item/' + it.identifiedResourceName + '.bmp', function(data){
 			this.ui.find('.item[data-index="'+ item.index +'"] button').css('backgroundImage', 'url('+ data +')');
 		}.bind(this));
+		
+		UIManager.components['Inventory'].updateCount(); // update inventory item count
 	};
 
 

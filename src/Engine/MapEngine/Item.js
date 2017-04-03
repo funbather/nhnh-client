@@ -347,8 +347,6 @@ define(function( require )
 			case 1: // failure
 			case 2: // downgrade
 		}
-
-		debugger;
 	}
 
 

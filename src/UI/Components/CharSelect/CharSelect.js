@@ -247,7 +247,7 @@ define(function(require)
 				return;
 
 			// Success (clean up character)
-			case -1:
+			case 1:
 				delete _slots[_index];
 				delete _entitySlots[_index];
 
@@ -271,7 +271,7 @@ define(function(require)
 
 			default: // Others error ?
 			case  0: // Incorrect adress email
-				UIManager.showMessageBox( DB.getMessage(301), 'ok' );
+				UIManager.showMessageBox("Character deletion failed.\n\nMake sure you type this exactly:\n^bo^FF0000This character is dead to me.^ld^000000", 'ok' );
 				break;
 		}
 	};

@@ -4499,8 +4499,8 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 
 
 	// 0x6f
-	PACKET.HC.ACCEPT_DELETECHAR = function PACKET_HC_ACCEPT_DELETECHAR(fp, end) {};
-	PACKET.HC.ACCEPT_DELETECHAR.size = 2;
+	PACKET.HC.ACCEPT_DELETECHAR = function PACKET_HC_ACCEPT_DELETECHAR(fp, end) { this.ErrorCode = fp.readUChar(); };
+	PACKET.HC.ACCEPT_DELETECHAR.size = 3;
 
 
 	// 0x70

@@ -256,6 +256,7 @@ define(function(require)
 				this.list.push( items[i] );
 			}
 		}
+		this.updateCount();
 	};
 
 
@@ -280,6 +281,7 @@ define(function(require)
 			this.list.push(object);
 			this.onUpdateItem(object.ITID, object.count);
 		}
+		this.updateCount();
 	};
 
 
@@ -377,6 +379,7 @@ define(function(require)
 		this.list.splice( this.list.indexOf(item), 1 );
 		this.ui.find('.item[data-index="'+ item.index +'"]').remove();
 		this.onUpdateItem(item.ITID, 0);
+		this.updateCount();
 
 		var content = this.ui.find('.container .content');
 		if (content.height() === content[0].scrollHeight) {
@@ -798,6 +801,17 @@ define(function(require)
 
 		event.stopImmediatePropagation();
 		return false;
+	}
+	
+	Inventory.updateCount = function UpdateCount() {
+		var inv = Inventory.list.length;
+		var eqp = (UIManager.components['Equipment']) ? Object.keys(UIManager.components['Equipment'].getEquips()).length : 0;
+		
+		Inventory.ui.find('.current').text(inv + eqp);
+		if ( eqp )
+			Inventory.ui.find('.equipped').text("(" + eqp + " Equipped)");
+		else
+			Inventory.ui.find('.equipped').text("");
 	}
 
 
