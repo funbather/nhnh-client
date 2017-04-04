@@ -274,9 +274,9 @@ define(function( require )
 		
 		if (value & StatusConst.HealthState.FORCEARMOR) {
 		
-			this._healthStateColor[0] *= 1.60;
-			this._healthStateColor[1] *= 1.60;
-			this._healthStateColor[2] *= 1.85;
+			this._healthStateColor[0] *= 1.20;
+			this._healthStateColor[1] *= 1.20;
+			this._healthStateColor[2] *= 1.55;
 			
 			if (!(this._healthState & StatusConst.HealthState.FORCEARMOR)) {
 				this.attachments.add({

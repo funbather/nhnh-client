@@ -340,5 +340,12 @@ define(function( require )
 			wav: 'effect/¼¼Å©¸®ÆÄÀÌ½º',
 			attachedEntity: true
 		}],
+		
+		154: [{ // Refine Success
+			type: 'STR',
+			file: 'bs_refinesuccess',
+			wav:  'effect/bs_refinesuccess',
+			attachedEntity: true
+		}],
 	};
 });
