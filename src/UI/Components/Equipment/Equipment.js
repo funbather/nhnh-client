@@ -407,8 +407,8 @@ define(function(require)
 			Camera.direction    = 4;
 			character.direction = 4;
 			character.headDir   = 0;
-			character.action    = character.ACTION.IDLE;
-			character.animation = _animation;
+			//character.action    = character.ACTION.IDLE;
+			//character.animation = _animation;
 
 			_savedColor.set(character.effectColor);
 			character.effectColor.set(_cleanColor);
