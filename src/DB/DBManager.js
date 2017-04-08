@@ -557,9 +557,11 @@ define(function(require)
 				item.BaseRoll1                   = item.BaseRoll1 || 0;
 				item.BaseRoll2                   = item.BaseRoll2 || 0;
 				item.BaseRoll3                   = item.BaseRoll3 || 0;
+				item.BaseRoll4                   = item.BaseRoll4 || 0;
 				item.RollMultiplier1             = item.RollMultiplier1 || 0;
 				item.RollMultiplier2             = item.RollMultiplier2 || 0;
 				item.RollMultiplier3             = item.RollMultiplier3 || 0;
+				item.RollMultiplier4             = item.RollMultiplier4 || 0;
 
 				item.Rating                      = item.Rating || 0;
 				item.identifiedDescriptionName   = item.identifiedDescriptionName.replace('$r$',ratings[item.Rating]);
@@ -595,6 +597,7 @@ define(function(require)
 					bonusdesc = bonusdesc.replace('$roll1$','^99BBFF' + (Math.floor(bval * (bonus.BaseRoll1 * (bonus.RollMultiplier1-1) + 1) / 100) + bonus.BaseRoll1) + '^FFFFFF');
 					bonusdesc = bonusdesc.replace('$roll2$','^99BBFF' + (Math.floor(bval * (bonus.BaseRoll2 * (bonus.RollMultiplier2-1) + 1) / 100) + bonus.BaseRoll2) + '^FFFFFF');
 					bonusdesc = bonusdesc.replace('$roll3$','^99BBFF' + ((Math.floor(bval * (bonus.BaseRoll3 * (bonus.RollMultiplier3-1) + 1) / 100) + bonus.BaseRoll3) / 10).toFixed(1) + '^FFFFFF');
+					bonusdesc = bonusdesc.replace('$roll4$','^99BBFF' + ((Math.floor(bval * (bonus.BaseRoll4 * (bonus.RollMultiplier4-1) + 1) / 100) + bonus.BaseRoll4) / 100).toFixed(2) + '^FFFFFF');
 				}
 			}
 		} else {

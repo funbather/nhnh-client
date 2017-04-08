@@ -331,6 +331,20 @@ define( function( require )
 
 			// Render all frames
 			for (var i=0, count=layers.length; i<count; ++i) {
+				if( entity.objecttype == 11 ) { // Entity.TYPE_ITEM
+					var _sx = entity.xSize;
+					var _sy = entity.ySize;
+					var _ec = entity.effectColor;
+					var _t = Renderer.tick % 1000;
+					entity.xSize += _t < 500 ? 1 + (_t/500) : 3 - (_t/500);
+					entity.ySize += _t < 500 ? 1 + (_t/500) : 3 - (_t/500);
+					entity.effectColor = [255,255,255,.90];
+					
+					entity.renderLayer( layers[i], spr, pal, files.size, _position, type === 'body' );
+					entity.xSize = _sx;
+					entity.ySize = _sy;
+					entity.effectColor = _ec;
+				}
 				entity.renderLayer( layers[i], spr, pal, files.size, _position, type === 'body' );
 			}
 

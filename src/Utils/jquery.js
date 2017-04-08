@@ -50,6 +50,8 @@ define( ['jquery', 'DB/DBManager'], function( jQuery, DB )
 						
 			// Line feed feature
 			txt = txt.replace(/\n/g, '<br/>');
+			// Whitespace
+			txt = txt.replace(/\^tab/g, '&#160;&#160;&#160;&#160;');
 
 			return jQuery(this).html( txt );
 

@@ -139,6 +139,8 @@ define(function( require )
 				charset = 'windows-1256';
 				break;
 		}
+		// just set to utf-8 for now... does charset even matter?
+		charset = 'utf-8';
 
 		TextEncoding.setCharset(charset);
 		_server = server;

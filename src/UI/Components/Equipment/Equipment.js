@@ -421,8 +421,8 @@ define(function(require)
 			// Revert changes
 			character.direction = direction;
 			character.headDir   = headDir;
-			character.action    = action;
-			character.animation = animation;
+			//character.action    = action;
+			//character.animation = animation;
 			character.effectColor.set(_savedColor);
 		};
 	}();
@@ -581,6 +581,7 @@ define(function(require)
 		// Get back data
 		var overlay = Equipment.ui.find('.overlay');
 		var pos     = jQuery(this).position();
+		var _rect = this.getBoundingClientRect();
 		var it = DB.getItemInfo( item.ITID );
 		var rarity = 0;
 		var desc = "^bo" + DB.getItemName(item) + "^ld\n\n" + DB.formatDesc(item);
@@ -608,8 +609,13 @@ define(function(require)
       case 4: overlay.css({color: "#ffffff"}); overlay.css({border: "4px solid #bb91ff"}); break;
     }
     
-		overlay.css({top: pos.top, left:pos.left+28});
+		//overlay.css({top: pos.top, left:pos.left+28});
 		overlay.text(desc);
+		
+		if( overlay.width() + _rect.left + 28 < Renderer.width )
+			overlay.css({top: pos.top, left:pos.left + 28});
+		else
+			overlay.css({top: pos.top, left:pos.left - (overlay.width() + 17)})
 	}
 
 	/**

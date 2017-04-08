@@ -33,9 +33,6 @@ define( ['Core/Preferences'], function( Preferences )
 		 * Do we show official game cursor ?
 		 */
 		cursor:      true,
-		
-		// Always show item names
-		items:       true
 
 	}, 1.1 );
 

@@ -59,9 +59,9 @@ function(   DB,            EntityManager,            Entity,                Alti
 		entity.files.body.spr = path + '.spr';
 		entity.files.body.act = path + '.act';
 
-		entity.files.shadow.size = .5;
-		entity.xSize = 5;
-		entity.ySize = 5;
+		entity.files.shadow.size = 0;
+		entity.xSize = 6;
+		entity.ySize = 6;
 			
 		// Item falling
 		entity.animations.add(function(tick) {
@@ -70,11 +70,6 @@ function(   DB,            EntityManager,            Entity,                Alti
 
 			return entity.position[2] === level;
 		});
-
-		if(GraphicsSettings.items) {
-			entity.display.alwaysOn = true;
-			entity.display.add();
-		}
 			
 		EntityManager.add(entity);
 	}

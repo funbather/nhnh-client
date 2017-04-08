@@ -54,7 +54,6 @@ define(function(require)
 		this.ui.find('.close').click(this.remove.bind(this));
 		this.ui.find('.details').change(onUpdateQualityDetails);
 		this.ui.find('.cursor').change(onToggleGameCursor);
-		this.ui.find('.items').change(onToggleItemDisplay);
 		this.ui.find('.screensize').change(onUpdateScreenSize);
 
 		this.draggable(this.ui.find('.titlebar'));
@@ -75,7 +74,6 @@ define(function(require)
 		this.ui.find('.details').val(GraphicsSettings.quality);
 		this.ui.find('.screensize').val(GraphicsSettings.screensize);
 		this.ui.find('.cursor').attr('checked', GraphicsSettings.cursor);
-		this.ui.find('.items').attr('checked', GraphicsSettings.items);
 	};
 
 
@@ -115,13 +113,6 @@ define(function(require)
 		if (!GraphicsSettings.cursor) {
 			document.body.style.cursor = 'default';
 		}
-	}
-
-	// Always show item names
-	function onToggleItemDisplay()
-	{
-		GraphicsSettings.items = !!this.checked;
-		GraphicsSettings.save();
 	}
 	
 	/**

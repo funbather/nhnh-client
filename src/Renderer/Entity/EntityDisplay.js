@@ -232,14 +232,11 @@ define(['Utils/gl-matrix', 'Renderer/Renderer'], function( glMatrix, Renderer )
 		ctx.textBaseline = 'top';
 		
 		if(bg) {
-			if(bg == 1)
-				ctx.fillStyle="rgba(0,0,0,.6)";
-			else
-				ctx.fillStyle="rgba(120,120,120,.6)"; // Hovering over item while always display item name option is on
+			ctx.fillStyle="rgba(0,0,0,.6)";
 			ctx.fillRect(0,0,width,height/2);
 			ctx.strokeStyle = color;
-			ctx.lineWidth = 3;
-			roundRect(ctx, .5, .5, ctx.canvas.width-1, ctx.canvas.height/2, 3);
+			ctx.lineWidth = 1;
+			roundRect(ctx, 0.5, 0.5, ctx.canvas.width-1, ctx.canvas.height/2, 2);
 			ctx.stroke();
 		}
 		

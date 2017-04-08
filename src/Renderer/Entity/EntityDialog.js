@@ -107,8 +107,9 @@ define(['Utils/gl-matrix', 'Core/Events', 'Renderer/Renderer'], function( glMatr
 		// Build dialog
 		ctx.fillStyle = 'rgba(0,0,0,0.4)';
 		ctx.fillRect( 0, 0, ctx.canvas.width, ctx.canvas.height);
-		ctx.strokeStyle = '#525252';
-		roundRect(ctx, 0.5, 0.5, ctx.canvas.width-1, ctx.canvas.height-1, 2);
+		ctx.strokeStyle = '#F2F2F2';
+		ctx.lineWidth = 2;
+		roundRect(ctx, 0, 0, ctx.canvas.width, ctx.canvas.height, 4);
 		ctx.stroke();
 
 		for (i = 0, j = lines.length; i < j; ++i) {

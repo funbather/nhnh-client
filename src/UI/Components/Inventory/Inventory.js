@@ -664,6 +664,7 @@ define(function(require)
 
 		// Get back data
 		var pos     = jQuery(this).position();
+		var _rect = this.getBoundingClientRect();
 		var overlay = Inventory.ui.find('.overlay');
 		var compare = Inventory.ui.find('.compare');
 		
@@ -674,7 +675,6 @@ define(function(require)
 
 		// Display box
 		overlay.show();
-		compare.show();
 
     switch(rarity) {
       case 0: overlay.css({color: "#ffffff"}); overlay.css({border: "4px solid #bbbbbb"}); break;
@@ -683,8 +683,6 @@ define(function(require)
       case 3: overlay.css({color: "#ffffff"}); overlay.css({border: "4px solid #8aa5ff"}); break;
       case 4: overlay.css({color: "#ffffff"}); overlay.css({border: "4px solid #bb91ff"}); break;
     }
-    
-		overlay.css({top: pos.top+20, left:pos.left+70});
 
 		var desc = item.count > 1 ? DB.getItemName(item) + ' x ' + (item.count || 1) + '\n\n' + DB.formatDesc(item) : "^bo" + DB.getItemName(item) + "^ld\n\n" + DB.formatDesc(item);
 		var _str;
@@ -700,10 +698,25 @@ define(function(require)
 		if (!_str)
 			compare.hide();
 		else {
-			var offset = overlay.width();
-			
-			compare.css({top: pos.top+20, left: pos.left+offset+90});
+			//compare.css({top: pos.top+20, left: pos.left+overlay.width()+90});
 			compare.text(_str);	
+			compare.show();
+		}
+
+		if( !_str ) { // nothing to compare
+			// check for room to display info on the left of cursor, if not display it on the right
+			if( overlay.width() + _rect.left + 70 < Renderer.width )
+				overlay.css({top: pos.top+20, left:pos.left+70});
+			else
+				overlay.css({top: pos.top+20, left:pos.left - (overlay.width() - 20)})
+		} else {
+			if( overlay.width() + compare.width() + _rect.left + 70 < Renderer.width ) {
+				overlay.css({top: pos.top+20, left:pos.left+70});
+				compare.css({top: pos.top+20, left:pos.left+overlay.width()+90});
+			} else {
+				overlay.css({top: pos.top+20, left:pos.left - (overlay.width() + compare.width())})
+				compare.css({top: pos.top+20, left:pos.left - (compare.width() - 20)});
+			}
 		}
 	}
 	
