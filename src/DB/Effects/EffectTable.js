@@ -333,6 +333,13 @@ define(function( require )
 			wav: '_enemy_hit_wind2',
 			attachedEntity: true
 		}],
+		
+		"water_hit": [{
+			type: 'STR',
+			file: 'sonic_claw',
+			wav: 'aqua_elemental_atk',
+			attachedEntity: true
+		}],
 
 		1: [{ // MGN_DISCHARGE
 			type: 'STR',

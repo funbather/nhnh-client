@@ -58,6 +58,9 @@ define(['./SkillConst'], function( SK )
 	SkillEffect[SK.MGN_IONPULSE]         = { effectId: "ionpulse" };
 	SkillEffect[SK.MGN_STORMLOCUS]       = { groundEffectId: "stormlocus_unit" };
 	SkillEffect[SK.MGN_STORMLOCUS_PULSE] = { hitEffectId: 1 };
+	
+	SkillEffect[SK.NPC_DELUGE] = { hitEffectId: "water_hit" };
+	SkillEffect[SK.NPC_GUSH] = { hitEffectId: "water_hit" };
 
 	/**
 	 * Exports

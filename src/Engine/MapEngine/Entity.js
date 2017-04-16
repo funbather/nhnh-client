@@ -275,6 +275,9 @@ define(function( require )
 							case 4:
 							case 0:
 								Damage.add( pkt.damage, target, Renderer.tick + pkt.attackMT);
+								
+								if( dstEntity.objecttype === Entity.TYPE_MOB && pkt.damage > 0 )
+									Events.setTimeout(function(){ Sound.play('_hit_fist'+(1 + Math.floor(Math.random() * 4))+'.wav'); }, pkt.attackMT * 1.1);
 								break;
 
 							// double attack
@@ -283,6 +286,9 @@ define(function( require )
 								if (dstEntity.objecttype === Entity.TYPE_MOB && pkt.damage > 0) {
 									Damage.add( pkt.damage / 2, dstEntity, Renderer.tick + pkt.attackMT * 1, Damage.TYPE.COMBO );
 									Damage.add( pkt.damage ,    dstEntity, Renderer.tick + pkt.attackMT * 1.5, Damage.TYPE.COMBO | Damage.TYPE.COMBO_FINAL );
+									
+									Events.setTimeout(function(){ Sound.play('_hit_dagger.wav'); }, pkt.attackMT * 1.1);
+									Events.setTimeout(function(){ Sound.play('_hit_fist'+(1 + Math.floor(Math.random() * 4))+'.wav'); }, pkt.attackMT * 1.5);
 								}
 
 								Damage.add( pkt.damage / 2, target, Renderer.tick + pkt.attackMT * 1 );
@@ -292,6 +298,10 @@ define(function( require )
 							// TODO: critical damage
 							case 10:
 								Damage.add( pkt.damage, target, Renderer.tick + pkt.attackMT, Damage.TYPE.CRIT );
+								if( dstEntity.objecttype === Entity.TYPE_MOB && pkt.damage > 0 ) {
+									Events.setTimeout(function(){ Sound.play('_hit_fist'+(1 + Math.floor(Math.random() * 4))+'.wav'); }, pkt.attackMT * 1.1);
+									Events.setTimeout(function(){ Sound.play('_hit_arrow.wav'); }, pkt.attackMT * 1.1 + 5);
+								}
 								break;
 
 							// TODO: lucky miss
@@ -303,6 +313,11 @@ define(function( require )
 								if (dstEntity.objecttype === Entity.TYPE_MOB && pkt.damage > 0) {
 									Damage.add( pkt.damage / 2, dstEntity, Renderer.tick + pkt.attackMT * 1, Damage.TYPE.COMBO );
 									Damage.add( pkt.damage ,    dstEntity, Renderer.tick + pkt.attackMT * 1.5, Damage.TYPE.COMBO | Damage.TYPE.COMBO_FINAL );
+									
+									Events.setTimeout(function(){ Sound.play('_hit_dagger.wav'); }, pkt.attackMT * 1.1);
+									Events.setTimeout(function(){ Sound.play('_hit_fist'+(1 + Math.floor(Math.random() * 4))+'.wav'); }, pkt.attackMT * 1.5);
+									Events.setTimeout(function(){ Sound.play('_hit_arrow.wav'); }, pkt.attackMT * 1.1 + 5);
+									Events.setTimeout(function(){ Sound.play('_hit_arrow.wav'); }, pkt.attackMT * 1.5 + 5);
 								}
 
 								Damage.add( pkt.damage / 2, target, Renderer.tick + pkt.attackMT * 1, Damage.TYPE.CRIT  );
@@ -311,6 +326,7 @@ define(function( require )
 							
 							case 21:
 								Damage.add( 0, dstEntity, Renderer.tick + pkt.attackMT, Damage.TYPE.BLOCKED );
+								Events.setTimeout(function(){ Sound.play('effect/kyrie_guard.wav'); }, pkt.attackMT * 1.1);
 								break;
 
 							case 22:
@@ -729,6 +745,7 @@ define(function( require )
 					Events.setTimeout( takeHit(i), pkt.attackMT + (200 * i) );
 				}	else if (pkt.action == 21) { // Target blocked damage?
 					Damage.add( 0, dstEntity, Renderer.tick + pkt.attackMT, Damage.TYPE.BLOCKED);
+					Events.setTimeout(function(){ Sound.play('effect/kyrie_guard.wav'); }, pkt.attackMT * 1.1);
 				}
 			}
 		}

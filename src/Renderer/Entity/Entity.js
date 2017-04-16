@@ -180,6 +180,12 @@ define( function( require )
 				case 'sex':
 				case 'job':
 					break;
+					
+				case 'classes':
+					this.classes = unit.classes;
+					if( this.classes )
+						this.job = parseClass(this.classes);
+					break;
 
 				// Not used ?
 				case 'xSize':

@@ -56,12 +56,8 @@ define(function(require)
 	 */
 	Storage.TAB = {
 		ITEM:   0,
-		KAFRA:  1,
-		ARMS:   2,
-		ARMOR:  3,
-		AMMO:   4,
-		CARD:   5,
-		ETC:    6
+		EQUIP:  1,
+		ETC:    2
 	};
 
 
@@ -93,7 +89,7 @@ define(function(require)
 		this.ui.find('.footer .close').click(this.onClosePressed.bind(this));
 
 		// Load tabs
-		Client.loadFile( DB.INTERFACE_PATH + 'basic_interface/tab_itm_ex_0'+ (_preferences.tab+1) +'.bmp', function(data){
+		Client.loadFile( DB.INTERFACE_PATH + 'basic_interface/tab_itm_0'+ (_preferences.tab+1) +'.bmp', function(data){
 			Storage.ui.find('.tabs').css('backgroundImage', 'url("' + data + '")');
 		});
 
@@ -196,14 +192,11 @@ define(function(require)
 			// TOFIX: WTH is it for ?
 			//	tab = Storage.TAB.KAFRA;
 			//	break;
-
+			
+			case Storage.ITEM.WEAPON:
 			case Storage.ITEM.EQUIP:
 			case Storage.ITEM.PETEQUIP:
-				tab = Storage.TAB.ARMOR;
-				break;
-
-			case Storage.ITEM.WEAPON:
-				tab = Storage.TAB.ARMS;
+				tab = Storage.TAB.EQUIP;
 				break;
 
 			case Storage.ITEM.AMMO:
@@ -232,7 +225,7 @@ define(function(require)
 				'</div>'
 			);
 
-			Client.loadFile( DB.INTERFACE_PATH + 'item/' + ( item.IsIdentified ? it.identifiedResourceName : it.unidentifiedResourceName ) + '.bmp', function(data){
+			Client.loadFile( DB.INTERFACE_PATH + 'item/' + it.identifiedResourceName + '.bmp', function(data){
 				this.ui.find('.item[data-index="'+ item.index +'"] .icon').css('backgroundImage', 'url('+ data +')');
 			}.bind(this));
 		}
@@ -353,7 +346,7 @@ define(function(require)
 		var idx          = jQuery(this).index();
 		_preferences.tab = idx;
 
-		Client.loadFile(DB.INTERFACE_PATH + 'basic_interface/tab_itm_ex_0'+ (idx+1) +'.bmp', function(data){
+		Client.loadFile(DB.INTERFACE_PATH + 'basic_interface/tab_itm_0'+ (idx+1) +'.bmp', function(data){
 			Storage.ui.find('.tabs').css('backgroundImage', 'url("' + data + '")');
 			requestFilter();
 		});
@@ -482,12 +475,7 @@ define(function(require)
 		overlay.css({top: pos.top-10, left:pos.left+35});
 		overlay.text(DB.getItemName(item) + ' ' + ( item.count || 1 ) + ' ea');
 
-		if (item.IsIdentified) {
-			overlay.removeClass('grey');
-		}
-		else {
-			overlay.addClass('grey');
-		}
+		overlay.removeClass('grey');
 	}
 
 

@@ -337,6 +337,8 @@ define(function(require)
 		}
 
 		// Took out dual-wield code... for now
+		
+		if( id > 100 ) return null; // Not a shield?
 
 		var baseClass = WeaponJobTable[job] || WeaponJobTable[0];
 		
@@ -658,10 +660,6 @@ define(function(require)
 	{
 		var it = DB.getItemInfo( item.ITID );
 		var str = '';
-
-		if (!item.IsIdentified) {
-			return it.unidentifiedDisplayName;
-		}
 
 		if (item.slot) {
 			switch (item.slot.card1) {

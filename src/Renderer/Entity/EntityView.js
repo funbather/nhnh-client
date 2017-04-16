@@ -107,10 +107,6 @@ define(function( require )
 		if (this.costume) {
 			job = this.costume;
 		}
-		
-		if (this.classes) {
-			job = parseClass(this.classes);
-		}
 
 		// Resize character
 		//this.xSize = this.ySize = DB.isBaby(job) ? 4 : 5;

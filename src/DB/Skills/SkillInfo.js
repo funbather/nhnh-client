@@ -288,6 +288,16 @@ define(["./SkillConst", "DB/Jobs/JobConst"], function( SK, JobId )
 		Name: "MGN_STORMLOCUS",
 		SkillName : "Storm Locus",
 	};
+	
+	SkillInfo[SK.NPC_DELUGE] = {
+		Name: "NPC_DELUGE",
+		SkillName : "Deluge",
+	};
+	
+	SkillInfo[SK.NPC_GUSH] = {
+		Name: "NPC_GUSH",
+		SkillName : "Gush",
+	};
 
 	SkillInfo[SK.AL_WARP] = {
 		Name: "AL_WARP",
@@ -296,15 +306,6 @@ define(["./SkillConst", "DB/Jobs/JobConst"], function( SK, JobId )
 		SpAmount : [ 35 ],
 		bSeperateLv : false,
 		AttackRange : [ 9 ],
-	};
-
-	SkillInfo[SK.AL_TELEPORTATION] = {
-		Name: "AL_TELEPORT",
-		SkillName : "Teleportation",
-		MaxLv : 1,
-		SpAmount : [ 35 ],
-		bSeperateLv : false,
-		AttackRange : [ 1 ],
 	};
 	
 	SkillInfo[SK.SC_INVOKE] = {
@@ -1314,7 +1315,6 @@ define(["./SkillConst", "DB/Jobs/JobConst"], function( SK, JobId )
 
 	SkillInfo[SK.AL_TELEPORT] = {
 		Name: "AL_TELEPORT",
-		SkillName : "Teleportation",
 		MaxLv : 2,
 		SpAmount : [ 10, 9 ],
 		bSeperateLv : false,

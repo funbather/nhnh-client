@@ -68,7 +68,7 @@ define(function(require)
 		var ui = this.ui;
 
 		ui.css({
-			top:  (Renderer.height - 120) / 1.5,
+			top:  (Renderer.height) / 3,
 			left: (Renderer.width  - 280) / 2.0
 		});
 
