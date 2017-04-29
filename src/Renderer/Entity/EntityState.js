@@ -298,7 +298,7 @@ define(function( require )
 		}
 		
 		if (value & StatusConst.HealthState.SQUASHED)
-			ySize *= 0.35;
+			ySize *= 0.65;
 		
 		if (value & StatusConst.HealthState.CHILLED)
 			this._healthStateColor[2] *= 1.75;

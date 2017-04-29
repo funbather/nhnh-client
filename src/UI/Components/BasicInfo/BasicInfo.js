@@ -91,20 +91,15 @@ define(function(require)
 					break;
 
 				case 'friend':
-					if(!_preferences.friend) {
-						PartyFriends.changeTab();
-						_preferences.friend = true;
-					}
-					PartyFriends.toggle();
+					var k = {};
+					k.cmd = "FRIEND";
+					PartyFriends.onShortCut(k);
 					break;
 
 				case 'party':
-					if (_preferences.friend) {
-						PartyFriends.changeTab();
-						_preferences.friend = false;
-
-					}
-					PartyFriends.toggle();
+					var k = {};
+					k.cmd = "PARTY";
+					PartyFriends.onShortCut(k);
 					break;
 
 				case 'emoji':

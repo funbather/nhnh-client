@@ -309,8 +309,8 @@ define(function( require )
 		// Apply fog to map
 		this.fog.exist = !!(mapInfo && mapInfo.fog);
 		if (this.fog.exist) {
-			this.fog.near   = mapInfo.fog.near * 240;
-			this.fog.far    = mapInfo.fog.far  * 240;
+			this.fog.near   = mapInfo.fog.near * 360;
+			this.fog.far    = mapInfo.fog.far  * 360;
 			this.fog.factor = mapInfo.fog.factor;
 			this.fog.color.set( mapInfo.fog.color );
 		}
@@ -400,7 +400,7 @@ define(function( require )
 		EffectManager.render( gl, modelView, projection, fog, tick, false);
 
 		// Play sounds
-		Sounds.render( Session.Entity.position, tick );
+		//Sounds.render( Session.Entity.position, tick );
 
 		// Find entity over the cursor
 		if (Mouse.intersect) {

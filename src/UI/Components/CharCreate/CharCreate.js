@@ -233,10 +233,10 @@ define(function(require)
 				var head = _chargen.entity.head + increment;
 
 				if (head < 2) {
-					head = 26;
+					head = 29;
 				}
 
-				if (head > 26) {
+				if (head > 29) {
 					head =  2;
 				}
 
@@ -245,7 +245,7 @@ define(function(require)
 
 			case 'headpalette':
 				_chargen.entity.headpalette += increment;
-				_chargen.entity.headpalette %= 10;
+				_chargen.entity.headpalette %= 34;
 				break;
 				
 			case 'sex':

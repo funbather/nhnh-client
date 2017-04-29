@@ -133,7 +133,7 @@ define(["./SkillConst"], function( SK )
 	};
 	
 	SkillDesc[SK.ACO_BENEVOLENCE] = {
-		x: function(skl){ return (5 * skl); }
+		x: function(skl){ return (10 + 5 * skl); }
 	};
 	
 	SkillDesc[SK.ACO_SPIRITWARD] = {
@@ -157,7 +157,7 @@ define(["./SkillConst"], function( SK )
 	
 	SkillDesc[SK.ACO_FORCEARMOR] = {
 		x: function(skl){ return (10 + 2 * skl); },
-		m: function(mst){ return "\n\nMastery: Force Armor also grants +^DD3322" + (mst * 1) + "^000000% DEF while active. (1%/MST)"; },
+		m: function(mst){ return "\n\nMastery: Force Armor also grants +^DD3322" + (mst * 0.5).toFixed(1) + "^000000% DEF while active. (0.5%/MST)"; },
 	};
 	
 	SkillDesc[SK.ACO_GODSSTRENGTH] = {

@@ -247,7 +247,7 @@ define(function( require )
 			case 23: // bleeding
 			case 24: // ignite
 				if (dstEntity) {
-					if (pkt.damage) {
+					if (pkt.damage && (pkt.action != 22 && pkt.action != 23 && pkt.action != 24)) {
 						dstEntity.setAction({
 							delay:  Renderer.tick + pkt.attackMT,
 							action: dstEntity.ACTION.HURT,

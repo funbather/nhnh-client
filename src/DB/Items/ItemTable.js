@@ -3590,7 +3590,7 @@ define(function()
 			"identifiedDescriptionName": [
 				"Consumable",
 				" ",
-				"Contains a small amount of Munny.\nMay also contain a crafting item.",
+				"Contains a small amount of zeny.\nMay also contain a crafting item.",
 			],
 			"slotCount": 0,
 			"ClassNum": 0

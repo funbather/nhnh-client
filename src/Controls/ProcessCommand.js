@@ -205,7 +205,12 @@ define(function( require )
 					return;
 				}
 				break;
-				
+			
+			case 'b':
+			case 'return':
+				this.onRequestTalk( "", "@return", 0 );
+				return;
+			
 			case 'at':
 			case 'autotarget': // Close range skills auto-target current attack target
 				pkt = new PACKET.CZ.SET_AUTOTARGET();

@@ -105,9 +105,9 @@ define(['Utils/gl-matrix', 'Core/Events', 'Renderer/Renderer'], function( glMatr
 		ctx.font = fontSize + 'px Arial';
 
 		// Build dialog
-		ctx.fillStyle = 'rgba(0,0,0,0.7.5)';
+		ctx.fillStyle = 'rgba(0,0,0,0.4)';
 		ctx.fillRect( 0, 0, ctx.canvas.width, ctx.canvas.height);
-		ctx.strokeStyle = '#FFF';
+		ctx.strokeStyle = '#555';
 		roundRect(ctx, 0.5, 0.5, ctx.canvas.width-1, ctx.canvas.height-1, 2);
 		ctx.stroke();
 

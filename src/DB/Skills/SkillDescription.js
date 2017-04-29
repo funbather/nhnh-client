@@ -64,7 +64,7 @@ define(["./SkillConst"], function( SKID )
 	SkillDescription[SKID.SWD_SECONDWIND] = [
 		"Second Wind",
 		"Support Spell",
-		"Cooldown: $zs, Requires: ^4488BBCritical HP^000000",
+		"Cooldown: $zs",
 		" ",
 		"Heal $x% of your Max HP over $y seconds, and cleanse yourself of ^4488BBPoison^000000, ^4488BBIgnite^000000, ^4488BBBleeding^000000, and ^4488BBBlind^000000.",
 	].join("\n");
@@ -98,7 +98,7 @@ define(["./SkillConst"], function( SKID )
 	SkillDescription[SKID.SWD_METEORMASH] = [
 		"Meteor Mash",
 		"Attack",
-		"Cooldown: 5s, Range: 2",
+		"Cooldown: 5s",
 		" ",
 		"Slam your shield down into the ground, dealing $x% ATK damage and ^4488BBSquashing^000000 all nearby enemies. ^4488BBSquashed^000000 enemies are ^4488BBProvoked^000000 and have -50% MSPD.",
 	].join("\n");
@@ -133,7 +133,7 @@ define(["./SkillConst"], function( SKID )
 		" ",
 		"+20% AGI",
 		"+15% Physical Damage Dealt",
-		"+0.2 Base ASPD",
+		"+0.2 Attacks Per Second",
 	].join("\n");
 
 	SkillDescription[SKID.THF_DOUBLESTRIKE] = [
@@ -162,7 +162,7 @@ define(["./SkillConst"], function( SKID )
 		"Adrenaline Rush",
 		"Passive",
 		" ",
-		"+$x% to MSPD",
+		"+$x% to MSPD\n",
 		"This bonus is doubled for 5 seconds after being attacked.",
 	].join("\n");
 
@@ -171,7 +171,7 @@ define(["./SkillConst"], function( SKID )
 		"Passive",
 		" ",
 		"You have a $x% chance to gain a Coin Bag when killing an enemy.\n",
-		"Coin Bags give a small amount of Munny and also have a chance of containing a crafting item.",
+		"Coin Bags give a small amount of zeny and also have a chance of containing a crafting item.",
 	].join("\n");
 
 	SkillDescription[SKID.THF_CAMOUFLAGE] = [
@@ -197,7 +197,7 @@ define(["./SkillConst"], function( SKID )
 		"Support Spell",
 		"Range: 9",
 		" ",
-		"Very nicely coerce an enemy into giving up its valuable items. Browbeated enemies immediately become passive and have a $x% chance to drop an additional item when killed.",
+		"Very nicely coerce an enemy into giving up its valuable items. Browbeated enemies have a $x% chance to drop an additional item when killed.",
 	].join("\n");
 
 	SkillDescription[SKID.THF_SONICSTRIKE] = [
@@ -223,7 +223,7 @@ define(["./SkillConst"], function( SKID )
 	SkillDescription[SKID.THF_BLADEFLOURISH] = [
 		"Blade Flourish",
 		"Attack",
-		"Cooldown: 4s, Range: 4",
+		"Cooldown: 4s",
 		" ",
 		"Deal $x% ATK damage to all enemies around you with a wide slash.",
 	].join("\n");
@@ -384,9 +384,9 @@ define(["./SkillConst"], function( SKID )
 	SkillDescription[SKID.MGN_ICENOVA] = [
 		"Ice Nova",
 		"Offensive Spell",
-		"Cooldown: 8s",
+		"Range: 9, Cooldown: 8s",
 		" ",
-		"Release a wave of ice magic, dealing $x% MAG damage and ^4488BBChilling^000000 enemies around you.",
+		"Release a blast of ice magic at an enemy, dealing $x% MAG damage and ^4488BBChilling^000000 the target and other enemies around them.",
 	].join("\n");
 
 	SkillDescription[SKID.MGN_FROSTBITE] = [
@@ -394,7 +394,7 @@ define(["./SkillConst"], function( SKID )
 		"Offensive Spell",
 		"Cooldown: 4s",
 		" ",
-		"Summon an icy windstorm that ^4488BBChills^000000 and deals $x% MAG damage to all nearby enemies. If Frostbite critically hits an enemy that is already chilled, they are ^4488BBFrozen^000000 for 15 seconds instead.",
+		"Summon an icy windstorm that ^4488BBChills^000000 and deals $x% MAG damage to nearby enemies. If Frostbite critically hits an enemy that is already chilled, they are ^4488BBFrozen^000000 for 15 seconds instead.",
 	].join("\n");
 
 	SkillDescription[SKID.MGN_LIGHTNINGBOLT] = [
