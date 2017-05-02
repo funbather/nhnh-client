@@ -44,6 +44,7 @@ define(function( require )
 		this.body       = new ViewFiles();
 		this.head       = new ViewFiles();
 		this.weapon     = new ViewFiles();
+		this.trail      = new ViewFiles();
 		this.shield     = new ViewFiles();
 		this.accessory  = new ViewFiles();
 		this.accessory2 = new ViewFiles();
@@ -316,6 +317,8 @@ define(function( require )
 				// Load weapon sound
 				if (type === 'weapon') {
 					this.sound.attackFile = DB.getWeaponSound( val );
+					this.trail.trail.spr = null;
+					this.files.trail.act = null;
 				}
 
 				return;
@@ -328,9 +331,11 @@ define(function( require )
 					_this.files[type].spr = path + '.spr';
 					_this.files[type].act = path + '.act';
 
-					// Load weapon sound
+					// Load weapon sound and trail
 					if (type === 'weapon') {
 						_this.attackFile = DB.getWeaponSound( _val );
+						_this.files.trail.spr  = DB.getWeaponPath(  _val, _this.job, _this._sex ) + '_\xB0\xCB\xB1\xA4.spr';
+						_this.files.trail.act  = DB.getWeaponPath(  _val, _this.job, _this._sex ) + '_\xB0\xCB\xB1\xA4.act';
 					}
 				},
 
