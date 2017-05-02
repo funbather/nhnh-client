@@ -425,7 +425,7 @@ define(function()
 				" ",
 				"+$bonus1$ Base HP"
 			],
-			"BaseBonus1": 20,
+			"BaseBonus1": 30,
 			"Multiplier1": 5,
 			"Rating": 3,
 			"slotCount": 0,
@@ -587,7 +587,7 @@ define(function()
 				"+$cel$% to MSPD"
 			],
 			"BaseEVADE": 24,
-			"BaseCEL": 8,
+			"BaseCEL": 14,
 			"Rating": 1,
 			"slotCount": 0,
 			"ClassNum": 1
@@ -604,7 +604,7 @@ define(function()
 				"+$cel$% to MSPD"
 			],
 			"BaseEVADE": 27,
-			"BaseCEL": 9,
+			"BaseCEL": 15,
 			"Rating": 2,
 			"slotCount": 0,
 			"ClassNum": 1
@@ -621,7 +621,7 @@ define(function()
 				"+$cel$% to MSPD"
 			],
 			"BaseEVADE": 30,
-			"BaseCEL": 10,
+			"BaseCEL": 16,
 			"Rating": 3,
 			"slotCount": 0,
 			"ClassNum": 1
@@ -640,7 +640,7 @@ define(function()
 			],
 			"BaseHP": 16,
 			"BaseDEF": 9,
-			"BaseCEL": 6,
+			"BaseCEL": 10,
 			"Rating": 1,
 			"slotCount": 0,
 			"ClassNum": 1
@@ -659,7 +659,7 @@ define(function()
 			],
 			"BaseHP": 18,
 			"BaseDEF": 10,
-			"BaseCEL": 6,
+			"BaseCEL": 11,
 			"Rating": 2,
 			"slotCount": 0,
 			"ClassNum": 1
@@ -678,7 +678,7 @@ define(function()
 			],
 			"BaseHP": 20,
 			"BaseDEF": 11,
-			"BaseCEL": 7,
+			"BaseCEL": 12,
 			"Rating": 3,
 			"slotCount": 0,
 			"ClassNum": 1
@@ -3458,17 +3458,33 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
+		"708": {
+			"identifiedDisplayName": "Warpstone",
+			"identifiedResourceName": "\xbf\xb5\xc8\xa5\xc0\xc7\xbc\xd3\xbb\xe8\xc0\xd3",
+			"identifiedDescriptionName": [
+				"Usable Item",
+				" ",
+				"Use this item to set a checkpoint while inside",
+				"of an instance, overwriting the previous one set",
+				"by you or another player. Talk to the instance's",
+				"Guardian to warp to the current checkpoint.",
+				" ",
+				"Quickly using this item a second time will return",
+				"you to town, even while outside of an instance.",
+			],
+			"slotCount": 0,
+			"ClassNum": 0
+		},
 		"800": {
 			"identifiedDisplayName": "Mythril Ore",
 			"identifiedResourceName": "\xb9\xcc\xbd\xba\xb8\xb1\xb1\xa4\xbc\xae",
 			"identifiedDescriptionName": [
 				"Crafting Item",
 				" ",
-				"The ore of a highly valuable metal amongst blacksmiths.",
-				" ",
-				"Can be taken to a Blacksmith to increase the quality of an item by 10%, up to a maximum of 100%.",
+				"Used by Blacksmiths to boost",
+				"the quality of an item by 10%,",
+				"up to a max of 100%.",
 			],
-			"condensedDesc": ["Crafting Item"," ","+10% Item Quality"],
 			"slotCount": 0,
 			"ClassNum": 0
 		},
@@ -3478,11 +3494,10 @@ define(function()
 			"identifiedDescriptionName": [
 				"Crafting Item",
 				" ",
-				"The ore of a highly valuable metal amongst blacksmiths.",
-				" ",
-				"Can be taken to a Blacksmith to increase the item level of an item by 5, up to a maximum of your current Base Level.",
+				"Used by Blacksmiths to boost",
+				"the item level of an item by 5,",
+				"up to a max of your base level.",
 			],
-			"condensedDesc": ["Crafting Item"," ","+5 Item Level"],
 			"slotCount": 0,
 			"ClassNum": 0
 		},
@@ -3492,11 +3507,10 @@ define(function()
 			"identifiedDescriptionName": [
 				"Crafting Item",
 				" ",
-				"A jewel prized amongst enchantresses for its affinity for the arcane, although this one is currently devoid of magic energies.",
-				" ",
-				"Can be taken to an Enchantress to store a shard from an enchanted item for use later, although doing so will destroy the equipment.",
+				"Used by Enchantresses to hold",
+				"a shard that has been removed",
+				"from another item.",
 			],
-			"condensedDesc": ["Crafting Item"," ","Can hold an enchantment."],
 			"slotCount": 0,
 			"ClassNum": 0
 		},
@@ -3506,11 +3520,10 @@ define(function()
 			"identifiedDescriptionName": [
 				"Crafting Item",
 				" ",
-				"A jewel prized amongst enchantresses for its affinity for the arcane.",
+				"Used by Enchantresses to replace",
+				"a shard in an item.",
 				" ",
-				"Can be taken to an Enchantress to replace a shard in an enchanted item with the shard stored within this one.",
 			],
-			"condensedDesc": ["Crafting Item"," "],
 			"slotCount": 0,
 			"ClassNum": 0
 		},
@@ -3520,11 +3533,9 @@ define(function()
 			"identifiedDescriptionName": [
 				"Crafting Item",
 				" ",
-				"A jewel prized amongst enchantresses for its affinity for the arcane.",
-				" ",
-				"Can be taken to an Enchantress to add a random shard to an item, up to a maximum of three.",
+				"Used by Enchantresses to add a",
+				"new random shard to an item.",
 			],
-			"condensedDesc": ["Crafting Item"," ","Adds a shard to an item."],
 			"slotCount": 0,
 			"ClassNum": 0
 		},
@@ -3534,11 +3545,11 @@ define(function()
 			"identifiedDescriptionName": [
 				"Crafting Item",
 				" ",
-				"A jewel prized amongst enchantresses for its affinity for the arcane.",
-				" ",
-				"Can be taken to an Enchantress to replace an item's seal with another one, or to add a seal to an item with three shards.",
+				"Used by Enchantresses to add a",
+				"seal to an item with 3 shards,",
+				"or to replace a seal in an item",
+				"with a random new one.",
 			],
-			"condensedDesc": ["Crafting Item"," ","Adds a seal to an item."],
 			"slotCount": 0,
 			"ClassNum": 0
 		},
@@ -3548,11 +3559,10 @@ define(function()
 			"identifiedDescriptionName": [
 				"Crafting Item",
 				" ",
-				"A jewel prized amongst enchantresses for its affinity for the arcane.",
-				" ",
-				"Can be taken to an Enchantress to randomize the current enchantments on an item.",
+				"Used by Enchantresses to replace",
+				"every shard and seal in an item",
+				"with a new random one.",
 			],
-			"condensedDesc": ["Crafting Item"," ","Rerolls item's enchantments."],
 			"slotCount": 0,
 			"ClassNum": 0
 		},
@@ -3562,11 +3572,11 @@ define(function()
 			"identifiedDescriptionName": [
 				"Crafting Item",
 				" ",
-				"A jewel prized amongst enchantresses for its affinity for the arcane.",
-				" ",
-				"Can be taken to an Enchantress to completely change the properties of a piece of equipment, giving or taking away any number of enchantments as well as randomizing its quality, sometimes even beyond 100%.",
+				"Used by Enchantresses to randomize",
+				"the properties and enchantments on",
+				"an item, sometimes beyond their",
+				"normal limits.",
 			],
-			"condensedDesc": ["Crafting Item"," ","Completely rerolls an item."],
 			"slotCount": 0,
 			"ClassNum": 0
 		},
@@ -3576,11 +3586,11 @@ define(function()
 			"identifiedDescriptionName": [
 				"Crafting Item",
 				" ",
-				"A blacksmith's hammer that has been blessed by a Goddess.",
-				" ",
-				"Can be taken to a Blacksmith to upgrade a normal item of a lower rank to the best of its type, while preserving all of its other aspects.",
+				"Used by Blacksmiths to boost",
+				"the rank of a normal item, up",
+				"to a max of $r$.",
 			],
-			"condensedDesc": ["Crafting Item"," ","Upgrades a normal item."],
+			"Rating": 3,
 			"slotCount": 0,
 			"ClassNum": 0
 		},
@@ -3590,7 +3600,20 @@ define(function()
 			"identifiedDescriptionName": [
 				"Consumable",
 				" ",
-				"Contains a small amount of zeny.\nMay also contain a crafting item.",
+				"Contains a small amount of zeny.",
+				" ",
+				"May also contain a crafting item.",
+			],
+			"slotCount": 0,
+			"ClassNum": 0
+		},
+		"810": {
+			"identifiedDisplayName": "Slime Token",
+			"identifiedResourceName": "\xc6\xf7\xb8\xb5\xc4\xda\xc0\xce",
+			"identifiedDescriptionName": [
+				"Miscellaneous Item",
+				" ",
+				"A token featuring a Slime.",
 			],
 			"slotCount": 0,
 			"ClassNum": 0

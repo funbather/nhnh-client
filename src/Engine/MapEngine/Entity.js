@@ -247,22 +247,24 @@ define(function( require )
 			case 23: // bleeding
 			case 24: // ignite
 				if (dstEntity) {
-					if (pkt.damage && (pkt.action != 22 && pkt.action != 23 && pkt.action != 24)) {
-						dstEntity.setAction({
-							delay:  Renderer.tick + pkt.attackMT,
-							action: dstEntity.ACTION.HURT,
-							frame:  0,
-							repeat: false,
-							play:   true,
-							next: {
-								delay:  Renderer.tick + pkt.attackMT * 2,
-								action: dstEntity.ACTION.READYFIGHT,
+					if (pkt.damage) {// && (pkt.action != 22 && pkt.action != 23 && pkt.action != 24)) {
+						if ((dstEntity.objecttype === Entity.TYPE_PC && dstEntity.action === dstEntity.ACTION.SIT) || dstEntity.objecttype !== Entity.TYPE_PC) {
+							dstEntity.setAction({
+								delay:  Renderer.tick + pkt.attackMT,
+								action: dstEntity.ACTION.HURT,
 								frame:  0,
-								repeat: true,
+								repeat: false,
 								play:   true,
-								next:   false
-							}
-						});
+								next: {
+									delay:  Renderer.tick + pkt.attackMT * 2,
+									action: dstEntity.ACTION.READYFIGHT,
+									frame:  0,
+									repeat: true,
+									play:   true,
+									next:   false
+								}
+							});
+						}
 					}
 
 					target = pkt.damage ? dstEntity : srcEntity;
@@ -347,7 +349,8 @@ define(function( require )
 					srcEntity.lookTo( dstEntity.position[0], dstEntity.position[1] );
 				}
 
-				if(srcEntity != dstEntity) { // Devotion fix (devotion caster would get stuck in attack animation)
+				// do not show attacking animation if the target is also the source OR! if it's status damage being dealt
+				if(srcEntity != dstEntity && (pkt.action != 22 && pkt.action != 23 && pkt.action != 24)) {
 				  srcEntity.attack_speed = pkt.attackMT;
 				  srcEntity.setAction({
 					action: srcEntity.ACTION.ATTACK,
@@ -470,7 +473,19 @@ define(function( require )
 		ChatBox.addText( pkt.msg, ChatBox.TYPE.PUBLIC, color);
 	}
 
-  function onTalkBox( pkt ) {
+	function onTalkBox( pkt ) {
+	var entity;
+
+		pkt.msg = pkt.msg.replace(/\: \|\d{2}/, ': ');
+
+		entity = EntityManager.get(pkt.accountID);
+		if (entity) {
+			entity.dialog.set( pkt.msg );
+		}
+	}
+  
+	function onNPCTalk( pkt )
+	{
     var entity;
 
 		pkt.msg = pkt.msg.replace(/\: \|\d{2}/, ': ');
@@ -479,7 +494,7 @@ define(function( require )
 		if (entity) {
 			entity.dialog.set( pkt.msg );
 		}
-  }
+	}
 
 	/**
 	 * Display entity's name
@@ -707,7 +722,7 @@ define(function( require )
 			var isCombo = target.objecttype !== Entity.TYPE_PC && pkt.count > 1;
 			var takeHit = function(i) {
 				return function takeHitFunc() {
-					if (dstEntity.action !== dstEntity.ACTION.DIE) {
+					if (dstEntity.action !== dstEntity.ACTION.DIE && !(dstEntity.objecttype === Entity.TYPE_PC && dstEntity.action !== dstEntity.ACTION.SIT)) {
 						dstEntity.setAction({
 							action: dstEntity.ACTION.HURT,
 							frame:  0,
@@ -1086,5 +1101,6 @@ define(function( require )
 		Network.hookPacket( PACKET.ZC.EMOTION,                      onEntityEmotion);
 		Network.hookPacket( PACKET.ZC.NOTIFY_MONSTER_HP,            onEntityLifeUpdate);
 		Network.hookPacket( PACKET.ZC.TALKBOX_CHATCONTENTS,         onTalkBox);
+		Network.hookPacket( PACKET.ZC.SHOWSCRIPT,                   onNPCTalk);
 	};
 });

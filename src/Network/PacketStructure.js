@@ -6639,6 +6639,12 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 	};
 	PACKET.ZC.TALKBOX_CHATCONTENTS.size = 86;
 
+	// 0x8b3
+	PACKET.ZC.SHOWSCRIPT = function PACKET_ZC_SHOWSCRIPT(fp, end) {
+		this.accountID = fp.readULong();
+		this.msg = fp.readString(end - fp.tell());
+	};
+	PACKET.ZC.SHOWSCRIPT.size = -1;
 
 	// 0x192
 	PACKET.ZC.UPDATE_MAPINFO = function PACKET_ZC_UPDATE_MAPINFO(fp, end) {

@@ -46,7 +46,7 @@ define(['./StatusConst'], function( SC )
 		icon: "\xc4\xc9\xb9\xcc\xc4\xc3\xc7\xc1\xb7\xce\xc5\xd8\xbc\xc7\x5b\xbd\xaf\xb5\xe5\x5d.tga",
 		descript: [
 			["Swagger", COLOR_TITLE_BUFF],
-			["Block chance increased."],
+			["Hit chance reduced."],
 		]
 	};
 
@@ -149,6 +149,7 @@ define(['./StatusConst'], function( SC )
 	};
 
 	StatusInfo[SC.BLOODING] = {
+		icon: "glastheim_trans.tga",
 		descript: [
 			["Bleeding", COLOR_TITLE_BUFF],
 			["Taking continuous physical damage."],
@@ -156,6 +157,7 @@ define(['./StatusConst'], function( SC )
 	};
 
 	StatusInfo[SC.HEALTHSTATE_POISON] = {
+		icon: "glastheim_trans.tga",
 		descript: [
 			["Poisoned", COLOR_TITLE_BUFF],
 			["Continuously losing HP."]

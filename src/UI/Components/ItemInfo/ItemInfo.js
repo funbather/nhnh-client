@@ -88,12 +88,6 @@ define(function(require)
 			})
 			.click(this.remove.bind(this));
 
-		// Ask to see card.
-		this.ui.find('.view').click(function(){
-			CardIllustration.append();
-			CardIllustration.setCard(this.item);
-		}.bind(this));
-
 		this.draggable(this.ui.find('.title'));
 	};
 
@@ -121,14 +115,6 @@ define(function(require)
 		ui.find('.title').text( item.IsIdentified ? it.identifiedDisplayName : it.unidentifiedDisplayName );
 		ui.find('.description').text( desc );
 		ui.find('.description').append( it.flavortext.italics() );
-
-		// Add view button (for cards)
-		if (item.type === ItemType.CARD) {
-			ui.find('.view').show();
-		}
-		else {
-			ui.find('.view').hide();
-		}
 
 		// TODO: add item owner name
 		switch (cardList.slot1) {
@@ -176,11 +162,11 @@ define(function(require)
 			file = 'item/' + card.identifiedResourceName + '.bmp';
 			name = '<div class="name">'+ jQuery.escape(card.identifiedDisplayName) + '</div>';
 		}
-		else if (index < maxSlots) {
-			file = 'empty_card_slot.bmp';
+		else if (index < 3) {
+			file = 'emptyshard.bmp';
 		}
 		else {
-			file = 'disable_card_slot.bmp';
+			file = 'emptyseal.bmp';
 		}
 
 		cardList.append(

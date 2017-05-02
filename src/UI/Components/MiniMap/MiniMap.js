@@ -441,12 +441,18 @@ define(function(require)
 			}
 
 			// Render NPC mark
-			if (tick % 1000 > 500) { // blink effect
-
-				count = _markers.length;
-
+			count = _markers.length;
+			if( count ) {
 				for (i = 0; i < count; ++i) {
 					dot = _markers[i];
+					if( tick % 1000 > 500 ) {
+						_ctx.fillStyle   = dot.color;
+						_ctx.strokeStyle = dot.color;
+					} else {
+						_ctx.fillStyle   = 'white';
+						_ctx.strokeStyle = 'white';
+					}
+					_ctx.lineWidth   = 2;
 
 					// Auto remove feature
 					if (dot.tick < Renderer.tick) {
@@ -457,9 +463,14 @@ define(function(require)
 					}
 
 					// Render mark
-					_ctx.fillStyle = dot.color;
-					_ctx.fillRect( projectX(dot.x) - 1, projectY(dot.y) - 4, 2, 8 );
-					_ctx.fillRect( projectX(dot.x) - 4, projectY(dot.y) - 1, 8, 2 );
+					_ctx.beginPath();
+					_ctx.moveTo( projectX(dot.x) + 0, projectY(dot.y) - 4 );
+					_ctx.lineTo( projectX(dot.x) + 4, projectY(dot.y) + 0 );
+					_ctx.lineTo( projectX(dot.x) + 0, projectY(dot.y) + 4 );
+					_ctx.lineTo( projectX(dot.x) - 4, projectY(dot.y) + 0 );
+					_ctx.lineTo( projectX(dot.x) + 0, projectY(dot.y) - 4 );
+					_ctx.stroke();
+					_ctx.fill();
 				}
 			}
 

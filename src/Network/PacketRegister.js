@@ -575,6 +575,7 @@ define( ['./PacketStructure' ], function( PACKET )
 		0xa10: PACKET.ZC.STORE_EQUIPMENT_ITEMLIST4,
 		0x9cb: PACKET.ZC.USE_SKILL2,
 		0xa27: PACKET.ZC.RECOVERY2,
+		0x8b3: PACKET.ZC.SHOWSCRIPT,
 
 		0x555: PACKET.ZC.CLEAR_TEXT, // NHNH Custom Packet
 	};
