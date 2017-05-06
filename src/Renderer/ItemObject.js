@@ -30,7 +30,7 @@ function(   DB,            EntityManager,            Entity,                Alti
 		var it     = DB.getItemInfo(itemid);
 		var path   = DB.getItemPath(itemid, identify);
 		var entity = new Entity();
-		var name   = identify ? it.identifiedDisplayName : it.unidentifiedDisplayName;
+		var name   = it.identifiedDisplayName;
 
 		entity.GID          = gid;
 		entity.objecttype   = Entity.TYPE_ITEM;

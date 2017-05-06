@@ -97,10 +97,7 @@ define(function(require)
 				break;
 				
 			case 'def':
-			case 'mdef':
-				this.ui.find('.' + type).text((val/10).toFixed(1));
-				break;
-				
+			case 'mdef':	
 			case 'critical':
 				this.ui.find('.' + type).text((val/10).toFixed(1) + '%');
 				break;
@@ -164,10 +161,10 @@ define(function(require)
 		var mdef = parseFloat(this.ui.find('.mdef2').text());
 		var mdef2 = parseFloat(this.ui.find('.mdef').text());
 		
-		this.ui.find('.physmit').text((100 - (100*calcMitigation(def))).toFixed(1));
-		this.ui.find('.physavo').text(calcAvoidance(def2,eva).toFixed(1));
-		this.ui.find('.magmit').text((100 - (100*calcMitigation(mdef))).toFixed(1));
-		this.ui.find('.magavo').text(calcAvoidance(mdef2,0).toFixed(1));
+		this.ui.find('.physmit').text((100 - (100*calcMitigation(def))).toFixed(1) + "%");
+		this.ui.find('.physavo').text(calcAvoidance(def2,eva).toFixed(1) + "%");
+		this.ui.find('.magmit').text((100 - (100*calcMitigation(mdef))).toFixed(1) + "%");
+		this.ui.find('.magavo').text(calcAvoidance(mdef2,0).toFixed(1) + "%");
 	};
 	
 	function calcMitigation(x) {

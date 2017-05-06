@@ -526,10 +526,10 @@ define(function(require)
 			if (!item._decoded) {				
 				var ratings = ["","\u2605\u2606\u2606","\u2605\u2605\u2606","\u2605\u2605\u2605","\u272A"];
 				
-				item.identifiedDescriptionName   = item.identifiedDescriptionName   ? TextEncoding.decodeString(item.identifiedDescriptionName.join('\n'))   : '';
-				item.unidentifiedDescriptionName = item.unidentifiedDescriptionName ? TextEncoding.decodeString(item.unidentifiedDescriptionName.join('\n')) : '';
+				item.identifiedDescriptionName   = item.identifiedDescriptionName ? TextEncoding.decodeString(item.identifiedDescriptionName.join('\n'))   : '';
+				item.unidentifiedDescriptionName = item.identifiedDescriptionName;
 				item.identifiedDisplayName       = TextEncoding.decodeString(item.identifiedDisplayName);
-				item.unidentifiedDisplayName     = TextEncoding.decodeString(item.unidentifiedDisplayName);
+				item.unidentifiedDisplayName     = item.identifiedDisplayName
 				item.prefixNameTable             = TextEncoding.decodeString(item.prefixNameTable || '');
 				item.flavortext                  = item.flavortext ? item.flavortext : '';
 				item.condensedDesc               = item.condensedDesc ? TextEncoding.decodeString(item.condensedDesc.join('\n'))  : item.identifiedDescriptionName;
@@ -568,6 +568,7 @@ define(function(require)
 				item.Rating                      = item.Rating || 0;
 				item.identifiedDescriptionName   = item.identifiedDescriptionName.replace('$r$',ratings[item.Rating]);
 				item.condensedDesc               = item.condensedDesc.replace('$r$',ratings[item.Rating]);
+				item.EquipLoc                    = item.EquipLoc || 0;
 				
 				item._decoded                    = true;
 			}
@@ -582,12 +583,23 @@ define(function(require)
 
 	DB.formatDesc = function formatDesc( item ) {
 		var it = DB.getItemInfo( item.ITID );
-		var desc, bonusdesc, bonus, bval;
-		
-		if(item.slot && item.slot['card1']) {
-			bonusdesc = "\n\n";
+		var bonus, bval;
+		var bonusdesc = "";
+
+		if( it.EquipLoc ) { // Only hats will have this set
+			var desc = "^FFFFFFCosmetic Item\n\n";
+			var loc = it.EquipLoc;
 			
-			for(var i=0; i<4; i++) {
+			desc += loc & 0x100 ? "Upper\n"  : "^777777Upper\n^FFFFFF";
+			desc += loc & 0x010 ? "Middle\n" : "^777777Middle\n^FFFFFF";
+			desc += loc & 0x001 ? "Lower\n"  : "^777777Lower\n^FFFFFF";
+			return desc;
+		}
+		
+		if( item.slot && item.slot['card1'] ) {
+			bonusdesc += "\n\n";
+			
+			for( var i=0; i<4; i++ ) {
 				if(item.slot['card' + (i+1)]) {
 					bonus = DB.getItemInfo((item.slot && item.slot['card' + (i+1)]));
 					
@@ -602,12 +614,11 @@ define(function(require)
 					bonusdesc = bonusdesc.replace('$roll4$','^99BBFF' + ((Math.floor(bval * (bonus.BaseRoll4 * (bonus.RollMultiplier4-1) + 1) / 100) + bonus.BaseRoll4) / 100).toFixed(2) + '^FFFFFF');
 				}
 			}
-		} else {
-			bonusdesc = "";
 		}
-			
-		var desc = '^FFFFFF' + it.condensedDesc + bonusdesc;
 	
+	
+		var desc = '^FFFFFF' + it.condensedDesc + bonusdesc;
+		
 		desc = desc.replace('$ilvl$', '^99BBFF'+item.IsIdentified+'^FFFFFF');
 		desc = desc.replace('$quality$', '^99BBFF'+item.RefiningLevel+'^FFFFFF');
 		desc = desc.replace('$hp$', '^99BBFF'+getStatValue(it.BaseHP, DB._mult["HP"], item.RefiningLevel, item.IsIdentified)+'^FFFFFF');
@@ -646,7 +657,7 @@ define(function(require)
 	DB.getItemPath = function getItemPath( itemid, identify )
 	{
 		var it = DB.getItemInfo( itemid );
-		return 'data/sprite/\xbe\xc6\xc0\xcc\xc5\xdb/' + ( identify ? it.identifiedResourceName : it.unidentifiedResourceName );
+		return 'data/sprite/\xbe\xc6\xc0\xcc\xc5\xdb/' + it.identifiedResourceName;
 	};
 
 

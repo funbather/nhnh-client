@@ -97,7 +97,8 @@ define(function(require)
 		// Bind skills
 		this.ui
 			.on('dblclick',    '.skill .icon, .skill .name', onRequestUseSkill)
-			.on('contextmenu', '.skill .icon, .skill .name', onRequestSkillInfo)
+			.on('mouseover', '.skill .icon, .skill .name', onRequestSkillInfo)
+			.on('mouseleave','.skill .icon, .skill .name', removeSkillInfo)
 			.on('mousedown',   '.selectable', onSkillFocus)
 			.on('dragstart',   '.skill',      onSkillDragStart)
 			.on('dragend',     '.skill',      onSkillDragEnd);
@@ -531,6 +532,11 @@ define(function(require)
 		SkillDescription.append();
 		SkillDescription.setSkill(skill.SKID, skill.level);
 	}
+	
+	function removeSkillInfo() {
+			SkillDescription.remove();
+			return;
+	}
 
 
 	/**
@@ -546,6 +552,8 @@ define(function(require)
 
 		SkillList.ui.find('.skill').removeClass('selected');
 		main.addClass('selected');
+		
+		SkillDescription.remove();
 	}
 
 

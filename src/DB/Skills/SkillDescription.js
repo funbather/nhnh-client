@@ -28,7 +28,7 @@ define(["./SkillConst"], function( SKID )
 		"Force of Will",
 		"Passive",
 		" ",
-		"You take $x% less physical damage from attacks. The damage reduction grows as you lose HP, up to $y% when at ^4488BBCritical HP^000000.",
+		"You take $x% less physical damage from attacks. The damage reduction grows as you lose HP, up to $y% when below 35% HP.",
 	].join("\n");
 
 	SkillDescription[SKID.SWD_DAUNTLESS] = [
@@ -92,7 +92,7 @@ define(["./SkillConst"], function( SKID )
 		" ",
 		"Deal $x% ATK damage with a powerful strike from your shield.",
 		" ",
-		"Umbo Blow deals a bonus $y% ATK damage for every 1% Physical Block Chance you have.",
+		"Umbo Blow deals an additional $y% ATK damage for every 1% Physical Block Chance you have.",
 	].join("\n");
 
 	SkillDescription[SKID.SWD_METEORMASH] = [
@@ -100,7 +100,7 @@ define(["./SkillConst"], function( SKID )
 		"Attack",
 		"Cooldown: 5s",
 		" ",
-		"Slam your shield down into the ground, dealing $x% ATK damage and ^4488BBSquashing^000000 all nearby enemies. ^4488BBSquashed^000000 enemies are ^4488BBProvoked^000000 and have -50% MSPD.",
+		"Slam your shield down into the ground, dealing $x% ATK damage and ^4488BBSquashing^000000 all nearby enemies. ^4488BBSquashed^000000 enemies are ^4488BBProvoked^000000 and move 50% slower.",
 	].join("\n");
 
 	SkillDescription[SKID.SWD_SHIELDBOOMERANG] = [
@@ -124,7 +124,7 @@ define(["./SkillConst"], function( SKID )
 		"Attack",
 		"Cooldown: 2s, Range: 2",
 		" ",
-		"Deal $x% ATK damage to your target and all enemies within 2 tiles of them with a deadly swing of your weapon.",
+		"Deal $x% ATK damage to your target and other nearby enemies with a deadly swing of your weapon.",
 	].join("\n");
 
 	SkillDescription[SKID.THF_SOUL] = [
@@ -140,14 +140,14 @@ define(["./SkillConst"], function( SKID )
 		"Double Strike",
 		"Passive",
 		" ",
-		"Your Basic Attacks have a $x% chance to hit twice.",
+		"Your basic attacks have a $x% chance to hit twice.",
 	].join("\n");
 
 	SkillDescription[SKID.THF_REFLEXES] = [
 		"Reflexes",
 		"Passive",
 		" ",
-		"+$x% EVA",
+		"You are $x% less likely to be hit by physical attacks.",
 	].join("\n");
 
 	SkillDescription[SKID.THF_MERCILESS] = [
@@ -179,7 +179,7 @@ define(["./SkillConst"], function( SKID )
 		"Support Spell",
 		"Cooldown: 20s",
 		" ",
-		"Blend into your surroundings, gaining +$x% EVA and +20% to MSPD for 8 seconds.",
+		"Use your surrounding environment to boost your stealth, gaining +$x% EVA and +20% to MSPD for 8 seconds.",
 	].join("\n");
 
 	SkillDescription[SKID.THF_DOUBLETEAM] = [
@@ -187,7 +187,7 @@ define(["./SkillConst"], function( SKID )
 		"Support Spell",
 		"Cooldown: 20s",
 		" ",
-		"Create an afterimage of yourself for $x seconds that copies all of your attacks. While the afterimage is active, you gain +$y% ASPD and your Basic Attacks will always Double Strike.",
+		"Create an afterimage of yourself for $x seconds that copies all of your basic attacks. While the afterimage is active, you gain +$y% ASPD and your attacks will always Double Strike.",
 		" ",
 		"Using an offensive skill ends this effect.",
 	].join("\n");
@@ -251,7 +251,7 @@ define(["./SkillConst"], function( SKID )
 		"Passive",
 		" ",
 		"+$x% Healing Power\n",
-		"When casting Cure on an ally, you are also healed for $y% of the amount."
+		"When casting Cure on an ally, you are also healed for $y% of the original amount."
 	].join("\n");
 
 	SkillDescription[SKID.ACO_BENEVOLENCE] = [
@@ -338,7 +338,7 @@ define(["./SkillConst"], function( SKID )
 		"Offensive Spell",
 		"Range: 9",
 		" ",
-		"Launch two magical spears of fire at an enemy, dealing $x% MAG damage.",
+		"Launch two magical spears of fire at an enemy, dealing $x% MAG damage each.",
 	].join("\n");
 
 	SkillDescription[SKID.MGN_INCINERATE] = [

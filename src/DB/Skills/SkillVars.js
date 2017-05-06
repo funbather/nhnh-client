@@ -12,11 +12,11 @@ define(["./SkillConst"], function( SK )
 	};
 	
 	SkillDesc[SK.SWD_DAUNTLESS] = {
-		x: function(skl){ return (1 * skl); }
+		x: function(skl){ return (3 + 1 * skl); }
 	};
 	
 	SkillDesc[SK.SWD_HARDHEARTED] = {
-		x: function(skl){ return (4 * skl); }
+		x: function(skl){ return (5 * skl); }
 	};
 	
 	SkillDesc[SK.SWD_PAVISE] = {
@@ -26,7 +26,7 @@ define(["./SkillConst"], function( SK )
 	
 	SkillDesc[SK.SWD_SWASHBUCKLING] = {
 		x: function(skl){ return (15 + 3 * skl); },
-		y: function(skl){ return (5 + parseInt(skl / 3)); },
+		y: function(skl){ return (7 + parseInt(skl / 3)); },
 		m: function(mst){ return "\n\nMastery: Enemies affected by Swashbuckling have their ATK lowered by an additional ^DD3322" + (mst * 0.1).toFixed(1) + "^000000%. (0.1%/MST)"; },
 	};
 	
@@ -71,7 +71,7 @@ define(["./SkillConst"], function( SK )
 	SkillDesc[SK.THF_SOUL] = { };
 	
 	SkillDesc[SK.THF_DOUBLESTRIKE] = {
-		x: function(skl){ return (4 * skl); }
+		x: function(skl){ return (10 + 6 * skl); }
 	};
 	
 	SkillDesc[SK.THF_REFLEXES] = {
@@ -84,7 +84,7 @@ define(["./SkillConst"], function( SK )
 	};
 	
 	SkillDesc[SK.THF_ADRENALINERUSH] = {
-		x: function(skl){ return (1.5 * skl).toFixed(1); }
+		x: function(skl){ return (5 + 1.5 * skl).toFixed(1); }
 	};
 	
 	SkillDesc[SK.THF_PICKPOCKET] = {
@@ -129,7 +129,7 @@ define(["./SkillConst"], function( SK )
 	
 	SkillDesc[SK.ACO_LIFELINK] = {
 		x: function(skl){ return (6 * skl); },
-		y: function(skl){ return (10 + 2 * skl); }
+		y: function(skl){ return (10 + 4 * skl); }
 	};
 	
 	SkillDesc[SK.ACO_BENEVOLENCE] = {
@@ -179,7 +179,7 @@ define(["./SkillConst"], function( SK )
 	SkillDesc[SK.MGN_SOUL] = { };
 	
 	SkillDesc[SK.MGN_FIRELANCE] = {
-		x: function(skl){ return (400 + 120 * skl); },
+		x: function(skl){ return (200 + 60 * skl); },
 		m: function(mst){ return "\n\nMastery: Fire Lance casts ^DD3322" + (mst * 1) + "^000000% faster. (1%/MST)"; },
 	};
 	
@@ -227,7 +227,7 @@ define(["./SkillConst"], function( SK )
 	
 	SkillDesc[SK.MGN_IONPULSE] = {
 		x: function(skl){ return (250 + 30 * skl); },
-		y: function(skl){ return (3 + parseInt(skl / 3)); },
+		y: function(skl){ return (5 + parseInt(skl / 3)); },
 		m: function(mst){ return "\n\nMastery: Stun applied by Ion Pulse lasts ^DD3322" + (mst * 1) + "^000000% longer. (1%/MST)"; },
 	};
 	

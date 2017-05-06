@@ -57,7 +57,8 @@ define(function(require)
 	Storage.TAB = {
 		ITEM:   0,
 		EQUIP:  1,
-		ETC:    2
+		HATS:   2,
+		ETC:    3
 	};
 
 
@@ -180,6 +181,7 @@ define(function(require)
 	Storage.addItemSub = function addItemSub( item )
 	{
 		var tab;
+		var it = DB.getItemInfo( item.ITID );
 		
 		switch (item.type) {
 			case Storage.ITEM.HEALING:
@@ -188,26 +190,22 @@ define(function(require)
 			case Storage.ITEM.USABLE_SKILL_UNK:
 				tab = Storage.TAB.ITEM;
 				break;
-
-			// TOFIX: WTH is it for ?
-			//	tab = Storage.TAB.KAFRA;
-			//	break;
 			
 			case Storage.ITEM.WEAPON:
+				tab = Storage.TAB.EQUIP;
+				
+				if( it.EquipLoc ) 
+					tab = Storage.TAB.HATS;
+				break;
+				
 			case Storage.ITEM.EQUIP:
 			case Storage.ITEM.PETEQUIP:
 				tab = Storage.TAB.EQUIP;
 				break;
 
-			case Storage.ITEM.AMMO:
-				tab = Storage.TAB.AMMO;
-				break;
-
-			case Storage.ITEM.CARD:
-				tab = Storage.TAB.CARD;
-				break;
-
 			default:
+			case Storage.ITEM.AMMO:
+			case Storage.ITEM.CARD:
 			case Storage.ITEM.ETC:
 			case Storage.ITEM.PETEGG:
 				tab = Storage.TAB.ETC;
@@ -215,7 +213,6 @@ define(function(require)
 		}
 
 		if (tab === _preferences.tab) {
-			var it   = DB.getItemInfo( item.ITID );
 
 			this.ui.find('.container .content').append(
 				'<div class="item" data-index="' + item.index +'" draggable="true">' +
@@ -469,13 +466,12 @@ define(function(require)
 		var item    = _list[i];
 		var pos     = jQuery(this).position();
 		var overlay = Storage.ui.find('.overlay');
+		var desc = item.count > 1 ? DB.getItemName(item) + ' x ' + (item.count || 1) + '\n\n' + DB.formatDesc(item) : "^bo" + DB.getItemName(item) + "^ld\n\n" + DB.formatDesc(item);
 
 		// Display box
 		overlay.show();
-		overlay.css({top: pos.top-10, left:pos.left+35});
-		overlay.text(DB.getItemName(item) + ' ' + ( item.count || 1 ) + ' ea');
-
-		overlay.removeClass('grey');
+		overlay.css({top: pos.top+4, left:pos.left+30});
+		overlay.text(desc);
 	}
 
 

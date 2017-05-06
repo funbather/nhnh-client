@@ -44,6 +44,7 @@ define(function()
 			SQUASHED     : 0x08000,
 			CHILLED      : 0x10000,
 			DEEPFREEZE   : 0x20000,
+			DOUBLETEAM   : 0x40000,
 		},
 
 		EffectState: {

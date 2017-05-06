@@ -131,6 +131,11 @@ define(function(require)
 				break;
 
 			case ItemType.WEAPON:
+				if( it.EquipLoc ) { // hide cardlist from cosmetics
+					cardList.parent().hide();
+					break;
+				}
+					
 			case ItemType.EQUIP:
 			case ItemType.PETEGG:
 				var slotCount = it.slotCount || 0;

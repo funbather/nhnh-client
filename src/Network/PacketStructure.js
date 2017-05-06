@@ -9462,21 +9462,23 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 	PACKET.ZC.SKILL_POSTDELAY.size = 8;
 
 
-	// 0x43e
+	// 0x43e unused
+	
+	// 0x985
 	PACKET.ZC.SKILL_POSTDELAY_LIST = function PACKET_ZC_SKILL_POSTDELAY_LIST(fp, end) {
 		this.delayList = (function() {
-			var i, count = (end - fp.tell()) / 6 | 0,
+			var i, count = (end - fp.tell()) / 10 | 0,
 				out = new Array(count);
 			for (i = 0; i < count; ++i) {
 				out[i] = {};
 				out[i].SKID = fp.readUShort();
+				out[i].total = fp.readULong();
 				out[i].tick = fp.readULong();
 			}
 			return out;
 		})();
 	};
 	PACKET.ZC.SKILL_POSTDELAY_LIST.size = -1;
-
 
 	// 0x43f
 	PACKET.ZC.MSG_STATE_CHANGE2 = function PACKET_ZC_MSG_STATE_CHANGE2(fp, end) {
@@ -11061,6 +11063,7 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 					out[i].optioncount = fp.readUChar(); //
 				}
 				out[i].IsIdentified = fp.readUChar();
+				out[i].IsIdentified = 1;
 				out[i].IsDamaged = 0;
 				out[i].PlaceETCTab = 0;
 				out[i].rolls = fp.readLong();

@@ -354,5 +354,19 @@ define(function( require )
 			wav:  'effect/bs_refinesuccess',
 			attachedEntity: true
 		}],
+		
+		371: [{ // Base Level
+			type: 'STR',
+			file: 'angel',
+			wav:  'levelup',
+			attachedEntity: true
+		}],
+		
+		158: [{ // Job Level
+			type: 'STR',
+			file: 'joblvup',
+			wav:  'effect/itempokjuk',
+			attachedEntity: true
+		}],
 	};
 });

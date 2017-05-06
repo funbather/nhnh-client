@@ -44,7 +44,8 @@ define(function(require)
 	Inventory.TAB = {
 		USABLE: 0,
 		EQUIP:  1,
-		ETC:    2
+		HATS:   2,
+		ETC:    3
 	};
 
 
@@ -293,6 +294,7 @@ define(function(require)
 	Inventory.addItemSub = function AddItemSub( item )
 	{
 		var tab;
+		var it = DB.getItemInfo( item.ITID );
 
 		switch (item.type) {
 			case ItemType.HEALING:
@@ -303,6 +305,15 @@ define(function(require)
 				break;
 
 			case ItemType.WEAPON:
+				tab = Inventory.TAB.EQUIP;
+				
+			 // okay so this looks dumb, right? why would hats be here?
+			 // WELL!! newer packet versions swap the type ids of weapons and armor! cool! wow
+			 // I'd rather not fix it just yet, in case it causes everything to break
+				if( it.EquipLoc ) 
+					tab = Inventory.TAB.HATS;
+				break;
+
 			case ItemType.EQUIP:
 			case ItemType.PETEGG:
 			case ItemType.PETEQUIP:
@@ -324,7 +335,6 @@ define(function(require)
 		}
 
 		if (tab === _preferences.tab) {
-			var it      = DB.getItemInfo( item.ITID );
 			var content = this.ui.find('.container .content');
 
 			content.append(
@@ -341,7 +351,7 @@ define(function(require)
 				this.ui.find('.hide').show();
 			}
 
-			Client.loadFile( DB.INTERFACE_PATH + 'item/' + ( item.IsIdentified ? it.identifiedResourceName : it.unidentifiedResourceName ) + '.bmp', function(data){
+			Client.loadFile( DB.INTERFACE_PATH + 'item/' + it.identifiedResourceName + '.bmp', function(data){
 				content.find('.item[data-index="'+ item.index +'"] .icon').css('backgroundImage', 'url('+ data +')');
 			});
 		}

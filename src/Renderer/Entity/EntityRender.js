@@ -332,7 +332,7 @@ define( function( require )
 
 			// Render all frames
 			for (var i=0, count=layers.length; i<count; ++i) {
-				if( entity.objecttype == 11 ) { // Entity.TYPE_ITEM
+				if( entity.objecttype == 11 ) { // item-only glowing outline
 					var _sx = entity.xSize;
 					var _sy = entity.ySize;
 					var _ec = entity.effectColor;
@@ -346,6 +346,22 @@ define( function( require )
 					entity.ySize = _sy;
 					entity.effectColor = _ec;
 				}
+				
+				if( entity._healthState & 0x40000 ) { // double team visual effect
+					var _sx = entity.xSize;
+					var _sy = entity.ySize;
+					var _ec = entity.effectColor;
+					var _t = Renderer.tick % 2000;
+					entity.xSize += _t < 1000 ? (_t/1500) : 4/3 - (_t/1500);
+					entity.ySize += _t < 1000 ? (_t/3000) : 2/3 - (_t/3000);
+					entity.effectColor = [0.4,0.4,255,.90];
+					
+					entity.renderLayer( layers[i], spr, pal, files.size, _position, type === 'body' );
+					entity.xSize = _sx;
+					entity.ySize = _sy;
+					entity.effectColor = _ec;
+				}
+				
 				entity.renderLayer( layers[i], spr, pal, files.size, _position, type === 'body' );
 			}
 
