@@ -1145,5 +1145,6 @@ define(function()
 		MGN_STORMLOCUS_PULSE: 4051,
 		NPC_DELUGE: 4052,
 		NPC_GUSH: 4053,
+		ALL_BLINK: 4054,
 	};
 });

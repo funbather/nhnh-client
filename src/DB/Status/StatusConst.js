@@ -788,5 +788,7 @@ define(function()
 		CHILLED:                                979,
 		DEEPFREEZE:                             980,
 		DISCHARGE:                              981,
+		VALORAURA:                              982,
+		FORTUNEAURA:                            983,
 	};
 });

@@ -428,5 +428,13 @@ define(["./SkillConst"], function( SKID )
 		"Place down a volatile well of magic energy that shocks nearby enemies for $x% MAG damage every time a player casts an offensive spell or performs a Discharge-enchanced attack near it.",
 	].join("\n");
 
+	SkillDescription[SKID.ALL_BLINK] = [
+		"Blink",
+		"Support Spell",
+		"Range: 18, Cooldown: 8s",
+		" ",
+		"Warp to target location.",
+	].join("\n");
+
 	return SkillDescription;
 });

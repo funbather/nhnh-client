@@ -164,6 +164,22 @@ define(['./StatusConst'], function( SC )
 		]
 	};
 
+	StatusInfo[SC.VALORAURA] = {
+		icon: "i_Ã¼ÀÌ½ºÈû.tga",
+		descript: [
+			["Valor Aura", COLOR_TITLE_BUFF],
+			["ATK, MAG, and ASPD increased."]
+		]
+	};
+
+	StatusInfo[SC.FORTUNEAURA] = {
+		icon: "akaitsuki.tga",
+		descript: [
+			["Fortune Aura", COLOR_TITLE_BUFF],
+			["LUK increased."]
+		]
+	};
+
 	StatusInfo[SC.HIDING] = {
 		icon: "\xc7\xcf\xc0\xcc\xb5\xf9.tga",
 		descript: [
@@ -1699,17 +1715,6 @@ define(['./StatusConst'], function( SC )
 		descript: [
 			["%s", COLOR_TIME], 
 			["Increases LUK"]
-		]
-	};
-
-	StatusInfo[SC.BLOODING] = {
-		haveTimeLimit: 1,
-		posTimeLimitStr: 2,
-		descript: [
-			["Bleeding", COLOR_TITLE_BUFF], 
-			["%s", COLOR_TIME],
-			["HP, SP recovery disabled"],
-			["HP lost every 10 seconds"]
 		]
 	};
 

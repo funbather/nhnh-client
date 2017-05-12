@@ -240,5 +240,7 @@ define(["./SkillConst"], function( SK )
 		x: function(skl){ return (100 + 20 * skl); },
 		m: function(mst){ return "\n\nMastery: Storm Locus is +^DD3322" + (mst * 1) + "^000000% more likely to critically hit. (1%/MST)"; },
 	};
+	
+	SkillDesc[SK.ALL_BLINK] = { };
 	return SkillDesc;
 });

@@ -281,7 +281,7 @@ function(      WebGL,         Texture,          glMatrix,        Client) {
 		var uniform   = _program.uniform;
 
 		mat4.identity(_matrix);
-		mat4.rotateY( _matrix, _matrix, (tick/4) / 180 * Math.PI);
+		mat4.rotateY( _matrix, _matrix, (tick/8) / 180 * Math.PI);
 
 		gl.useProgram( _program );
 

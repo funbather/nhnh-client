@@ -280,6 +280,8 @@ define(function( require )
 								
 								if( dstEntity.objecttype === Entity.TYPE_MOB && pkt.damage > 0 )
 									Events.setTimeout(function(){ Sound.play('_hit_fist'+(1 + Math.floor(Math.random() * 4))+'.wav'); }, pkt.attackMT * 1.1);
+									
+								srcEntity.lookTo( dstEntity.position[0], dstEntity.position[1] );
 								break;
 
 							// double attack
@@ -295,6 +297,8 @@ define(function( require )
 
 								Damage.add( pkt.damage / 2, target, Renderer.tick + pkt.attackMT * 1 );
 								Damage.add( pkt.damage / 2, target, Renderer.tick + pkt.attackMT * 1.5 );
+								
+								srcEntity.lookTo( dstEntity.position[0], dstEntity.position[1] );
 								break;
 
 							// TODO: critical damage
@@ -304,6 +308,8 @@ define(function( require )
 									Events.setTimeout(function(){ Sound.play('_hit_fist'+(1 + Math.floor(Math.random() * 4))+'.wav'); }, pkt.attackMT * 1.1);
 									Events.setTimeout(function(){ Sound.play('_hit_arrow.wav'); }, pkt.attackMT * 1.1 + 5);
 								}
+								
+								srcEntity.lookTo( dstEntity.position[0], dstEntity.position[1] );
 								break;
 
 							// TODO: lucky miss
@@ -324,11 +330,15 @@ define(function( require )
 
 								Damage.add( pkt.damage / 2, target, Renderer.tick + pkt.attackMT * 1, Damage.TYPE.CRIT  );
 								Damage.add( pkt.damage / 2, target, Renderer.tick + pkt.attackMT * 1.5, Damage.TYPE.CRIT  );
+								
+								srcEntity.lookTo( dstEntity.position[0], dstEntity.position[1] );
 								break;
 							
 							case 21:
 								Damage.add( 0, dstEntity, Renderer.tick + pkt.attackMT, Damage.TYPE.BLOCKED );
 								Events.setTimeout(function(){ Sound.play('effect/kyrie_guard.wav'); }, pkt.attackMT * 1.1);
+								
+								srcEntity.lookTo( dstEntity.position[0], dstEntity.position[1] );
 								break;
 
 							case 22:
@@ -344,9 +354,6 @@ define(function( require )
 								break;
 						}
 					}
-
-					// Update entity position
-					srcEntity.lookTo( dstEntity.position[0], dstEntity.position[1] );
 				}
 
 				// do not show attacking animation if the target is also the source OR! if it's status damage being dealt

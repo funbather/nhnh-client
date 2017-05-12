@@ -264,9 +264,9 @@ define(function( require )
 		"icicleedge": [{
 			type: 'CYLINDER',
 			topSize: 0,
-			bottomSize: 0.4,
+			bottomSize: 0.3,
 			height: 5,
-			textureName: 'rocktex3',
+			textureName: 'icetex',
 			wav:  '_hit_dagger',
 			tickTime: 600,
 			attachedEntity: false
@@ -367,6 +367,18 @@ define(function( require )
 			file: 'joblvup',
 			wav:  'effect/itempokjuk',
 			attachedEntity: true
+		}],
+		
+		1234: [{
+			type: 'CYLINDER',
+			topSize: 0.2,
+			bottomSize: 0.2,
+			height: 32,
+			textureName: 'unique',
+			tickTime: 1000,
+			attachedEntity: true,
+			wav:  'effect/acolyte_cure',
+			repeat: true
 		}],
 	};
 });

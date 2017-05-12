@@ -332,11 +332,11 @@ define(function( require )
 				break;
 
 			case 'CYLINDER':
-				EffectManager.add(new Cylinder( position, effect.topSize, effect.bottomSize, effect.height, effect.textureName, tick, tick+effect.tickTime), AID);
+				EffectManager.add(new Cylinder( position, effect.topSize, effect.bottomSize, effect.height, effect.textureName, tick, tick+effect.tickTime), AID, persistent);
 				break;
 				
 			case 'SQUARE':
-				EffectManager.add(new Square( position, effect.textureName, position[0], position[1], effect.size, tick+effect.tickTime), AID);
+				EffectManager.add(new Square( position, effect.textureName, position[0], position[1], effect.size, tick+effect.tickTime), AID, persistent);
 				break;				
 
 			case 'FUNC':

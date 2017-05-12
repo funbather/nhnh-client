@@ -303,6 +303,11 @@ define(["./SkillConst", "DB/Jobs/JobConst"], function( SK, JobId )
 		Name: "NPC_POISON",
 		SkillName : "Poison",
 	};
+	
+	SkillInfo[SK.ALL_BLINK] = {
+		Name: "ALL_BLINK",
+		SkillName : "Blink",
+	};
 
 	SkillInfo[SK.AL_WARP] = {
 		Name: "AL_WARP",

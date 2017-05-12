@@ -27,6 +27,7 @@ function(   DB,            EntityManager,            Entity,                Alti
 	function add( gid, itemid, identify, count, x, y, z, quality, ilvl, slot1, slot2, slot3, slot4 )
 	{
 		var GraphicsSettings = require('Preferences/Graphics');
+		var EffectManager = require('Renderer/EffectManager');
 		var it     = DB.getItemInfo(itemid);
 		var path   = DB.getItemPath(itemid, identify);
 		var entity = new Entity();
@@ -70,8 +71,11 @@ function(   DB,            EntityManager,            Entity,                Alti
 
 			return entity.position[2] === level;
 		});
-			
+		
 		EntityManager.add(entity);
+		
+		if( itemid >= 200 && itemid < 500 ) // uniques
+			EffectManager.spam(1234, entity.GID);
 	}
 
 
@@ -82,7 +86,9 @@ function(   DB,            EntityManager,            Entity,                Alti
 	 */
 	function remove( gid )
 	{
+		var EffectManager = require('Renderer/EffectManager');
 		EntityManager.remove(gid);
+		EffectManager.remove(null, gid);
 	}
 
 

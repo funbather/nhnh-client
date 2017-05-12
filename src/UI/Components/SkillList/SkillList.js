@@ -570,6 +570,8 @@ define(function(require)
 			return stopPropagation(event);
 		}
 
+		SkillDescription.remove();
+
 		var img   = new Image();
 		img.src   = this.firstChild.firstChild.src;
 

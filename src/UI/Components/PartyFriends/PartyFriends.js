@@ -457,7 +457,7 @@ define(function(require)
 	 */
 	PartyFriends.removePartyMember = function removePartyMember( AID, characterName )
 	{
-		if (AID === Session.AID) {
+		if (AID === Session.AID && Session.Entity.display.name === characterName) {
 			_party.length = 0;
 
 			this.ui.find('.content .party').empty();
@@ -474,7 +474,7 @@ define(function(require)
 		for (i = 0; i < count; ++i) {
 			// Why Gravity doesn't send the GID ? Meaning we can't have the same
 			// character name twice (even in the same account).
-			if (_party[i].AID === AID && _party[i].characterName === characterName) {
+			if (_party[i].characterName === characterName) {
 				_party.splice(i, 1);
 				this.ui.find('.content .party .node:eq(' + i + ')').remove();
 				break;

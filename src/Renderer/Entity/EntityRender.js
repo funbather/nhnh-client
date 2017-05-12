@@ -243,14 +243,14 @@ define( function( require )
 				// Draw Head
 				renderElement( this, this.files.head, 'head', _position, false);
 
-				// Hat Bottom
-				if (this.accessory > 0) {
-					renderElement( this, this.files.accessory, 'head', _position, false);
-				}
-
 				// Hat Middle
 				if (this.accessory3 > 0 && this.accessory3 !== this.accessory2 && this.accessory3 !== this.accessory) {
 					renderElement( this, this.files.accessory3, 'head', _position, false);
+				}
+				
+				// Hat Bottom
+				if (this.accessory > 0) {
+					renderElement( this, this.files.accessory, 'head', _position, false);
 				}
 
 				// Hat Top
@@ -347,7 +347,7 @@ define( function( require )
 					entity.effectColor = _ec;
 				}
 				
-				if( entity._healthState & 0x40000 ) { // double team visual effect
+				if( entity.healthState & 0x40000 ) { // double team visual effect
 					var _sx = entity.xSize;
 					var _sy = entity.ySize;
 					var _ec = entity.effectColor;

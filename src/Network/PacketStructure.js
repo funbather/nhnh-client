@@ -11063,7 +11063,7 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 					out[i].optioncount = fp.readUChar(); //
 				}
 				out[i].IsIdentified = fp.readUChar();
-				out[i].IsIdentified = 1;
+				out[i].IsIdentified = (out[i].IsIdentified) ? out[i].IsIdentified : 1;
 				out[i].IsDamaged = 0;
 				out[i].PlaceETCTab = 0;
 				out[i].rolls = fp.readLong();

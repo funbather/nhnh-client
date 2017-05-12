@@ -303,7 +303,7 @@ define(function( require )
 				return;
 		}
 
-		if (Session.AID === pkt.AID) {
+		if (Session.AID === pkt.AID && Session.Entity.display.name === pkt.characterName) {
 			Session.hasParty = false;
 		}
 
