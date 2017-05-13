@@ -163,10 +163,10 @@ define(function( require )
 		var obj      = new Damage();
 
 		obj.type     = type || (damage ? Damage.TYPE.DAMAGE : Damage.TYPE.MISS);
-		obj.type     = damage ? obj.type : obj.type & ~(Damage.TYPE.CRIT); // Possible to "miss" a critical flagged attack, looked dumb in-client lol
-		if (entity.objecttype === entity.constructor.TYPE_PC && obj.type != Damage.TYPE.BLOCKED) { // Don't apply red overlay to blocked attacks
+		obj.type     = (obj.type == Damage.TYPE.MISS || !damage) ? obj.type & ~(Damage.TYPE.CRIT) : obj.type; // Possible to "miss" a critical flagged attack, looked dumb in-client lol
+
+		if (entity.objecttype === entity.constructor.TYPE_PC && obj.type != Damage.TYPE.BLOCKED) // Don't apply red overlay to blocked attacks
 			obj.type |= Damage.TYPE.ENEMY;
-		}
 
 		obj.color[3] = 1.0;
 		obj.delay    = 1500;

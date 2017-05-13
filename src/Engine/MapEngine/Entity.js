@@ -246,9 +246,10 @@ define(function( require )
 			case 22: // poison
 			case 23: // bleeding
 			case 24: // ignite
-				if (dstEntity) {
-					if (pkt.damage) {// && (pkt.action != 22 && pkt.action != 23 && pkt.action != 24)) {
-						if ((dstEntity.objecttype === Entity.TYPE_PC && dstEntity.action === dstEntity.ACTION.SIT) || dstEntity.objecttype !== Entity.TYPE_PC) {
+				if( dstEntity ) {
+					if( pkt.damage ) {
+						if( ((dstEntity.objecttype === Entity.TYPE_PC && dstEntity.action === dstEntity.ACTION.SIT) || dstEntity.objecttype !== Entity.TYPE_PC)
+						  && (pkt.action != 22 && pkt.action != 23 && pkt.action != 24) ) {
 							dstEntity.setAction({
 								delay:  Renderer.tick + pkt.attackMT,
 								action: dstEntity.ACTION.HURT,

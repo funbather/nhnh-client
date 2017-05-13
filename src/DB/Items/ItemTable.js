@@ -308,7 +308,7 @@ define(function()
 				" ",
 				"+$hp$ Max HP",
 				"+$def$ Defense",
-				"+$bonus1$% Critical Chanceical Chance"
+				"+$bonus1$% Critical Chance"
 			],
 			"BaseHP": 17,
 			"BaseDEF": 8,
@@ -3401,8 +3401,10 @@ define(function()
 				"$shard +$roll1$ Intelligence",
 				"^tab+$roll2$% Faster Cooldown Expiration",
 			],
-			"BaseRoll1": 3,
-			"RollMultiplier1": 5,
+			"BaseRoll1": 1,
+			"RollMultiplier1": 6,
+			"BaseRoll2": 3,
+			"RollMultiplier2": 3,
 			"slotCount": 0,
 			"ClassNum": 0
 		},
