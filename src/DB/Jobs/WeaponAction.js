@@ -45,6 +45,9 @@ define(['./JobConst', 'DB/Items/WeaponType'], function( JobId, WeaponType )
 
 	WeaponAction[JobId.SWORDMAN] = new function(){
 		this[ WeaponType.NONE ]         = 0;
+		this[ WeaponType.BOW ]          = 0;
+		this[ WeaponType.ROD  ]         = 0;
+		this[ WeaponType.TWOHANDROD ]   = 0;
 		this[ WeaponType.SHORTSWORD ]   = 1;
 		this[ WeaponType.SWORD ]        = 1;
 		this[ WeaponType.TWOHANDSWORD ] = 1;
@@ -56,11 +59,17 @@ define(['./JobConst', 'DB/Items/WeaponType'], function( JobId, WeaponType )
 		this[ WeaponType.TWOHANDSPEAR ] = 2;
 	};
 
-	WeaponAction[JobId.MAGICIA] = new function(){
-		this[ WeaponType.NONE ]       = 0;
-		this[ WeaponType.ROD ]        = 1;
-		this[ WeaponType.TWOHANDROD ] = 1;
-		this[ WeaponType.SHORTSWORD ] = 2;
+	WeaponAction[JobId.MAGICIAN] = new function(){
+		this[ WeaponType.NONE ]         = 0;
+		this[ WeaponType.MACE ]         = 1;
+		this[ WeaponType.AXE  ]         = 1;
+		this[ WeaponType.TWOHANDAXE ]   = 1;
+		this[ WeaponType.ROD  ]         = 1;
+		this[ WeaponType.TWOHANDROD ]   = 1;
+		this[ WeaponType.SWORD ]        = 2;
+		this[ WeaponType.TWOHANDSWORD ] = 2;
+		this[ WeaponType.SHORTSWORD ]   = 2;
+		this[ WeaponType.BOW ]          = 2;
 	};
 
 	WeaponAction[JobId.ARCHER] = new function(){
@@ -70,11 +79,16 @@ define(['./JobConst', 'DB/Items/WeaponType'], function( JobId, WeaponType )
 	};
 
 	WeaponAction[JobId.ACOLYTE] = new function(){
-		this[ WeaponType.NONE ]        = 0;
-		this[ WeaponType.ROD  ]        = 1;
-		this[ WeaponType.TWOHANDROD ]  = 1;
-		this[ WeaponType.MACE ]        = 1;
-		this[ WeaponType.TWOHANDMACE ] = 1;
+		this[ WeaponType.NONE ]         = 0;
+		this[ WeaponType.MACE ]         = 1;
+		this[ WeaponType.AXE  ]         = 2;
+		this[ WeaponType.TWOHANDAXE ]   = 2;
+		this[ WeaponType.ROD  ]         = 1;
+		this[ WeaponType.TWOHANDROD ]   = 1;
+		this[ WeaponType.SWORD ]        = 2;
+		this[ WeaponType.TWOHANDSWORD ] = 2;
+		this[ WeaponType.SHORTSWORD ]   = 2;
+		this[ WeaponType.BOW ]          = 2;
 	};
 
 	WeaponAction[JobId.MERCHANT] = new function(){
@@ -90,6 +104,11 @@ define(['./JobConst', 'DB/Items/WeaponType'], function( JobId, WeaponType )
 
 	WeaponAction[JobId.THIEF] = new function(){
 		this[ WeaponType.NONE ]         = 0;
+		this[ WeaponType.MACE ]         = 0;
+		this[ WeaponType.AXE  ]         = 0;
+		this[ WeaponType.TWOHANDAXE ]   = 0;
+		this[ WeaponType.ROD  ]         = 0;
+		this[ WeaponType.TWOHANDROD ]   = 0;
 		this[ WeaponType.SWORD ]        = 1;
 		this[ WeaponType.TWOHANDSWORD ] = 1;
 		this[ WeaponType.SHORTSWORD ]   = 1;
