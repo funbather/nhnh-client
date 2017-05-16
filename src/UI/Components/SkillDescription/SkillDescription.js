@@ -93,7 +93,7 @@ define(function(require)
 	 *
 	 * @param {number} skill id
 	 */
-	SkillDescription.setSkill = function setSkill( id , level )
+	SkillDescription.setSkill = function setSkill( id , level , upg )
 	{
 		this.uid = id;
 		var desc = SkillDB[id] || '...';
@@ -104,13 +104,16 @@ define(function(require)
 		
 		var x = SkillVars[id].x ? SkillVars[id].x(sklvl) : ""; //
 		var y = SkillVars[id].y ? SkillVars[id].y(sklvl) : ""; // x, y, z are varying skill-specific values (SkillVars)
-		var z = SkillVars[id].z ? SkillVars[id].z(sklvl) : ""; // 
+		var z = SkillVars[id].z ? SkillVars[id].z(sklvl) : ""; //
+		
 		var m = SkillVars[id].m ? SkillVars[id].m(mst) : ""; // skill-specific mastery info
+		var r = ( upg && (level>0) ) ? (SkillVars[id].r ? SkillVars[id].r(sklvl+1) : "") : "";
 		
 		desc = desc.replace("$x", "^DD3322" + x + "^000000");
 		desc = desc.replace("$y", "^DD3322" + y + "^000000");
 		desc = desc.replace("$z", "^DD3322" + z + "^000000");
 		desc += m;
+		desc += r;
 
 		this.ui.find('.content').text(desc);
 

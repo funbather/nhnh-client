@@ -110,10 +110,12 @@ define(function(require)
 	 */
 	CharCreate.onAppend = function onAppend()
 	{
+		var chrjob = (_chargen.entity._job == -1) ? 1 : _chargen.entity.job;
+	
 		_chargen.render = true;
 		_chargen.entity.set({
 			sex:_accountSex,
-			job:    1,
+			job:chrjob,
 			head:   2,
 			action: 0
 		});
@@ -265,11 +267,11 @@ define(function(require)
 						CharCreate.ui.find('.jobname').text("Thief");
 						break;
 					case 0x0B000100:
-						_chargen.entity.job = 4;
+						_chargen.entity.job = 11;
 						CharCreate.ui.find('.jobname').text("Acolyte");
 						break;
 					case 0x15001000:
-						_chargen.entity.job = 2;
+						_chargen.entity.job = 21;
 						CharCreate.ui.find('.jobname').text("Magician");
 						break;
 				}

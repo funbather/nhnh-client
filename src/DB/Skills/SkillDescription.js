@@ -19,7 +19,7 @@ define(["./SkillConst"], function( SKID )
 		"Soul of the Swordsman",
 		"Innate Passive",
 		" ",
-		"+20% VIT",
+		"+20% Vitality",
 		"+35% Base HP",
 		"-10% Physical Damage Taken",
 	].join("\n");
@@ -98,7 +98,7 @@ define(["./SkillConst"], function( SKID )
 	SkillDescription[SKID.SWD_METEORMASH] = [
 		"Meteor Mash",
 		"Attack",
-		"Cooldown: 5s",
+		"Cooldown: 5s, Requires: ^4488BBShield^000000",
 		" ",
 		"Slam your shield down into the ground, dealing $x% ATK damage and ^4488BBSquashing^000000 all nearby enemies. ^4488BBSquashed^000000 enemies are ^4488BBProvoked^000000 and move 50% slower.",
 	].join("\n");
@@ -131,7 +131,7 @@ define(["./SkillConst"], function( SKID )
 		"Soul of the Thief",
 		"Innate Passive",
 		" ",
-		"+20% AGI",
+		"+20% Agility",
 		"+15% Physical Damage Dealt",
 		"+0.2 Attacks Per Second",
 	].join("\n");
@@ -154,15 +154,15 @@ define(["./SkillConst"], function( SKID )
 		"Merciless",
 		"Passive",
 		" ",
-		"+$x% to CRIT",
-		"+$y% to CRIT DMG",
+		"+$x% Critical Chance",
+		"+$y% Critical Damage",
 	].join("\n");
 
 	SkillDescription[SKID.THF_ADRENALINERUSH] = [
 		"Adrenaline Rush",
 		"Passive",
 		" ",
-		"+$x% to MSPD\n",
+		"+$x% Move Speed\n",
 		"This bonus is doubled for 5 seconds after being attacked.",
 	].join("\n");
 
@@ -179,7 +179,7 @@ define(["./SkillConst"], function( SKID )
 		"Support Spell",
 		"Cooldown: 20s",
 		" ",
-		"Use your surrounding environment to boost your stealth, gaining +$x% EVA and +20% to MSPD for 8 seconds.",
+		"Use your surrounding environment to boost your stealth, gaining +$x% Evasion and +20% Move Speed for 8 seconds.",
 	].join("\n");
 
 	SkillDescription[SKID.THF_DOUBLETEAM] = [
@@ -187,7 +187,7 @@ define(["./SkillConst"], function( SKID )
 		"Support Spell",
 		"Cooldown: 20s",
 		" ",
-		"Create an afterimage of yourself for $x seconds that copies all of your basic attacks. While the afterimage is active, you gain +$y% ASPD and your attacks will always Double Strike.",
+		"Create an afterimage of yourself for $x seconds that copies all of your basic attacks. While the afterimage is active, you gain +$y% Attack Speed and your attacks will always double strike.",
 		" ",
 		"Using an offensive skill ends this effect.",
 	].join("\n");
@@ -217,7 +217,7 @@ define(["./SkillConst"], function( SKID )
 		" ",
 		"Deal $x% ATK damage with a deadly slash.",
 		" ",
-		"Bonecutter can Double Strike.",
+		"Bonecutter can double strike.",
 	].join("\n");
 
 	SkillDescription[SKID.THF_BLADEFLOURISH] = [
@@ -240,10 +240,10 @@ define(["./SkillConst"], function( SKID )
 		"Soul of the Acolyte",
 		"Innate Passive",
 		" ",
-		"+20% MST",
+		"+20% Mastery",
 		"+35% HP Regen",
 		"+35% MP Regen",
-		"+25% Buff Duration",
+		"+25% Duration of Buffs you apply",
 	].join("\n");
 
 	SkillDescription[SKID.ACO_LIFELINK] = [
@@ -328,9 +328,9 @@ define(["./SkillConst"], function( SKID )
 		"Soul of the Magician",
 		"Innate Passive",
 		" ",
-		"+20% INT",
-		"+20% MP",
-		"-10% Base Cast Time"
+		"+20% Intelligence",
+		"+20% Max MP",
+		"-10% Casting Time"
 	].join("\n");
 
 	SkillDescription[SKID.MGN_FIRELANCE] = [

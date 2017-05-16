@@ -291,7 +291,7 @@ define(function( require )
 	 */
 	Camera.update = function Update( tick )
 	{
-		var lerp      = Math.min( (tick - this.lastTick) * 0.006, 1.0);
+		var lerp      = Math.min( (tick - this.lastTick) * 0.005, 1.0);
 		this.lastTick = tick;
 
 		// Update camera from mouse movement
@@ -315,8 +315,8 @@ define(function( require )
 		this.zoom        += ( this.zoomFinal - this.zoom ) * lerp * 2.0;
 		
 		// Angle
-		this.angle[0]    += ( this.angleFinal[0] - this.angle[0] ) * lerp * 2.0;
-		this.angle[1]    += ( this.angleFinal[1] - this.angle[1] ) * lerp * 2.0;
+		this.angle[0]    += ( this.angleFinal[0] - this.angle[0] ) * lerp * 1.2;
+		this.angle[1]    += ( this.angleFinal[1] - this.angle[1] ) * lerp * 1.2;
 		this.angle[0]    %=   360;
 		this.angle[1]    %=   360;
 

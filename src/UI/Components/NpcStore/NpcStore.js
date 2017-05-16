@@ -424,7 +424,7 @@ define(function(require)
 		);
 
 		// Add the icon once loaded
-		Client.loadFile( DB.INTERFACE_PATH + 'item/' + (item.IsIdentified ? it.identifiedResourceName : it.unidentifiedResourceName) + '.bmp', function(data){
+		Client.loadFile( DB.INTERFACE_PATH + 'item/' + (it.identifiedResourceName) + '.bmp', function(data){
 			content.find('.item[data-index="'+ item.index +'"] .icon').css('backgroundImage', 'url('+ data +')');
 		});
 	}

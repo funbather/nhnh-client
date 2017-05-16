@@ -66,7 +66,6 @@ define(['Utils/gl-matrix', 'Renderer/Renderer'], function( glMatrix, Renderer )
 	 */
 	Life.prototype.update = function update()
 	{
-		var width  = 60, height =  5;
 		var Entity = this.entity.constructor;
 
 		// Don't display it, if negatives values.
@@ -82,8 +81,14 @@ define(['Utils/gl-matrix', 'Renderer/Renderer'], function( glMatrix, Renderer )
 		var sp       = this.sp > -1 && this.sp_max > -1;
 		var sp_per   = this.sp / this.sp_max;
 
+		if( this.entity.objecttype === Entity.TYPE_PC ) {
+			var width  = 60, height =  7;
+		} else {
+			var width  = 40, height =  5;
+		}
+
 		if (sp) {
-			height += 4;
+			height += (height - 1);
 		}
 
 		// Draw life
@@ -96,7 +101,7 @@ define(['Utils/gl-matrix', 'Renderer/Renderer'], function( glMatrix, Renderer )
 
 		// empty
 		ctx.fillStyle = '#424242';
-		ctx.fillRect( 1, 1, width-2, height-2 );
+		ctx.fillRect( 1, 1, width-2, height-2);
 	
 		// Display HP
 		if (this.entity.objecttype === Entity.TYPE_MOB) {
@@ -109,14 +114,14 @@ define(['Utils/gl-matrix', 'Renderer/Renderer'], function( glMatrix, Renderer )
 			ctx.fillStyle = ( hp_per <= 0.35 ) ? '#FF0000' : '#10ef21';
 		}
 
-		ctx.fillRect( 1, 1, Math.round( (width-2) * hp_per ), 3 );
+		ctx.fillRect( 1, 1, Math.round( (width-2) * hp_per ), height / 2 + 1 );
 
 		// Display SP
 		if (sp) {
 			ctx.fillStyle = '#10189c';
-			ctx.fillRect( 0, 4, width, 1);
+			ctx.fillRect( 0, height/2 - 1, width, height / 2);
 			ctx.fillStyle = '#1863de';
-			ctx.fillRect( 1, 5, Math.round( (width-2) * sp_per ), 3 );
+			ctx.fillRect( 1, height/2, Math.round( (width-2) * sp_per ), height / 2 - 1 );
 		}
 	};
 
@@ -126,14 +131,14 @@ define(['Utils/gl-matrix', 'Renderer/Renderer'], function( glMatrix, Renderer )
 	 *
 	 * @param {mat4} matrix
 	 */
-	Life.prototype.render = function Render( matrix )
+	Life.prototype.render = function Render( matrix, ismob )
 	{
 		var canvas = this.canvas;
 		var z;
 
 		// Cast position
 		_pos[0] =  0.0;
-		_pos[1] = -0.5;
+		_pos[1] = -0.4;
 		_pos[2] =  0.0;
 		_pos[3] =  1.0;
 

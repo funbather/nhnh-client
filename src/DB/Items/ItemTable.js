@@ -3797,15 +3797,10 @@ define(function()
 			"identifiedDisplayName": "Warpstone",
 			"identifiedResourceName": "\xbf\xb5\xc8\xa5\xc0\xc7\xbc\xd3\xbb\xe8\xc0\xd3",
 			"identifiedDescriptionName": [
-				"Usable Item",
+				"Useable Item",
 				" ",
-				"Use this item to set a checkpoint while inside",
-				"of an instance, overwriting the previous one set",
-				"by you or another player. Talk to the instance's",
-				"Guardian to warp to the current checkpoint.",
-				" ",
-				"Quickly using this item a second time will return",
-				"you to town.",
+				"Use to create a portal back to",
+				"town while in an instance."
 			],
 			"slotCount": 0,
 			"ClassNum": 0

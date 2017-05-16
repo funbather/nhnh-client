@@ -2301,6 +2301,7 @@ define(function()
 		6051: "MER_DIETER",
 		6052: "MER_ELEANOR",
 		10010: "4_F_LYDIA",
+		10043: "4_ENERGY_BLUE",
 		10079: "4_F_FRUIT",
 		10204: "TREASURECHEST",
 	};

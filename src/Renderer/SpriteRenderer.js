@@ -52,12 +52,12 @@ function(      WebGL,         glMatrix,      Camera )
 			// Matrix translation
 			"mat[3].x += mat[0].x * x + mat[1].x * y + mat[2].x * z;",
 			"mat[3].y += mat[0].y * x + mat[1].y * y + mat[2].y * z;",
-			"mat[3].z += (mat[0].z * x + mat[1].z * y + mat[2].z * z) + (uCameraLatitude / 50.0);",
+			"mat[3].z += (mat[0].z * x + mat[1].z * y + mat[2].z * z) + (uCameraLatitude / 150.0);",
 			"mat[3].w += mat[0].w * x + mat[1].w * y + mat[2].w * z;",
 
 			// Spherical billboard
 			"mat[0].xyz = vec3( 1.0, 0.0, 0.0 );",
-			"mat[1].xyz = vec3( 0.0, 1.0 + 0.5/uCameraLatitude, uCameraLatitude/50.0 );",
+			"mat[1].xyz = vec3( 0.0, 1.0 + 0.5/uCameraLatitude, uCameraLatitude/150.0 );",
 			"mat[2].xyz = vec3( 0.0, 0.0, 1.0 );",
 
 			"return mat;",
