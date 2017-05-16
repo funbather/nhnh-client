@@ -185,6 +185,20 @@ define(function( require )
 		}
 	}
 
+	function onNPCEmotion( pkt )
+	{
+		var entity = EntityManager.get(pkt.npcID);
+		if (entity && ((pkt.type + 81) in Emotions.indexes)) {
+			entity.attachments.add({
+				frame: Emotions.indexes[pkt.type + 81],
+				file:  'emotion',
+				play:   true,
+				head:   true,
+				repeat: true,
+				depth:  5.0
+			});
+		}
+	}
 
 	/**
 	 * Resurect an entity
@@ -1110,5 +1124,6 @@ define(function( require )
 		Network.hookPacket( PACKET.ZC.NOTIFY_MONSTER_HP,            onEntityLifeUpdate);
 		Network.hookPacket( PACKET.ZC.TALKBOX_CHATCONTENTS,         onTalkBox);
 		Network.hookPacket( PACKET.ZC.SHOWSCRIPT,                   onNPCTalk);
+		Network.hookPacket( PACKET.ZC.QUEST_NOTIFY_EFFECT,          onNPCEmotion);
 	};
 });

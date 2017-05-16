@@ -258,16 +258,25 @@ define(function()
 		[ 78, 62, "panic", "e32", "øÈ²" ],
 
 		// ET_WHISP = 80
-		[ 79, 63, "whisp", "e33", "À§½ºÆÛ" ]
-
-/*
-80 ! quest
-81 ? quest
-82 ! job
-83 ? job
-84 ! special
-85 ? special
-*/
+		[ 79, 63, "whisp", "e33", "À§½ºÆÛ" ],
+		
+		// ! Quest
+		[ 80, 64 ],
+		
+		// ? Quest
+		[ 81, 65 ],
+		
+		// ! Job
+		[ 82, 65 ],
+		
+		// ? Job
+		[ 83, 65 ],
+		
+		// ! Event
+		[ 84, 65 ],
+		
+		// ? Event
+		[ 85, 65 ],
 	];
 
 	var i, j, count, size;
