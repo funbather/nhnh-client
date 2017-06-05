@@ -112,8 +112,8 @@ define(function(require)
 		// Items options
 		ui.find('.content')
 			.on('mousewheel DOMMouseScroll', onScroll)
-			.on('mouseover',        '.item', onItemOver)
-			.on('mouseout',         '.item', onItemOut)
+			.on('mouseover',        '.icon', onItemOver)
+			.on('mouseout',         '.icon', onItemOut)
 			.on('contextmenu',      '.icon', onItemInfo)
 			.on('dblclick',         '.item', onItemSelected)
 			.on('mousedown',        '.item', onItemFocus)
@@ -731,7 +731,7 @@ define(function(require)
 
 	function onItemOver()
 	{
-		var index = parseInt(this.getAttribute('data-index'), 10);
+		var index = parseInt( this.parentNode.getAttribute('data-index'), 10);
 		var item  = _input[index];
 
 		// Not found
@@ -740,7 +740,7 @@ define(function(require)
 		}
 
 		// Get back data
-		var pos     = jQuery(this).position();
+		var pos     = jQuery(this.parentNode).offset();
 		var overlay = NpcStore.ui.find('.overlay');
 		var desc = "^bo" + DB.getItemName(item) + "^ld\n\n" + DB.formatDesc(item);
 
