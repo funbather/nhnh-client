@@ -17,6 +17,8 @@
 #NpcStore .content .item .name { position:absolute; top:13px; left:32px; width:115px; white-space:nowrap; }
 #NpcStore .content .item .price { position:absolute; top:13px; right:16px; white-space:nowrap; text-align:right; }
 #NpcStore .content .item .unity { position:absolute; top:13px; right:2px; width:10px; }
+#NpcStore .overlay { position:absolute; display:none; white-space:nowrap; z-index:900; overflow:auto; border: 2px solid #CCC;
+                      border-radius: 4px; padding:5px; background:rgba(0,0,0,0.8); color:white; text-shadow:1px 1px black;}
 
 #NpcStore .footer .total { padding-left:10px; padding-top:8px; }
 #NpcStore .InputWindow, #NpcStore .OutputWindow  { width:280px; position:absolute; z-index:50; }

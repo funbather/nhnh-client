@@ -470,7 +470,7 @@ define(function(require)
 
 		// Display box
 		overlay.show();
-		overlay.css({top: pos.top+4, left:pos.left+30});
+		overlay.css({top: pos.top+28, left:pos.left+27});
 		overlay.text(desc);
 	}
 

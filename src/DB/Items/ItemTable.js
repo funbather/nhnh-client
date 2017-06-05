@@ -478,7 +478,7 @@ define(function()
 				"+$hp$ Max HP",
 				"+$eva$ Evasion"
 			],
-			"BaseHP": 6,
+			"BaseHP": 10,
 			"BaseEVADE": 40,
 			"Rating": 1,
 			"slotCount": 0,
@@ -495,7 +495,7 @@ define(function()
 				"+$hp$ Max HP",
 				"+$eva$ Evasion"
 			],
-			"BaseHP": 7,
+			"BaseHP": 12,
 			"BaseEVADE": 45,
 			"Rating": 2,
 			"slotCount": 0,
@@ -512,7 +512,7 @@ define(function()
 				"+$hp$ Max HP",
 				"+$eva$ Evasion"
 			],
-			"BaseHP": 8,
+			"BaseHP": 14,
 			"BaseEVADE": 50,
 			"Rating": 3,
 			"slotCount": 0,
@@ -530,8 +530,8 @@ define(function()
 				"+$def$ Defense",
 				"+$eva$ Evasion"
 			],
-			"BaseHP": 19,
-			"BaseDEF": 12,
+			"BaseHP": 25,
+			"BaseDEF": 15,
 			"BaseEVADE": 10,
 			"Rating": 1,
 			"slotCount": 0,
@@ -549,8 +549,8 @@ define(function()
 				"+$def$ Defense",
 				"+$eva$ Evasion"
 			],
-			"BaseHP": 21,
-			"BaseDEF": 14,
+			"BaseHP": 28,
+			"BaseDEF": 17,
 			"BaseEVADE": 11,
 			"Rating": 2,
 			"slotCount": 0,
@@ -568,8 +568,8 @@ define(function()
 				"+$def$ Defense",
 				"+$eva$ Evasion"
 			],
-			"BaseHP": 23,
-			"BaseDEF": 16,
+			"BaseHP": 31,
+			"BaseDEF": 21,
 			"BaseEVADE": 12,
 			"Rating": 3,
 			"slotCount": 0,
@@ -693,8 +693,8 @@ define(function()
 				" ",
 				"+$bonus1$ Magic Defense",
 			],
-			"BaseBonus1": 30,
-			"Multiplier1": 6,
+			"BaseBonus1": 40,
+			"Multiplier1": 7,
 			"Rating": 3,
 			"slotCount": 0,
 			"ClassNum": 1
@@ -720,7 +720,7 @@ define(function()
 		},
 			"39": {
 			"identifiedDisplayName": "Blightstone",
-			"identifiedResourceName": "\xc8\xaf\xb1\xb8",
+			"identifiedResourceName": "\xb7\xe9\xb8\xb6\xb7\xc2\xc0\xc7\xc1\xa4\xbc\xf6",
 			"identifiedDescriptionName": [
 				"Accessory $r$",
 				"Item Level: $ilvl$",
@@ -763,7 +763,7 @@ define(function()
 				" ",
 				"+$bonus1$% HP Regen",
 			],
-			"BaseBonus1": 30,
+			"BaseBonus1": 45,
 			"Multiplier1": 2,
 			"Rating": 3,
 			"slotCount": 0,
@@ -796,8 +796,8 @@ define(function()
 				" ",
 				"+$bonus1$ Luck",
 			],
-			"BaseBonus1": 5,
-			"Multiplier1": 10,
+			"BaseBonus1": 10,
+			"Multiplier1": 5,
 			"Rating": 3,
 			"slotCount": 0,
 			"ClassNum": 1
@@ -828,8 +828,8 @@ define(function()
 				" ",
 				"+$bonus3$% Base Critical Chance",
 			],
-			"BaseBonus3": 10,
-			"Multiplier3": 8,
+			"BaseBonus3": 6,
+			"Multiplier3": 6,
 			"Rating": 3,
 			"slotCount": 0,
 			"ClassNum": 1
@@ -844,8 +844,8 @@ define(function()
 				" ",
 				"+$bonus1$% Critical Damage",
 			],
-			"BaseBonus1": 8,
-			"Multiplier1": 8,
+			"BaseBonus1": 16,
+			"Multiplier1": 4,
 			"Rating": 3,
 			"slotCount": 0,
 			"ClassNum": 1
@@ -3051,8 +3051,8 @@ define(function()
 			"identifiedDescriptionName": [
 				"$shard +$roll1$ Luck",
 			],
-			"BaseRoll1": 5,
-			"RollMultiplier1": 5,
+			"BaseRoll1": 8,
+			"RollMultiplier1": 3,
 			"slotCount": 0,
 			"ClassNum": 0
 		},
@@ -3106,7 +3106,7 @@ define(function()
 			"identifiedDescriptionName": [
 				"$shard +$roll3$% Base Critical Chance",
 			],
-			"BaseRoll3": 8,
+			"BaseRoll3": 3,
 			"RollMultiplier3": 5,
 			"slotCount": 0,
 			"ClassNum": 0
@@ -3117,8 +3117,8 @@ define(function()
 			"identifiedDescriptionName": [
 				"$shard +$roll1$% Critical Damage",
 			],
-			"BaseRoll1": 8,
-			"RollMultiplier1": 3,
+			"BaseRoll1": 13,
+			"RollMultiplier1": 2,
 			"slotCount": 0,
 			"ClassNum": 0
 		},
@@ -3189,13 +3189,13 @@ define(function()
 			"ClassNum": 0
 		},
 		"518": {
-			"identifiedDisplayName": "Shard of Soulsteal",
+			"identifiedDisplayName": "Shard of Critical Rate",
 			"identifiedResourceName": "\xc5\xa9\xb8\xae\xbd\xba\xc5\xbb\xc5\xb0",
 			"identifiedDescriptionName": [
-				"$shard +$roll1$ MP restored on Kill",
+				"$shard +$roll1$% Critical Chance",
 			],
-			"BaseRoll1": 3,
-			"RollMultiplier1": 5,
+			"BaseRoll1": 10,
+			"RollMultiplier1": 2,
 			"slotCount": 0,
 			"ClassNum": 0
 		},
@@ -3440,11 +3440,11 @@ define(function()
 			"identifiedDisplayName": "Seal of Lethality",
 			"identifiedResourceName": "\xb8\xb6\xb7\xc2\xbc\xae_\xb3\xeb\xb6\xfb",
 			"identifiedDescriptionName": [
-				"$seal +$roll3$% Base Critical Chance",
+				"$seal +$roll1$% Critical Chance",
 				"^tab+$roll2$% Critical Damage",
 			],
-			"BaseRoll3": 25,
-			"RollMultiplier3": 3,
+			"BaseRoll1": 25,
+			"RollMultiplier1": 3,
 			"BaseRoll2": 16,
 			"RollMultiplier2": 3,
 			"slotCount": 0,

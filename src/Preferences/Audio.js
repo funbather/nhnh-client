@@ -19,12 +19,12 @@ define( ['Core/Preferences'], function( Preferences )
 
 		BGM:   {
 			play:   true,
-			volume: 0.5
+			volume: 0.3
 		},
 
 		Sound: {
 			play:   true,
-			volume: 0.5
+			volume: 0.3
 		}
 
 	}, 1.0 );

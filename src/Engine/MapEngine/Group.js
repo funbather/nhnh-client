@@ -375,9 +375,9 @@ define(function( require )
 	{
 		PartyUI.setOptions(pkt.expOption, pkt.ItemPickupRule, pkt.ItemDivisionRule);
 		
-		var opt1 = (pkt.expOption)        ? "No Sharing" : "Split Evenly";
-		var opt2 = (pkt.ItemPickupRule)   ? "Killer Only" : "Party OK";
-		var opt3 = (pkt.ItemDivisionRule) ? "Finders Keepers" : "Random";
+		var opt1 = (pkt.expOption)        ? "Split Evenly" : "No Sharing";
+		var opt2 = (pkt.ItemPickupRule)   ? "Party OK" : "Killer Only";
+		var opt3 = (pkt.ItemDivisionRule) ? "Random" : "Finders Keepers";
 
 		ChatBox.addText( "Party Option - " + "EXP Sharing       : " + opt1, ChatBox.TYPE.INFO );
 		ChatBox.addText( "Party Option - " + "Pickup Priority   : " + opt2, ChatBox.TYPE.INFO );

@@ -97,8 +97,8 @@ define(function(require)
 		// Bind skills
 		this.ui
 			.on('dblclick',    '.skill .icon, .skill .name', onRequestUseSkill)
-			.on('mouseover', '.skill .icon, .skill .name', onRequestSkillInfo)
-			.on('mouseleave','.skill .icon, .skill .name', removeSkillInfo)
+			.on('mouseover',   '.skill .name', onRequestSkillInfo)
+			.on('mouseleave',  '.skill .name', removeSkillInfo)
 			.on('mousedown',   '.selectable', onSkillFocus)
 			.on('dragstart',   '.skill',      onSkillDragStart)
 			.on('dragend',     '.skill',      onSkillDragEnd);
@@ -523,10 +523,10 @@ define(function(require)
 		skill = getSkillById(parseInt(main.data('index'), 10));
 
 		// Don't add the same UI twice, remove it
-		if (SkillDescription.uid === skill.SKID) {
-			SkillDescription.remove();
-			return;
-		}
+		//if (SkillDescription.uid === skill.SKID) {
+		//	SkillDescription.remove();
+		//	return;
+		//}
 
 		// Add ui to window
 		SkillDescription.append();
@@ -553,7 +553,7 @@ define(function(require)
 		SkillList.ui.find('.skill').removeClass('selected');
 		main.addClass('selected');
 		
-		SkillDescription.remove();
+		//SkillDescription.remove();
 	}
 
 
@@ -570,7 +570,7 @@ define(function(require)
 			return stopPropagation(event);
 		}
 
-		SkillDescription.remove();
+		//SkillDescription.remove();
 
 		var img   = new Image();
 		img.src   = this.firstChild.firstChild.src;

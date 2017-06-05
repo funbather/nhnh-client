@@ -51,7 +51,7 @@ define(["./SkillConst"], function( SK )
 	
 	SkillDesc[SK.SWD_ENDURE] = {
 		x: function(skl){ return (15 + 3 * skl); },
-		m: function(mst){ return "\n\nMastery: You take ^DD3322" + (mst * 0.25).toFixed(2) + "^000000% less damage while Endure is active. (0.25%/MST)"; },
+		m: function(mst){ return "\n\nMastery: Endure also grants +^DD3322" + (mst * 1) + "^000000% DEF while active. (1%/MST)"; },
 		r: function(skl){ return "\n\n^boNext Level^ld:\nBarrier HP -> ^DD3322" + SkillDesc[SK.SWD_ENDURE].x(skl) + "^000000% Max HP"; }
 	};
 	

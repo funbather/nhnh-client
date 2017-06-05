@@ -112,6 +112,8 @@ define(function(require)
 		// Items options
 		ui.find('.content')
 			.on('mousewheel DOMMouseScroll', onScroll)
+			.on('mouseover',        '.item', onItemOver)
+			.on('mouseout',         '.item', onItemOut)
 			.on('contextmenu',      '.icon', onItemInfo)
 			.on('dblclick',         '.item', onItemSelected)
 			.on('mousedown',        '.item', onItemFocus)
@@ -727,7 +729,32 @@ define(function(require)
 		return false;
 	}
 
+	function onItemOver()
+	{
+		var index = parseInt(this.getAttribute('data-index'), 10);
+		var item  = _input[index];
 
+		// Not found
+		if (item < 0) {
+			return;
+		}
+
+		// Get back data
+		var pos     = jQuery(this).position();
+		var overlay = NpcStore.ui.find('.overlay');
+		var desc = "^bo" + DB.getItemName(item) + "^ld\n\n" + DB.formatDesc(item);
+
+		// Display box
+		overlay.show();
+		overlay.css({top: pos.top+28, left:pos.left+25});
+		overlay.text(desc);
+	}
+	
+	function onItemOut()
+	{
+		NpcStore.ui.find('.overlay').hide();
+	}
+	
 	/**
 	 * Start dragging an item
 	 */
