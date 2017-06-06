@@ -188,8 +188,6 @@ define(["./SkillConst"], function( SKID )
 		"Cooldown: 20s",
 		" ",
 		"Create an afterimage of yourself for $x seconds that copies all of your basic attacks. While the afterimage is active, you gain +$y% Attack Speed and your attacks will always double strike.",
-		" ",
-		"Using an offensive skill ends this effect.",
 	].join("\n");
 
 	SkillDescription[SKID.THF_BROWBEAT] = [

@@ -3550,7 +3550,7 @@ define(function()
 			"identifiedResourceName": "\xb8\xb6\xb7\xc2\xbc\xae_\xb3\xeb\xb6\xfb",
 			"identifiedDescriptionName": [
 				"$seal +$roll1$% chance on hit to inflict Poison",
-				"^tab+$roll2$% Debuff Damage",
+				"^tab+$roll2$% Status Damage",
 			],
 			"BaseRoll1": 10,
 			"RollMultiplier1": 2,
@@ -4629,6 +4629,7 @@ define(function()
 			"identifiedDescriptionName": [
 			],
 			"slotCount": 0,
+			"EquipLoc": 0x001,
 			"ClassNum": 569
 		},
 		"5211": {
