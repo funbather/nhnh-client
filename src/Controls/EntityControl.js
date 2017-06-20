@@ -154,6 +154,9 @@ define(function( require )
 
 				// Too far, walking to it
 				if (vec2.distance(Session.Entity.position, this.position) > 2) {
+					if( KEYS.SHIFT ) // hold position
+						return true;
+				
 					Session.moveAction = pkt;
 
 					pkt         = new PACKET.CZ.REQUEST_MOVE();
@@ -332,10 +335,15 @@ define(function( require )
 					this.position[0] | 0, this.position[1] | 0,
 					main.attack_range,
 					out
-				); // Fix for weird attack range bug
+				);
 
 				// Can't attack
 				if (!count) {
+					return true;
+				}
+				
+				// out of range, holding position
+				if( count > 1 && KEYS.SHIFT ) {
 					return true;
 				}
 

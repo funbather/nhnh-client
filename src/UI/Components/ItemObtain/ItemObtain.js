@@ -53,7 +53,7 @@ define(function(require)
 	/**
 	 * @var {number} time to display
 	 */
-	var _life = 5 * 1000;
+	var _life = 3 * 1000;
 
 
 	/**
@@ -104,32 +104,12 @@ define(function(require)
 	{
 		var it       = DB.getItemInfo(item.ITID);
 		var display  = DB.getItemName(item);
-		var resource = item.IsIdentified ? it.identifiedResourceName : it.unidentifiedResourceName;
-		var itdis   = '';
-		var enchtitle = '';
-		var rarity = 0;
-				
-		for(var i = 0; i <= 4; i++) {
-      if(item.slot['card' + i]) { 
-        rarity++;
-      }
-    }
-    
-    if(rarity) {
-      enchtitle = DB.getRarity(rarity);
-    } 
-    
-    switch(rarity) {
-      case 1: itdis = ' class="yellow"'; break;
-      case 2: itdis = ' class="green"'; break;
-      case 3: itdis = ' class="blue"'; break;
-      case 4: itdis = ' class="purple"'; break;
-    }
-
+		var resource = it.identifiedResourceName;
+		
 		this.ui.find('.content').html(
 			'<img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" class="'+ item.ITID +'" width="24" height="24" /> ' +
-			'<span'+itdis+'>' +
-			jQuery.escape(enchtitle+display) +
+			'<span>' +
+			jQuery.escape(display) +
 			'</span>' +
 			jQuery.escape(' ' + DB.getMessage(696).replace('%d', item.count || 1))
 		);

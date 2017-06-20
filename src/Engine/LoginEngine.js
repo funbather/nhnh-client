@@ -140,7 +140,8 @@ define(function( require )
 				break;
 		}
 		// just set to utf-8 for now... does charset even matter?
-		charset = 'utf-8';
+		//charset = 'utf-8';
+		charset = 'shift-jis';
 
 		TextEncoding.setCharset(charset);
 		_server = server;

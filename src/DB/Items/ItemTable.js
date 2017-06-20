@@ -3813,7 +3813,6 @@ define(function()
 				" ",
 				"Heals 40% of your Max HP",
 				"over 4 seconds.",
-				"Limit: 50",
 			],
 			"slotCount": 0,
 			"ClassNum": 0
@@ -3953,6 +3952,54 @@ define(function()
 				"Miscellaneous Item",
 				" ",
 				"A token engraved with a Slime.",
+			],
+			"slotCount": 0,
+			"ClassNum": 0
+		},
+		"811": {
+			"identifiedDisplayName": "Unappraised Weapon",
+			"identifiedResourceName": "\xbf\xc0\xb7\xa1\xb5\xc8\xba\xb8\xb6\xf3\xbb\xf3\xc0\xda",
+			"identifiedDescriptionName": [
+				"Unappraised Item",
+				"Item Level: $ilvl$",
+				" ",
+				"A cube containing an unknown weapon.",
+				" ",
+				"Open to discover what's inside for yourself,",
+				"or bring to an Appraiser for a chance at",
+				"uncovering an even better item.",
+			],
+			"slotCount": 0,
+			"ClassNum": 0
+		},
+		"812": {
+			"identifiedDisplayName": "Unappraised Armor",
+			"identifiedResourceName": "\xc3\xca\xb7\xcf\xbb\xf3\xc0\xda",
+			"identifiedDescriptionName": [
+				"Unappraised Item",
+				"Item Level: $ilvl$",
+				" ",
+				"A cube containing an unknown piece of armor.",
+				" ",
+				"Open to discover what's inside for yourself,",
+				"or bring to an Appraiser for a chance at",
+				"uncovering an even better item.",
+			],
+			"slotCount": 0,
+			"ClassNum": 0
+		},
+		"813": {
+			"identifiedDisplayName": "Unappraised Relic",
+			"identifiedResourceName": "\xbb\xa1\xb0\xa3\xbb\xf3\xc0\xda",
+			"identifiedDescriptionName": [
+				"Unappraised Item",
+				"Item Level: $ilvl$",
+				" ",
+				"A cube containing a rare piece of equipment.",
+				" ",
+				"Open to discover what's inside for yourself,",
+				"or bring to a very skilled Appraiser for a",
+				"chance at uncovering an even better item.",
 			],
 			"slotCount": 0,
 			"ClassNum": 0

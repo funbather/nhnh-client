@@ -112,8 +112,8 @@ define(function(require)
 		// Items options
 		ui.find('.content')
 			.on('mousewheel DOMMouseScroll', onScroll)
-			.on('mouseover',        '.icon', onItemOver)
-			.on('mouseout',         '.icon', onItemOut)
+			.on('mouseover',        '.item', onItemOver)
+			.on('mouseout',         '.item', onItemOut)
 			.on('contextmenu',      '.icon', onItemInfo)
 			.on('dblclick',         '.item', onItemSelected)
 			.on('mousedown',        '.item', onItemFocus)
@@ -731,7 +731,7 @@ define(function(require)
 
 	function onItemOver()
 	{
-		var index = parseInt( this.parentNode.getAttribute('data-index'), 10);
+		var index = parseInt( this.getAttribute('data-index'), 10);
 		var item  = _input[index];
 
 		// Not found
@@ -740,7 +740,7 @@ define(function(require)
 		}
 
 		// Get back data
-		var pos     = jQuery(this.parentNode).offset();
+		var pos     = jQuery(this).offset();
 		var overlay = NpcStore.ui.find('.overlay');
 		var desc = "^bo" + DB.getItemName(item) + "^ld\n\n" + DB.formatDesc(item);
 
@@ -765,6 +765,8 @@ define(function(require)
 
 		InputWindow  = NpcStore.ui.find('.InputWindow:first').get(0);
 		OutputWindow = NpcStore.ui.find('.OutputWindow:first').get(0);
+		
+		NpcStore.ui.find('.overlay').hide();
 
 		container = (jQuery.contains(InputWindow, this) ? InputWindow : OutputWindow).className;
 		img       = new Image();

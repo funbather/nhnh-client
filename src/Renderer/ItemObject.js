@@ -41,24 +41,27 @@ function(   DB,            EntityManager,            Entity,                Alti
 
 		entity.display.load = entity.display.TYPE.COMPLETE;
 		
-		if(count > 1) // Consumable? Misc?
-      entity.display.name = ' '+DB.getMessage(183).replace('%s',name).replace('%d', count)+' ';
-    else if(!quality && !ilvl) // Accessories & Single misc items
-      entity.display.name = ' '+name+' ';
-    else
-      entity.display.name = ' '+name+' -- Lv. '+ilvl+' | '+quality+'% ';
+		if( itemid == 811 || itemid == 812 || itemid == 813 ) // special case for unappraised items
+			entity.display.name = (count > 1) ? " Lv. " + ilvl + " " + name + " x " + count : " Lv. " + ilvl + " " + name + " ";
+		else if(count > 1) // Consumable? Misc?
+			entity.display.name = ' '+DB.getMessage(183).replace('%s',name).replace('%d', count)+' ';
+		else if(!quality && !ilvl) // Accessories & Single misc items
+			entity.display.name = ' '+name+' ';
+		else
+			entity.display.name = ' '+name+' -- Lv. '+ilvl+' | '+quality+'% ';
       
 		entity.display.update('#FFEF94',1);
-    switch(identify) {
-      case 1: entity.display.update('#ffffff',1); break;
-      case 2: entity.display.update('#ffefad',1); break;
-      case 3: entity.display.update('#b9ffad',1); break;
-      case 4: entity.display.update('#C4D2FF',1); break;
-      case 5: entity.display.update('#D6BDFF',1); break;
-    }
+		switch(identify) {
+			case 1: entity.display.update('#ffffff',1); break;
+			case 2: entity.display.update('#ffefad',1); break;
+			case 3: entity.display.update('#b9ffad',1); break;
+			case 4: entity.display.update('#C4D2FF',1); break;
+			case 5: entity.display.update('#D6BDFF',1); break;
+		}
 
 		entity.files.body.spr = path + '.spr';
 		entity.files.body.act = path + '.act';
+		entity.files.body.png = DB.INTERFACE_PATH + 'item/' + it.identifiedResourceName + '.bmp';
 
 		entity.files.shadow.size = 0;
 		entity.xSize = 6;
@@ -74,7 +77,7 @@ function(   DB,            EntityManager,            Entity,                Alti
 		
 		EntityManager.add(entity);
 		
-		if( itemid >= 200 && itemid < 500 ) // uniques
+		if( (itemid >= 200 && itemid < 500)  || (itemid == 813) ) // uniques
 			EffectManager.spam(1234, entity.GID);
 	}
 

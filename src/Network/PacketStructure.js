@@ -11022,8 +11022,8 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 				out[i].slot.card3 = fp.readUShort();
 				out[i].slot.card4 = fp.readUShort();
 				out[i].HireExpireDate = fp.readLong();
-				out[i].IsIdentified = fp.readUChar(); // Unused, just eat this
-				out[i].IsIdentified = 1;
+				out[i].IsIdentified = fp.readUChar();
+				out[i].IsIdentified = out[i].IsIdentified ? out[i].IsIdentified : 1;
 				out[i].PlaceETCTab = 0;
 				out[i].rolls = fp.readLong();
 			}
