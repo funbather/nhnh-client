@@ -3817,6 +3817,72 @@ define(function()
 			"slotCount": 0,
 			"ClassNum": 0
 		},
+		"790": {
+			"identifiedDisplayName": "Cool Stat Reset Potion",
+			"identifiedResourceName": "\xc7\xcf\xbe\xe1\xc6\xf7\xbc\xc7",
+			"identifiedDescriptionName": [
+				"Consumable",
+				" ",
+				"Resets your Stat Points.",
+			],
+			"slotCount": 0,
+			"ClassNum": 0
+		},
+		"791": {
+			"identifiedDisplayName": "Cool Skill Reset Potion",
+			"identifiedResourceName": "\xc7\xcf\xbe\xe1\xc6\xf7\xbc\xc7",
+			"identifiedDescriptionName": [
+				"Consumable",
+				" ",
+				"Resets your Skill Points.",
+			],
+			"slotCount": 0,
+			"ClassNum": 0
+		},
+		"792": {
+			"identifiedDisplayName": "Cool Swordsman Potion",
+			"identifiedResourceName": "\xc7\xcf\xbe\xe1\xc6\xf7\xbc\xc7",
+			"identifiedDescriptionName": [
+				"Consumable",
+				" ",
+				"Changes your class to Swordsman.",
+			],
+			"slotCount": 0,
+			"ClassNum": 0
+		},
+		"793": {
+			"identifiedDisplayName": "Cool Thief Potion",
+			"identifiedResourceName": "\xc7\xcf\xbe\xe1\xc6\xf7\xbc\xc7",
+			"identifiedDescriptionName": [
+				"Consumable",
+				" ",
+				"Changes your class to Thief.",
+			],
+			"slotCount": 0,
+			"ClassNum": 0
+		},
+		"794": {
+			"identifiedDisplayName": "Cool Acolyte Potion",
+			"identifiedResourceName": "\xc7\xcf\xbe\xe1\xc6\xf7\xbc\xc7",
+			"identifiedDescriptionName": [
+				"Consumable",
+				" ",
+				"Changes your class to Acolyte.",
+			],
+			"slotCount": 0,
+			"ClassNum": 0
+		},
+		"795": {
+			"identifiedDisplayName": "Cool Magician Potion",
+			"identifiedResourceName": "\xc7\xcf\xbe\xe1\xc6\xf7\xbc\xc7",
+			"identifiedDescriptionName": [
+				"Consumable",
+				" ",
+				"Changes your class to Magician.",
+			],
+			"slotCount": 0,
+			"ClassNum": 0
+		},
 		"800": {
 			"identifiedDisplayName": "Mythril Ore",
 			"identifiedResourceName": "\xb9\xcc\xbd\xba\xb8\xb1\xb1\xa4\xbc\xae",
