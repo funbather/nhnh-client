@@ -15,9 +15,9 @@ define(function(require)
 	/**
 	 * Dependencies
 	 */
-	var KEYS        = require('Controls/KeyEventHandler');
-	var Preferences = require('Preferences/BattleMode');
-	var UIManager   = require('UI/UIManager');
+	var KEYS         = require('Controls/KeyEventHandler');
+	var Preferences  = require('Preferences/Keybinds');
+	var UIManager    = require('UI/UIManager');
 	
 	var Session     = require('Engine/SessionStorage');
 	var Network     = require('Network/NetworkManager');
@@ -37,23 +37,14 @@ define(function(require)
 	 */
 	BattleMode.process = function process( keyId )
 	{
-		var key = Preferences[keyId];
-		var key_ui = Preferences[keyId+300];
-		
-		if (key_ui && // UI Keybinds take precedence
-		   ((!!key_ui.shift) === KEYS.SHIFT) &&
-		   ((!!key_ui.alt)   === KEYS.ALT)   &&
-		   ((!!key_ui.ctrl)  === KEYS.CTRL)
-		) {
-			var component = UIManager.getComponent(key_ui.component);
-			if (component.onShortCut) {
-				component.onShortCut(key_ui);
-			}
-			return true;
-		} else if (keyId === KEYS.SPACE) { // Figure out how to do this better later
+		var key = Preferences.keys[keyId];
+
+		if( keyId === KEYS.SPACE ) {
 				var pkt = new PACKET.CZ.REQUEST_ACT();
+				
 				pkt.action = Session.Entity.action === Session.Entity.ACTION.SIT ? 3 : 2;
 				Network.sendPacket(pkt);
+				
 				return true;
 		} else if (key &&
 		   ((!!key.shift) === KEYS.SHIFT) &&
@@ -66,7 +57,6 @@ define(function(require)
 			}
 			return true;
 		}
-		
 
 		return false;
 	};

@@ -21,6 +21,7 @@ define(function(require)
 	var UIComponent        = require('UI/UIComponent');
 	var SoundOption        = require('UI/Components/SoundOption/SoundOption');
 	var GraphicsOption     = require('UI/Components/GraphicsOption/GraphicsOption');
+	var KeyConfig          = require('UI/Components/KeyConfig/KeyConfig');
 	var htmlText           = require('text!./Escape.html');
 	var cssText            = require('text!./Escape.css');
 
@@ -53,6 +54,7 @@ define(function(require)
 
 		this.ui.find('.sound').click(onToggleSoundUI);
 		this.ui.find('.graphics').click(onToggleGraphicUI);
+		this.ui.find('.hotkey').click(onToggleKeyConfigUI);
 		this.ui.find('.resurection').click(function(){ Escape.onResurectionReques(); });
 		this.ui.find('.savepoint').click(function(){ Escape.onReturnSavePointRequest(); });
 		this.ui.find('.charselect').click(function(){ Escape.onCharSelectionRequest(); });
@@ -132,6 +134,15 @@ define(function(require)
 		}
 	}
 
+	function onToggleKeyConfigUI()
+	{
+		if (!KeyConfig.ui || !KeyConfig.ui[0].parentNode) {
+			KeyConfig.append();
+		}
+		else {
+			KeyConfig.remove();
+		}
+	}
 
 	/**
 	 * @var {function} callback when player want to resuret using Token of Siegfried
