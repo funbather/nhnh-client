@@ -236,8 +236,12 @@ define(function(require)
 	BasicInfo.update = function ipdate( type, val1, val2 )
 	{
 		switch (type) {
-			case 'name':
 			case 'blvl':
+				this.ui.find('.'+ type +'_value').text(val1);
+				DB._blvl = val1;
+				break;
+		
+			case 'name':
 			case 'jlvl':
 				this.ui.find('.'+ type +'_value').text(val1);
 				break;

@@ -88,6 +88,7 @@ define(function(require)
 	             "SKILLDMG":2,
 	             "SPELLDMG":2 }
 
+	DB._blvl = 1;
 
 	/**
 	 * Initialize DB
@@ -522,10 +523,9 @@ define(function(require)
 		return function getItemInfo( itemid )
 		{
 			var item = ItemTable[itemid] || unknownItem;
+			var ratings = ["","\u2605\u2606\u2606","\u2605\u2605\u2606","\u2605\u2605\u2605","\u272A"];
 
-			if (!item._decoded) {				
-				var ratings = ["","\u2605\u2606\u2606","\u2605\u2605\u2606","\u2605\u2605\u2605","\u272A"];
-				
+			if (!item._decoded) {
 				item.identifiedDescriptionName   = item.identifiedDescriptionName ? TextEncoding.decodeString(item.identifiedDescriptionName.join('\n'))   : '';
 				item.unidentifiedDescriptionName = item.identifiedDescriptionName;
 				item.identifiedDisplayName       = TextEncoding.decodeString(item.identifiedDisplayName);
@@ -577,14 +577,17 @@ define(function(require)
 		};
 	}();
 
-	DB.getStatMultiplier = function getMultiplier( stat ) {
+	// Flags
+	// 1 - Item is equipped, apply stat penalties
+	// 2 - Item obtained from cube, highlight high rolls
+  //        extra: cube item level	
 
-	}
-
-	DB.formatDesc = function formatDesc( item ) {
+	DB.formatDesc = function formatDesc( item, flag, extra ) {
 		var it = DB.getItemInfo( item.ITID );
-		var bonus, bval;
+		var bonus, bval, slotcount;
 		var bonusdesc = "";
+		var itemlevel = (item.ITID < 500) ? Math.min(item.IsIdentified, DB._blvl + 3) : item.IsIdentified;
+		var statcolor = "^99BBFF";
 
 		if( it.EquipLoc ) { // Only hats will have this set
 			var desc = "^FFFFFFCosmetic Item\n\n";
@@ -596,9 +599,17 @@ define(function(require)
 			return desc;
 		}
 		
+		slotcount = (item.slot['card1'] > 0) + (item.slot['card2'] > 0) + (item.slot['card3'] > 0) + (item.slot['card4'] > 0);
+		
+		if( flag == 2 ) {
+			if     ( slotcount > 3 ) bonusdesc = "\n\nEnchantments: ^99BBFF^bo" + slotcount + " !!^ld^FFFFFF\n";
+			else if( slotcount > 2 ) bonusdesc = "\n\nEnchantments: ^99BBFF^bo" + slotcount + " !^ld^FFFFFF\n";
+			else                     bonusdesc = "\n\nEnchantments: ^99BBFF" + slotcount + "^FFFFFF\n";
+		} else {
+			bonusdesc = (slotcount) ? "\n\n" : "";
+		}
+		
 		if( item.slot && item.slot['card1'] ) {
-			bonusdesc += "\n\n";
-			
 			for( var i=0; i<4; i++ ) {
 				if(item.slot['card' + (i+1)]) {
 					bonus = DB.getItemInfo((item.slot && item.slot['card' + (i+1)]));
@@ -618,27 +629,52 @@ define(function(require)
 	
 	
 		var desc = '^FFFFFF' + it.condensedDesc + bonusdesc;
+		var lvldiff = -(itemlevel - item.IsIdentified);
 		
-		desc = desc.replace('$ilvl$', '^99BBFF'+item.IsIdentified+'^FFFFFF');
-		desc = desc.replace('$quality$', '^99BBFF'+item.RefiningLevel+'^FFFFFF');
-		desc = desc.replace('$hp$', '^99BBFF'+getStatValue(it.BaseHP, DB._mult["HP"], item.RefiningLevel, item.IsIdentified)+'^FFFFFF');
-		desc = desc.replace('$mp$', '^99BBFF'+getStatValue(it.BaseMP, DB._mult["MP"], item.RefiningLevel, item.IsIdentified)+'^FFFFFF');
-		desc = desc.replace('$def$', '^99BBFF'+getStatValue(it.BaseDEF, DB._mult["DEF"], item.RefiningLevel, item.IsIdentified)+'^FFFFFF');
-		desc = desc.replace('$mdef$', '^99BBFF'+getStatValue(it.BaseMDEF, DB._mult["MDEF"], item.RefiningLevel, item.IsIdentified)+'^FFFFFF');
-		desc = desc.replace('$atk$', '^99BBFF'+getStatValue(it.BaseATK, DB._mult["ATK"], item.RefiningLevel, item.IsIdentified)+'^FFFFFF');
-		desc = desc.replace('$mag$', '^99BBFF'+getStatValue(it.BaseMAG, DB._mult["MAG"], item.RefiningLevel, item.IsIdentified)+'^FFFFFF');
-		desc = desc.replace('$eva$', '^99BBFF'+getStatValue(it.BaseEVADE, DB._mult["EVA"], item.RefiningLevel, item.IsIdentified)+'^FFFFFF');
-		desc = desc.replace('$cel$', '^99BBFF'+getStatValue(it.BaseCEL, DB._mult["CEL"], item.RefiningLevel, item.IsIdentified)+'^FFFFFF');
-		desc = desc.replace('$crit$', '^99BBFF'+(getStatValue(it.BaseCRIT, DB._mult["CRIT"], item.RefiningLevel, item.IsIdentified) / 10).toFixed(1)+'^FFFFFF');
-		desc = desc.replace('$def2$', '^99BBFF'+(getStatValue(it.BaseDEF2, DB._mult["DEF2"], item.RefiningLevel, item.IsIdentified) / 10).toFixed(1)+'^FFFFFF');
-		desc = desc.replace('$mdef2$', '^99BBFF'+(getStatValue(it.BaseMDEF2, DB._mult["MDEF2"], item.RefiningLevel, item.IsIdentified) / 10).toFixed(1)+'^FFFFFF');
-		desc = desc.replace('$skilldmg$', '^99BBFF'+getStatValue(it.BaseSKILLDMG, DB._mult["SKILLDMG"], item.RefiningLevel, item.IsIdentified)+'^FFFFFF');
-		desc = desc.replace('$spelldmg$', '^99BBFF'+getStatValue(it.BaseSPELLDMG, DB._mult["SPELLDMG"], item.RefiningLevel, item.IsIdentified)+'^FFFFFF');
-		desc = desc.replace('$aspd$', '^99BBFF'+getStatValue(it.BaseASPD, DB._mult["ASPD"], item.RefiningLevel, item.IsIdentified)+'^FFFFFF');
-		desc = desc.replace('$cspd$', '^99BBFF'+getStatValue(it.BaseCSPD, DB._mult["CSPD"], item.RefiningLevel, item.IsIdentified)+'^FFFFFF');
-		desc = desc.replace('$bonus1$', '^99BBFF'+getStatValue(it.BaseBonus1, it.Multiplier1, item.RefiningLevel, item.IsIdentified)+'^FFFFFF');
-		desc = desc.replace('$bonus2$', '^99BBFF'+getStatValue(it.BaseBonus2, it.Multiplier2, item.RefiningLevel, item.IsIdentified)+'^FFFFFF');
-		desc = desc.replace('$bonus3$', '^99BBFF'+(getStatValue(it.BaseBonus3, it.Multiplier3, item.RefiningLevel, item.IsIdentified) / 10).toFixed(1)+'^FFFFFF');
+		if( flag != 2 ) {
+			if( (flag == 1) && lvldiff )
+				desc = desc.replace('$ilvl$', '^FF99BB' + itemlevel + '^FFFFFF' + '   (^99BBFF'+item.IsIdentified+'^FFFFFF)');
+			else if( (flag != 1) && lvldiff )
+				desc = desc.replace('$ilvl$', '^99BBFF'+item.IsIdentified+'^FFFFFF'+'   (^FF99BB' + itemlevel + '^FFFFFF Equipped)');
+			else
+				desc = desc.replace('$ilvl$', '^99BBFF'+item.IsIdentified+'^FFFFFF');
+		} else if( flag == 2 ) {
+			if     ( item.IsIdentified - extra > 2 ) desc = desc.replace('$ilvl$', '^99BBFF^bo'+item.IsIdentified+' !!^ld^FFFFFF');
+			else if( item.IsIdentified - extra > 1 ) desc = desc.replace('$ilvl$', '^99BBFF^bo'+item.IsIdentified+' !^ld^FFFFFF');
+			else                                     desc = desc.replace('$ilvl$', '^99BBFF'+item.IsIdentified+'^FFFFFF');
+		}
+
+		// display actual item stats when unequipped, penalized stats when equipped
+		itemlevel = ( flag == 1 ) ? itemlevel : item.IsIdentified;
+		statcolor = ( (flag == 1) && ((itemlevel - item.IsIdentified) < 0)) ? "^FF99BB" : statcolor;
+		
+		if( flag == 2 ) {
+			if     ( item.RefiningLevel > 115 ) desc = desc.replace('$quality$', '^99BBFF^bo'+item.RefiningLevel+' !!^ld^FFFFFF');
+			else if( item.RefiningLevel > 100 ) desc = desc.replace('$quality$', '^99BBFF^bo'+item.RefiningLevel+' !^ld^FFFFFF');
+			else                                desc = desc.replace('$quality$', '^99BBFF'+item.RefiningLevel+'^FFFFFF');
+			
+		} else {
+			desc = desc.replace('$quality$', '^99BBFF'+item.RefiningLevel+'^FFFFFF');
+		}
+		
+		desc = desc.replace('$hp$', statcolor+getStatValue(it.BaseHP, DB._mult["HP"], item.RefiningLevel, itemlevel)+'^FFFFFF');
+		desc = desc.replace('$mp$', statcolor+getStatValue(it.BaseMP, DB._mult["MP"], item.RefiningLevel, itemlevel)+'^FFFFFF');
+		desc = desc.replace('$def$', statcolor+getStatValue(it.BaseDEF, DB._mult["DEF"], item.RefiningLevel, itemlevel)+'^FFFFFF');
+		desc = desc.replace('$mdef$', statcolor+getStatValue(it.BaseMDEF, DB._mult["MDEF"], item.RefiningLevel, itemlevel)+'^FFFFFF');
+		desc = desc.replace('$atk$', statcolor+getStatValue(it.BaseATK, DB._mult["ATK"], item.RefiningLevel, itemlevel)+'^FFFFFF');
+		desc = desc.replace('$mag$', statcolor+getStatValue(it.BaseMAG, DB._mult["MAG"], item.RefiningLevel, itemlevel)+'^FFFFFF');
+		desc = desc.replace('$eva$', statcolor+getStatValue(it.BaseEVADE, DB._mult["EVA"], item.RefiningLevel, itemlevel)+'^FFFFFF');
+		desc = desc.replace('$cel$', statcolor+getStatValue(it.BaseCEL, DB._mult["CEL"], item.RefiningLevel, itemlevel)+'^FFFFFF');
+		desc = desc.replace('$crit$', statcolor+(getStatValue(it.BaseCRIT, DB._mult["CRIT"], item.RefiningLevel, itemlevel) / 10).toFixed(1)+'^FFFFFF');
+		desc = desc.replace('$def2$', statcolor+(getStatValue(it.BaseDEF2, DB._mult["DEF2"], item.RefiningLevel, itemlevel) / 10).toFixed(1)+'^FFFFFF');
+		desc = desc.replace('$mdef2$', statcolor+(getStatValue(it.BaseMDEF2, DB._mult["MDEF2"], item.RefiningLevel, itemlevel) / 10).toFixed(1)+'^FFFFFF');
+		desc = desc.replace('$skilldmg$', statcolor+getStatValue(it.BaseSKILLDMG, DB._mult["SKILLDMG"], item.RefiningLevel, itemlevel)+'^FFFFFF');
+		desc = desc.replace('$spelldmg$', statcolor+getStatValue(it.BaseSPELLDMG, DB._mult["SPELLDMG"], item.RefiningLevel, itemlevel)+'^FFFFFF');
+		desc = desc.replace('$aspd$', statcolor+getStatValue(it.BaseASPD, DB._mult["ASPD"], item.RefiningLevel, itemlevel)+'^FFFFFF');
+		desc = desc.replace('$cspd$', statcolor+getStatValue(it.BaseCSPD, DB._mult["CSPD"], item.RefiningLevel, itemlevel)+'^FFFFFF');
+		desc = desc.replace('$bonus1$', statcolor+getStatValue(it.BaseBonus1, it.Multiplier1, item.RefiningLevel, itemlevel)+'^FFFFFF');
+		desc = desc.replace('$bonus2$', statcolor+getStatValue(it.BaseBonus2, it.Multiplier2, item.RefiningLevel, itemlevel)+'^FFFFFF');
+		desc = desc.replace('$bonus3$', statcolor+(getStatValue(it.BaseBonus3, it.Multiplier3, item.RefiningLevel, itemlevel) / 10).toFixed(1)+'^FFFFFF');
 		
 		return desc;
 	};

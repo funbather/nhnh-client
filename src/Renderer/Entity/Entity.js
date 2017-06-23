@@ -237,6 +237,11 @@ define( function( require )
 					this.position[2] = Altitude.getCellHeight(  unit.MoveData[0],  unit.MoveData[1] );
 					this.walkTo.apply( this, unit.MoveData );
 					break;
+					
+				case 'honor':
+					this.honor = unit.honor;
+					this.depth = (unit.honor) ? 999 : unit.depth;
+					break;
 
 				default:
 					if (Entity.prototype.hasOwnProperty(keys[i]) || Entity.prototype.hasOwnProperty('_' + keys[i])) {

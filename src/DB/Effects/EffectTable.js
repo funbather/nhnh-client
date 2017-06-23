@@ -377,8 +377,32 @@ define(function( require )
 			textureName: 'unique',
 			tickTime: 1000,
 			attachedEntity: true,
-			wav:  'effect/acolyte_cure',
+			wav:  'uniquedrop',
 			repeat: true
+		}],
+		
+		1235: [{
+			type: 'CYLINDER',
+			topSize: 0,
+			bottomSize: 0,
+			height: 0,
+			textureName: 'unique',
+			tickTime: 1000,
+			attachedEntity: true,
+			wav:  'cube_okay',
+			repeat: false
+		}],
+		
+		1236: [{
+			type: 'CYLINDER',
+			topSize: 0,
+			bottomSize: 0,
+			height: 0,
+			textureName: 'unique',
+			tickTime: 1000,
+			attachedEntity: true,
+			wav:  'cube_good',
+			repeat: false
 		}],
 	};
 });

@@ -30,6 +30,7 @@ define(function( require )
 	var ContextMenu = require('UI/Components/ContextMenu/ContextMenu');
 	var Pet         = require('UI/Components/PetInformations/PetInformations');
 	var Trade       = require('UI/Components/Trade/Trade');
+	var Sound      = require('Audio/SoundManager');
 	var getModule   = require;
 
 
@@ -47,6 +48,9 @@ define(function( require )
 	function onMouseOver()
 	{
 		var Entity = this.constructor;
+		
+		if( this.honor )
+			return true;
 
 		switch (this.objecttype) {
 			case Entity.TYPE_PET:
@@ -141,6 +145,9 @@ define(function( require )
 	{
 		var Entity = this.constructor;
 		var pkt;
+		
+		if( this.honor )
+			return true;
 
 		switch (this.objecttype) {
 			case Entity.TYPE_PET:
@@ -302,6 +309,9 @@ define(function( require )
 		var Entity = this.constructor;
 		var main   = Session.Entity;
 		var pkt;
+		
+		if( this.honor )
+			return true;
 
 		switch (this.objecttype) {
 
@@ -318,7 +328,6 @@ define(function( require )
 			// no break intended.
 
 			case Entity.TYPE_MOB:
-
 				// Start rendering the lock on arrow
 				this.attachments.add({
 					uid:    'lockon',
@@ -339,6 +348,7 @@ define(function( require )
 
 				// Can't attack
 				if (!count) {
+					Sound.play('doot.wav');
 					return true;
 				}
 				

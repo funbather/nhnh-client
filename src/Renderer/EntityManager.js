@@ -213,10 +213,13 @@ define(function( require )
 	 * @param {Entity} a
 	 * @param {Entity} b
 	 */
-	function sort(  a, b )
+	function sort( a, b )
 	{
 		var aDepth = a.depth + (a.GID%100) / 1000;
 		var bDepth = b.depth + (b.GID%100) / 1000;
+		
+		aDepth += (a.honor) ? 999 : 0;
+		bDepth += (b.honor) ? 999 : 0;
 
 		return bDepth - aDepth;
 	}
@@ -237,6 +240,9 @@ define(function( require )
 			aDepth -= Entity.PickingPriority[a.objecttype] * 100;
 			bDepth -= Entity.PickingPriority[b.objecttype] * 100;
 		}
+		
+		aDepth += (a.honor) ? 999 : 0;
+		bDepth += (b.honor) ? 999 : 0;
 
 		return aDepth - bDepth;
 	}
