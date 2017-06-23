@@ -32,6 +32,7 @@ define(function( require )
 	var ItemSelection        = require('UI/Components/ItemSelection/ItemSelection');
 	var Inventory            = require('UI/Components/Inventory/Inventory');
 	var NpcMenu              = require('UI/Components/NpcMenu/NpcMenu');
+	var Sound                = require('Audio/SoundManager');
 
 	// SKILL_POSTDELAY 0x43d
 	function onSkillCooldown( pkt ) {
@@ -455,6 +456,7 @@ define(function( require )
 
 		// Can't attack to this point
 		if (!count) {
+			Sound.play('doot.wav');
 			return;
 		}
 
@@ -516,6 +518,7 @@ define(function( require )
 
 		// Can't attack to this point
 		if (!count) {
+			Sound.play('doot.wav');
 			return;
 		}
 

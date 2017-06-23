@@ -25,6 +25,7 @@ define(function( require )
 	var Session       = require('Engine/SessionStorage');
 	var ChatBox       = require('UI/Components/ChatBox/ChatBox');
 	var ItemObtain    = require('UI/Components/ItemObtain/ItemObtain');
+	var CubeOpen      = require('UI/Components/CubeOpen/CubeOpen');
 	var ItemSelection = require('UI/Components/ItemSelection/ItemSelection');
 	var Inventory     = require('UI/Components/Inventory/Inventory');
 	var Equipment     = require('UI/Components/Equipment/Equipment');
@@ -114,6 +115,12 @@ define(function( require )
 		);
 
 		Inventory.addItem(pkt);
+	}
+
+	function onCubeOpen( pkt )
+	{
+		CubeOpen.append();
+		CubeOpen.set(pkt);
 	}
 
 
@@ -387,5 +394,6 @@ define(function( require )
 		Network.hookPacket( PACKET.ZC.ITEMCOMPOSITION_LIST,   onItemCompositionList );
 		Network.hookPacket( PACKET.ZC.ACK_ITEMCOMPOSITION,    onItemCompositionResult );
 		Network.hookPacket( PACKET.ZC.ACK_ITEMREFINING,       onRefineResult);
+		Network.hookPacket( PACKET.ZC.CUBE_OPEN,              onCubeOpen);
 	};
 });

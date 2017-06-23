@@ -584,7 +584,7 @@ define(function(require)
 		var _rect = this.getBoundingClientRect();
 		var it = DB.getItemInfo( item.ITID );
 		var rarity = 0;
-		var desc = "^bo" + DB.getItemName(item) + "^ld\n\n" + DB.formatDesc(item);
+		var desc = "^bo" + DB.getItemName(item) + "^ld\n\n" + DB.formatDesc(item, 1);
 		
 
 		// Possible jquery error

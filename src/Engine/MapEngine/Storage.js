@@ -42,6 +42,17 @@ define(function( require )
 		itemBuffer = [];
 	}
 
+	function onZenyUpdate( pkt ) {
+		Storage.setZeny( pkt.amount );
+	}
+	
+	function onDepositAck( pkt ) {
+		Storage.deposit( pkt.money, pkt.balance );
+	}
+	
+	function onWithdrawAck( pkt ) {
+		Storage.withdraw( pkt.money, pkt.balance );
+	}
 
 	/**
 	 * Add items to storage
@@ -133,6 +144,21 @@ define(function( require )
 		Network.sendPacket( pkt );
 	};
 
+	Storage.reqDeposit = function ReqDeposit( aid, amount ) {
+		var pkt = new PACKET.CZ.BANK_DEPOSIT_REQ();
+		pkt.aid = aid;
+		pkt.amount = amount;
+		
+		Network.sendPacket( pkt );
+	};
+	
+	Storage.reqWithdraw = function ReqWithdraw( aid, amount ) {
+		var pkt = new PACKET.CZ.BANK_WITHDRAW_REQ();
+		pkt.aid = aid;
+		pkt.amount = amount;
+		
+		Network.sendPacket( pkt );
+	};
 
 	/**
 	 * Initialize
@@ -153,5 +179,8 @@ define(function( require )
 		Network.hookPacket( PACKET.ZC.ADD_ITEM_TO_STORE3,         onStorageItemAdded );
 		Network.hookPacket( PACKET.ZC.CLOSE_STORE,                onStorageClose );
 		Network.hookPacket( PACKET.ZC.DELETE_ITEM_FROM_STORE,     onStorageItemRemoved );
+		Network.hookPacket( PACKET.ZC.BANK_AMOUNT,                onZenyUpdate );
+		Network.hookPacket( PACKET.ZC.BANK_DEPOSIT_ACK,           onDepositAck );
+		Network.hookPacket( PACKET.ZC.BANK_WITHDRAW_ACK,          onWithdrawAck );
 	};
 });

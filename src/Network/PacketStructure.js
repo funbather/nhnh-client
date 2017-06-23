@@ -5142,6 +5142,57 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 		
 		return pkt_buf;
 	};
+	
+	// 0x558
+	PACKET.ZC.CUBE_OPEN = function PACKET_ZC_CUBE_OPEN(fp, end) {
+		this.ITID = fp.readUShort();
+		this.RefiningLevel = fp.readUChar();
+		this.IsIdentified = fp.readUChar();
+		this.slot = {};
+		this.slot.card1 = fp.readUShort();
+		this.slot.card2 = fp.readUShort();
+		this.slot.card3 = fp.readUShort();
+		this.slot.card4 = fp.readUShort();
+		this.rolls = fp.readULong();
+		this.cubelvl = fp.readUChar();
+	};
+	PACKET.ZC.CUBE_OPEN.size = 19;
+	
+	// 0x9a7
+	PACKET.CZ.BANK_DEPOSIT_REQ = function PACKET_CZ_BANK_DEPOSIT_REQ() {
+		this.AID = 0;
+		this.amount = 0;
+	};
+	PACKET.CZ.BANK_DEPOSIT_REQ.prototype.build = function() {
+		var pkt_buf = new BinaryWriter(10);
+		
+		pkt_buf.writeShort(0x9a7);
+		pkt_buf.writeULong(this.AID);
+		pkt_buf.writeLong(this.amount);
+		
+		return pkt_buf;
+	};
+
+	// 0x9a9
+	PACKET.CZ.BANK_WITHDRAW_REQ = function PACKET_CZ_BANK_WITHDRAW_REQ() {
+		this.AID = 0;
+		this.amount = 0;
+	};
+	PACKET.CZ.BANK_WITHDRAW_REQ.prototype.build = function() {
+		var pkt_buf = new BinaryWriter(10);
+		
+		pkt_buf.writeShort(0x9a9);
+		pkt_buf.writeULong(this.AID);
+		pkt_buf.writeLong(this.amount);
+		
+		return pkt_buf;
+	};
+	
+	// 0x557
+	PACKET.ZC.BANK_AMOUNT = function PACKET_ZC_BANK_AMOUNT(fp, end) {
+		this.amount = fp.readLong();
+	};
+	PACKET.ZC.BANK_AMOUNT.size = 6;
 
 	// 0xb6
 	PACKET.ZC.CLOSE_DIALOG = function PACKET_ZC_CLOSE_DIALOG(fp, end) {
@@ -6941,7 +6992,8 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 		this.ITID = fp.readUShort();
 		this.type = fp.readUChar();
 		this.IsIdentified = fp.readUChar();
-		this.IsDamaged = fp.readUChar();
+		this.IsIdentified = fp.readUChar();
+		this.IsDamaged = 0;
 		this.RefiningLevel = fp.readUChar();
 		this.slot = {};
 		this.slot.card1 = fp.readUShort();
@@ -11218,6 +11270,23 @@ define(['Utils/BinaryWriter', './PacketVerManager'], function(BinaryWriter, PACK
 	};
 	PACKET.ZC.STORE_EQUIPMENT_ITEMLIST4.size = -1;
 
+	// 0x9a8
+	PACKET.ZC.BANK_DEPOSIT_ACK = function PACKET_ZC_BANK_DEPOSIT_ACK(fp, end) {
+		this.reason = fp.readShort();
+		this.money = fp.readULong();
+		this.unused = fp.readULong(); // eat these 4 bytes
+		this.balance = fp.readLong();
+	}
+	PACKET.ZC.BANK_DEPOSIT_ACK.size = 16;
+
+	// 0x9aa
+	PACKET.ZC.BANK_WITHDRAW_ACK = function PACKET_ZC_BANK_WITHDRAW_ACK(fp, end) {
+		this.reason = fp.readShort();
+		this.money = fp.readULong();
+		this.unused = fp.readULong(); // eat these 4 bytes
+		this.balance = fp.readLong();
+	}
+	PACKET.ZC.BANK_WITHDRAW_ACK.size = 16;
 
 	// 0x997
 	PACKET.ZC.EQUIPWIN_MICROSCOPE_V5 = function PACKET_ZC_EQUIPWIN_MICROSCOPE_V5(fp, end) {

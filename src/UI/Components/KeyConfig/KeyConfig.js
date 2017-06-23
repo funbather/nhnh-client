@@ -101,7 +101,7 @@ define(function(require)
 		});
 
 		this.ui.find('.close').click(this.remove.bind(this));
-		this.ui.find('#save').click(onSaveConfig);
+		this.ui.find('.save').click(onSaveConfig);
 
 		this.draggable(this.ui.find('.titlebar'));
 	};

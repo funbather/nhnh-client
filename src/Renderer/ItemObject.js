@@ -61,7 +61,6 @@ function(   DB,            EntityManager,            Entity,                Alti
 
 		entity.files.body.spr = path + '.spr';
 		entity.files.body.act = path + '.act';
-		entity.files.body.png = DB.INTERFACE_PATH + 'item/' + it.identifiedResourceName + '.bmp';
 
 		entity.files.shadow.size = 0;
 		entity.xSize = 6;

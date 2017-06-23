@@ -28,6 +28,7 @@ define(function(require)
 	var UIManager     = require('UI/UIManager');
 	var UIComponent   = require('UI/UIComponent');
 	var Cursor        = require('UI/CursorManager');
+	var Sound         = require('Audio/SoundManager');
 
 
 	/**
@@ -294,6 +295,7 @@ define(function(require)
 
 		// This skill can't be casted on this type
 		if (!(target & _flag) && !KEYS.SHIFT && !Controls.noshift) {
+			Sound.play('doot.wav');
 			return;
 		}
 

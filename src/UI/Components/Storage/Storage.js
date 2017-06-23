@@ -23,8 +23,10 @@ define(function(require)
 	var UIComponent        = require('UI/UIComponent');
 	var InputBox           = require('UI/Components/InputBox/InputBox');
 	var ItemInfo           = require('UI/Components/ItemInfo/ItemInfo');
+	var BasicInfo          = require('UI/Components/BasicInfo/BasicInfo');
 	var htmlText           = require('text!./Storage.html');
 	var cssText            = require('text!./Storage.css');
+	var Session    = require('Engine/SessionStorage');
 
 
 	/**
@@ -88,6 +90,8 @@ define(function(require)
 		this.ui.find('.tabs button').mousedown(onSwitchTab);
 		this.ui.find('.footer .extend').mousedown(onResize);
 		this.ui.find('.footer .close').click(this.onClosePressed.bind(this));
+		this.ui.find('.deposit').click(onDeposit);
+		this.ui.find('.withdraw').click(onWithdraw);
 
 		// Load tabs
 		Client.loadFile( DB.INTERFACE_PATH + 'basic_interface/tab_itm_0'+ (_preferences.tab+1) +'.bmp', function(data){
@@ -271,7 +275,20 @@ define(function(require)
 		this.ui.find('.footer .current').text(current);
 		this.ui.find('.footer .limit').text(limit);
 	};
+	
+	Storage.setZeny = function setZeny( amount ) {
+		this.ui.find('.zeny').text((amount).toLocaleString());
+	};
 
+	Storage.deposit = function Deposit( money, balance ) {
+		this.ui.find('.zeny').text((money).toLocaleString());
+		BasicInfo.update('zeny', balance );
+	};
+
+	Storage.withdraw = function Withdraw( money, balance ) {
+		this.ui.find('.zeny').text((money).toLocaleString());
+		BasicInfo.update('zeny', balance );
+	};
 
 	/**
 	 * Stop event propagation
@@ -349,6 +366,19 @@ define(function(require)
 		});
 	}
 
+	function onDeposit( event ) {
+		var amt = parseInt(Storage.ui.find('.zenyinput').val()) ? parseInt(Storage.ui.find('.zenyinput').val()) : 0;
+		Storage.reqDeposit(Session.AID, amt);
+		
+		Storage.ui.find('.zenyinput').val("");
+	}
+
+	function onWithdraw( event ) {
+		var amt = parseInt(Storage.ui.find('.zenyinput').val()) ? parseInt(Storage.ui.find('.zenyinput').val()) : 0;
+		Storage.reqWithdraw(Session.AID, amt);
+		
+		Storage.ui.find('.zenyinput').val("");
+	}
 
 	/**
 	 * Drop from inventory to storage
@@ -551,7 +581,6 @@ define(function(require)
 
 		return false;
 	}
-
 
 	/**
 	 * Callbacks
