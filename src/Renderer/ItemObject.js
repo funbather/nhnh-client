@@ -42,7 +42,7 @@ function(   DB,            EntityManager,            Entity,                Alti
 		entity.display.load = entity.display.TYPE.COMPLETE;
 		
 		if( itemid == 811 || itemid == 812 || itemid == 813 ) // special case for unappraised items
-			entity.display.name = (count > 1) ? " Lv. " + ilvl + " " + name + " x " + count : " Lv. " + ilvl + " " + name + " ";
+			entity.display.name = (count > 1) ? " Tier " + ilvl + " " + name + " x " + count : " Tier " + ilvl + " " + name + " ";
 		else if(count > 1) // Consumable? Misc?
 			entity.display.name = ' '+DB.getMessage(183).replace('%s',name).replace('%d', count)+' ';
 		else if(!quality && !ilvl) // Accessories & Single misc items

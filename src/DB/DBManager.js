@@ -640,7 +640,7 @@ define(function(require)
 				desc = desc.replace('$ilvl$', '^99BBFF'+item.IsIdentified+'^FFFFFF');
 		} else if( flag == 2 ) {
 			if     ( item.IsIdentified - extra > 2 ) desc = desc.replace('$ilvl$', '^99BBFF^bo'+item.IsIdentified+' !!^ld^FFFFFF');
-			else if( item.IsIdentified - extra > 1 ) desc = desc.replace('$ilvl$', '^99BBFF^bo'+item.IsIdentified+' !^ld^FFFFFF');
+			else if( item.IsIdentified - extra > 0 ) desc = desc.replace('$ilvl$', '^99BBFF^bo'+item.IsIdentified+' !^ld^FFFFFF');
 			else                                     desc = desc.replace('$ilvl$', '^99BBFF'+item.IsIdentified+'^FFFFFF');
 		}
 
@@ -675,6 +675,10 @@ define(function(require)
 		desc = desc.replace('$bonus1$', statcolor+getStatValue(it.BaseBonus1, it.Multiplier1, item.RefiningLevel, itemlevel)+'^FFFFFF');
 		desc = desc.replace('$bonus2$', statcolor+getStatValue(it.BaseBonus2, it.Multiplier2, item.RefiningLevel, itemlevel)+'^FFFFFF');
 		desc = desc.replace('$bonus3$', statcolor+(getStatValue(it.BaseBonus3, it.Multiplier3, item.RefiningLevel, itemlevel) / 10).toFixed(1)+'^FFFFFF');
+		
+		desc = desc.replace('$tier$', statcolor+item.IsIdentified + '^FFFFFF');
+		desc = desc.replace('$t1$', statcolor+(item.IsIdentified * 4 - 3) + '^FFFFFF');
+		desc = desc.replace('$t2$', statcolor+(item.IsIdentified * 4 - 0) + '^FFFFFF');
 		
 		return desc;
 	};
